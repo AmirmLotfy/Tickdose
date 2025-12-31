@@ -46,6 +46,14 @@ app.*.map.json
 
 # Environment variables - DO NOT COMMIT
 .env
+*.env
+!*.env.example
+
+# Firebase configuration files - DO NOT COMMIT (contain API keys)
+google-services.json
+**/google-services.json
+**/GoogleService-Info.plist
+lib/firebase_options.dart
 
 # Android Keystore files - DO NOT COMMIT
 **/keystore.properties

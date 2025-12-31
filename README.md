@@ -83,6 +83,15 @@ cd ..
 4. Download configuration files:
    - Android: `google-services.json` → `android/app/google-services.json`
    - iOS: `GoogleService-Info.plist` → `ios/Runner/GoogleService-Info.plist`
+   - macOS: `GoogleService-Info.plist` → `macos/Runner/GoogleService-Info.plist`
+   
+   **Note**: These files contain API keys and are excluded from git. See `.example` files for templates.
+
+5. Generate `firebase_options.dart`:
+   ```bash
+   flutterfire configure
+   ```
+   This will generate `lib/firebase_options.dart` with your Firebase configuration.
 
 ### 4. Environment Configuration
 
