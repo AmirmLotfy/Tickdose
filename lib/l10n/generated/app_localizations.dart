@@ -3523,6 +3523,338 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{xp} XP to Level {level}'**
   String xpToNextLevel(String xp, String level);
+
+  /// No description provided for @noChatHistoryYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No chat history yet'**
+  String get noChatHistoryYet;
+
+  /// No description provided for @noPatientsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No patients found'**
+  String get noPatientsFound;
+
+  /// No description provided for @noLogsForThisDay.
+  ///
+  /// In en, this message translates to:
+  /// **'No logs for this day'**
+  String get noLogsForThisDay;
+
+  /// No description provided for @errorOccurredMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred'**
+  String get errorOccurredMessage;
+
+  /// No description provided for @errorWithMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {error}'**
+  String errorWithMessage(String error);
+
+  /// No description provided for @somethingWentWrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get somethingWentWrong;
+
+  /// No description provided for @errorRecoveryMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'re sorry, but an error occurred. The app will try to recover automatically.'**
+  String get errorRecoveryMessage;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Try Again'**
+  String get tryAgain;
+
+  /// No description provided for @profileUpdatedSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile updated successfully'**
+  String get profileUpdatedSuccessfully;
+
+  /// No description provided for @enableLocationServices.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Location Services'**
+  String get enableLocationServices;
+
+  /// No description provided for @locationServicesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Find nearby pharmacies and get location-based reminders'**
+  String get locationServicesDescription;
+
+  /// No description provided for @locationServicesDetailedDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'We use your location to help you find the nearest pharmacies and provide accurate medication reminders based on your location.'**
+  String get locationServicesDetailedDescription;
+
+  /// No description provided for @enableCameraAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Camera Access'**
+  String get enableCameraAccess;
+
+  /// No description provided for @cameraAccessDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan medication labels and capture health information'**
+  String get cameraAccessDescription;
+
+  /// No description provided for @enableMicrophoneAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Microphone Access'**
+  String get enableMicrophoneAccess;
+
+  /// No description provided for @microphoneAccessDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Use voice commands and record symptoms'**
+  String get microphoneAccessDescription;
+
+  /// No description provided for @youCanChangeAnytimeInSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'You can change this anytime in Settings'**
+  String get youCanChangeAnytimeInSettings;
+
+  /// No description provided for @notNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Now'**
+  String get notNow;
+
+  /// No description provided for @allow.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow'**
+  String get allow;
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get today;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get yesterday;
+
+  /// No description provided for @noActivityForThisDate.
+  ///
+  /// In en, this message translates to:
+  /// **'No activity for this date'**
+  String get noActivityForThisDate;
+
+  /// No description provided for @open24Hours.
+  ///
+  /// In en, this message translates to:
+  /// **'24/7'**
+  String get open24Hours;
+
+  /// No description provided for @errorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get errorTitle;
+
+  /// No description provided for @pageNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Page not found'**
+  String get pageNotFound;
+
+  /// No description provided for @todayAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Today, {time}'**
+  String todayAt(String time);
+
+  /// No description provided for @missedMedicationAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Missed Medication Alert'**
+  String get missedMedicationAlert;
+
+  /// No description provided for @patientMissedMedicationAt.
+  ///
+  /// In en, this message translates to:
+  /// **'{patientOrUser} missed {medicineName} at {time}'**
+  String patientMissedMedicationAt(
+      String patientOrUser, String medicineName, String time);
+
+  /// No description provided for @user.
+  ///
+  /// In en, this message translates to:
+  /// **'User'**
+  String get user;
+
+  /// No description provided for @adherenceSummaryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{type} Adherence Summary'**
+  String adherenceSummaryTitle(String type);
+
+  /// No description provided for @adherenceSummaryBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Adherence: {rate}% | Taken: {taken} | Missed: {missed} | Skipped: {skipped}'**
+  String adherenceSummaryBody(
+      String rate, String taken, String missed, String skipped);
+
+  /// No description provided for @sideEffectAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Side Effect Alert'**
+  String get sideEffectAlert;
+
+  /// No description provided for @sideEffectBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{medicineName}: {symptom} ({severity})'**
+  String sideEffectBody(String medicineName, String symptom, String severity);
+
+  /// No description provided for @urgentHealthConcern.
+  ///
+  /// In en, this message translates to:
+  /// **'URGENT Health Concern'**
+  String get urgentHealthConcern;
+
+  /// No description provided for @healthConcernAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Health Concern Alert'**
+  String get healthConcernAlert;
+
+  /// No description provided for @noRemindersSet.
+  ///
+  /// In en, this message translates to:
+  /// **'No reminders set'**
+  String get noRemindersSet;
+
+  /// No description provided for @noDoctorsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No doctors found'**
+  String get noDoctorsFound;
+
+  /// No description provided for @errorLoadingPatients.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading patients'**
+  String get errorLoadingPatients;
+
+  /// No description provided for @patientsWillAppearHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Patients will appear here when they\ngrant you access as their caregiver'**
+  String get patientsWillAppearHere;
+
+  /// No description provided for @howAreYouFeeling.
+  ///
+  /// In en, this message translates to:
+  /// **'How are you feeling?'**
+  String get howAreYouFeeling;
+
+  /// No description provided for @describeSymptomsByVoiceOrText.
+  ///
+  /// In en, this message translates to:
+  /// **'Describe your symptoms by voice or text'**
+  String get describeSymptomsByVoiceOrText;
+
+  /// No description provided for @accountDeletedSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Account deleted successfully'**
+  String get accountDeletedSuccessfully;
+
+  /// No description provided for @incorrectPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect password'**
+  String get incorrectPassword;
+
+  /// No description provided for @pleaseLogInAgainBeforeDeletingAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Please log out and log in again before deleting account'**
+  String get pleaseLogInAgainBeforeDeletingAccount;
+
+  /// No description provided for @genericNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Generic Name:'**
+  String get genericNameLabel;
+
+  /// No description provided for @manufacturerLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Manufacturer:'**
+  String get manufacturerLabel;
+
+  /// No description provided for @translationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'[Translation]'**
+  String get translationLabel;
+
+  /// No description provided for @couldNotMakeCall.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not make call'**
+  String get couldNotMakeCall;
+
+  /// No description provided for @resetSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Settings'**
+  String get resetSettingsTitle;
+
+  /// No description provided for @resetSettingsConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to reset all voice settings to defaults?'**
+  String get resetSettingsConfirmation;
+
+  /// No description provided for @settingsResetToDefaults.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings reset to defaults'**
+  String get settingsResetToDefaults;
+
+  /// No description provided for @resetButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get resetButton;
+
+  /// No description provided for @apiRateLimitExceeded.
+  ///
+  /// In en, this message translates to:
+  /// **'API rate limit exceeded. Please try again later.'**
+  String get apiRateLimitExceeded;
+
+  /// No description provided for @apiInitializationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'API initialization failed. Please check your configuration.'**
+  String get apiInitializationFailed;
+
+  /// No description provided for @apiGenericError.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred. Please try again.'**
+  String get apiGenericError;
 }
 
 class _AppLocalizationsDelegate

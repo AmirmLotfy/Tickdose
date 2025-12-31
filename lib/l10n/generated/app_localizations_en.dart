@@ -1889,4 +1889,195 @@ class AppLocalizationsEn extends AppLocalizations {
   String xpToNextLevel(String xp, String level) {
     return '$xp XP to Level $level';
   }
+
+  @override
+  String get noChatHistoryYet => 'No chat history yet';
+
+  @override
+  String get noPatientsFound => 'No patients found';
+
+  @override
+  String get noLogsForThisDay => 'No logs for this day';
+
+  @override
+  String get errorOccurredMessage => 'An error occurred';
+
+  @override
+  String errorWithMessage(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get somethingWentWrong => 'Something went wrong';
+
+  @override
+  String get errorRecoveryMessage =>
+      'We\'re sorry, but an error occurred. The app will try to recover automatically.';
+
+  @override
+  String get tryAgain => 'Try Again';
+
+  @override
+  String get profileUpdatedSuccessfully => 'Profile updated successfully';
+
+  @override
+  String get enableLocationServices => 'Enable Location Services';
+
+  @override
+  String get locationServicesDescription =>
+      'Find nearby pharmacies and get location-based reminders';
+
+  @override
+  String get locationServicesDetailedDescription =>
+      'We use your location to help you find the nearest pharmacies and provide accurate medication reminders based on your location.';
+
+  @override
+  String get enableCameraAccess => 'Enable Camera Access';
+
+  @override
+  String get cameraAccessDescription =>
+      'Scan medication labels and capture health information';
+
+  @override
+  String get enableMicrophoneAccess => 'Enable Microphone Access';
+
+  @override
+  String get microphoneAccessDescription =>
+      'Use voice commands and record symptoms';
+
+  @override
+  String get youCanChangeAnytimeInSettings =>
+      'You can change this anytime in Settings';
+
+  @override
+  String get notNow => 'Not Now';
+
+  @override
+  String get allow => 'Allow';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get yesterday => 'Yesterday';
+
+  @override
+  String get noActivityForThisDate => 'No activity for this date';
+
+  @override
+  String get open24Hours => '24/7';
+
+  @override
+  String get errorTitle => 'Error';
+
+  @override
+  String get pageNotFound => 'Page not found';
+
+  @override
+  String todayAt(String time) {
+    return 'Today, $time';
+  }
+
+  @override
+  String get missedMedicationAlert => 'Missed Medication Alert';
+
+  @override
+  String patientMissedMedicationAt(
+      String patientOrUser, String medicineName, String time) {
+    return '$patientOrUser missed $medicineName at $time';
+  }
+
+  @override
+  String get user => 'User';
+
+  @override
+  String adherenceSummaryTitle(String type) {
+    return '$type Adherence Summary';
+  }
+
+  @override
+  String adherenceSummaryBody(
+      String rate, String taken, String missed, String skipped) {
+    return 'Adherence: $rate% | Taken: $taken | Missed: $missed | Skipped: $skipped';
+  }
+
+  @override
+  String get sideEffectAlert => 'Side Effect Alert';
+
+  @override
+  String sideEffectBody(String medicineName, String symptom, String severity) {
+    return '$medicineName: $symptom ($severity)';
+  }
+
+  @override
+  String get urgentHealthConcern => 'URGENT Health Concern';
+
+  @override
+  String get healthConcernAlert => 'Health Concern Alert';
+
+  @override
+  String get noRemindersSet => 'No reminders set';
+
+  @override
+  String get noDoctorsFound => 'No doctors found';
+
+  @override
+  String get errorLoadingPatients => 'Error loading patients';
+
+  @override
+  String get patientsWillAppearHere =>
+      'Patients will appear here when they\ngrant you access as their caregiver';
+
+  @override
+  String get howAreYouFeeling => 'How are you feeling?';
+
+  @override
+  String get describeSymptomsByVoiceOrText =>
+      'Describe your symptoms by voice or text';
+
+  @override
+  String get accountDeletedSuccessfully => 'Account deleted successfully';
+
+  @override
+  String get incorrectPassword => 'Incorrect password';
+
+  @override
+  String get pleaseLogInAgainBeforeDeletingAccount =>
+      'Please log out and log in again before deleting account';
+
+  @override
+  String get genericNameLabel => 'Generic Name:';
+
+  @override
+  String get manufacturerLabel => 'Manufacturer:';
+
+  @override
+  String get translationLabel => '[Translation]';
+
+  @override
+  String get couldNotMakeCall => 'Could not make call';
+
+  @override
+  String get resetSettingsTitle => 'Reset Settings';
+
+  @override
+  String get resetSettingsConfirmation =>
+      'Are you sure you want to reset all voice settings to defaults?';
+
+  @override
+  String get settingsResetToDefaults => 'Settings reset to defaults';
+
+  @override
+  String get resetButton => 'Reset';
+
+  @override
+  String get apiRateLimitExceeded =>
+      'API rate limit exceeded. Please try again later.';
+
+  @override
+  String get apiInitializationFailed =>
+      'API initialization failed. Please check your configuration.';
+
+  @override
+  String get apiGenericError => 'An error occurred. Please try again.';
 }

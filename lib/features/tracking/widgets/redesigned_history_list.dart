@@ -5,6 +5,7 @@ import 'package:tickdose/core/theme/app_theme.dart';
 import 'package:tickdose/features/tracking/providers/tracking_provider.dart';
 import 'package:tickdose/core/models/medicine_log_model.dart';
 import 'package:tickdose/l10n/generated/app_localizations.dart';
+import 'package:tickdose/core/widgets/standard_error_widget.dart';
 
 /// Redesigned history list with left border indicators matching the design
 class RedesignedHistoryList extends ConsumerWidget {

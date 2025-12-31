@@ -76,24 +76,20 @@ class GeminiService {
   List<SafetySetting> _getSafetySettings() {
     return [
       SafetySetting(
-        category: HarmCategory.medical,
-        threshold: HarmBlockThreshold.medium, // Block potentially harmful medical advice
+        HarmCategory.dangerousContent,
+        HarmBlockThreshold.medium, // Block dangerous content
       ),
       SafetySetting(
-        category: HarmCategory.dangerousContent,
-        threshold: HarmBlockThreshold.medium, // Block dangerous content
+        HarmCategory.harassment,
+        HarmBlockThreshold.medium, // Block harassment
       ),
       SafetySetting(
-        category: HarmCategory.harassment,
-        threshold: HarmBlockThreshold.medium, // Block harassment
+        HarmCategory.hateSpeech,
+        HarmBlockThreshold.medium, // Block hate speech
       ),
       SafetySetting(
-        category: HarmCategory.hateSpeech,
-        threshold: HarmBlockThreshold.medium, // Block hate speech
-      ),
-      SafetySetting(
-        category: HarmCategory.sexuallyExplicit,
-        threshold: HarmBlockThreshold.medium, // Block explicit content
+        HarmCategory.sexuallyExplicit,
+        HarmBlockThreshold.medium, // Block explicit content
       ),
     ];
   }
@@ -119,8 +115,10 @@ class GeminiService {
       try {
         // Use GoogleSearchRetrieval tool for real-time web search
         // This enables the model to fetch current information from Google Search
-        tools = [Tool.googleSearchRetrieval()];
-        Logger.info('Google Search grounding enabled for model: $modelName', tag: 'GeminiService');
+        // Note: Tool.googleSearchRetrieval() may not be available in this package version
+        // tools = [Tool.googleSearchRetrieval()];
+        Logger.info('Google Search grounding requested but not available in current package version', tag: 'GeminiService');
+        tools = null;
       } catch (e) {
         Logger.warn('Could not enable grounding tool: $e. Continuing without grounding.', tag: 'GeminiService');
         tools = null;
@@ -819,6 +817,58 @@ Output STRICT JSON list:
   /// Clean expired cache entries (call periodically)
   void cleanExpiredCache() {
     _cleanExpiredCache();
+  }
+
+  /// Sanitize text response by removing markdown code blocks and extra whitespace
+  String _sanitizeText(String text) {
+    if (text.isEmpty) return text;
+    
+    // Remove markdown code blocks
+    text = text.replaceAll(RegExp(r'```[\s\S]*?```'), '');
+    text = text.replaceAll(RegExp(r'`[^`]+`'), '');
+    
+    // Remove extra whitespace
+    text = text.replaceAll(RegExp(r'\n{3,}'), '\n\n');
+    text = text.trim();
+    
+    return text;
+  }
+
+  /// Validate drug interaction response structure
+  Map<String, dynamic> _validateDrugInteractionResponse(Map<String, dynamic> jsonMap) {
+    // Ensure required fields exist with defaults
+    return {
+      'hasInteractions': jsonMap['hasInteractions'] ?? false,
+      'interactions': jsonMap['interactions'] is List ? jsonMap['interactions'] : [],
+      'severity': jsonMap['severity'] ?? 'unknown',
+      'recommendations': jsonMap['recommendations'] is List ? jsonMap['recommendations'] : [],
+      'consultDoctor': jsonMap['consultDoctor'] ?? false,
+      'error': jsonMap['error'] ?? false,
+    };
+  }
+
+  /// Validate medicine details response structure
+  Map<String, dynamic> _validateMedicineDetailsResponse(Map<String, dynamic> jsonMap) {
+    return {
+      'name': jsonMap['name'] ?? '',
+      'dosage': jsonMap['dosage'] ?? '',
+      'frequency': jsonMap['frequency'] ?? '',
+      'instructions': jsonMap['instructions'] ?? '',
+      'warnings': jsonMap['warnings'] is List ? jsonMap['warnings'] : [],
+      'sideEffects': jsonMap['sideEffects'] is List ? jsonMap['sideEffects'] : [],
+    };
+  }
+
+  /// Validate symptom analysis response structure
+  Map<String, dynamic> _validateSymptomAnalysisResponse(Map<String, dynamic> jsonMap) {
+    return {
+      'analysis': jsonMap['analysis'] ?? '',
+      'possibleCauses': jsonMap['possibleCauses'] is List ? jsonMap['possibleCauses'] : [],
+      'recommendations': jsonMap['recommendations'] is List ? jsonMap['recommendations'] : [],
+      'urgency': jsonMap['urgency'] ?? 'low',
+      'consultDoctor': jsonMap['consultDoctor'] ?? false,
+      'disclaimer': jsonMap['disclaimer'] ?? 'This is not medical advice. Consult a healthcare professional.',
+    };
   }
 }
 

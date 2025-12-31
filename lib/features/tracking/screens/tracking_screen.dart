@@ -13,6 +13,7 @@ import 'package:tickdose/features/tracking/services/tracking_service.dart';
 import 'package:tickdose/features/tracking/services/pdf_service.dart';
 import 'package:tickdose/core/utils/adherence_calculator.dart';
 import 'package:tickdose/features/auth/providers/auth_provider.dart';
+import 'package:tickdose/core/widgets/standard_error_widget.dart';
 
 // Provider for tracking stats
 final trackingStatsProvider = FutureProvider<Map<String, dynamic>>((ref) async {

@@ -1881,4 +1881,195 @@ class AppLocalizationsAr extends AppLocalizations {
   String xpToNextLevel(String xp, String level) {
     return '$xp نقطة إلى المستوى $level';
   }
+
+  @override
+  String get noChatHistoryYet => 'لا يوجد تاريخ محادثة بعد';
+
+  @override
+  String get noPatientsFound => 'لم يتم العثور على مرضى';
+
+  @override
+  String get noLogsForThisDay => 'لا توجد سجلات لهذا اليوم';
+
+  @override
+  String get errorOccurredMessage => 'حدث خطأ';
+
+  @override
+  String errorWithMessage(String error) {
+    return 'خطأ: $error';
+  }
+
+  @override
+  String get somethingWentWrong => 'حدث خطأ ما';
+
+  @override
+  String get errorRecoveryMessage =>
+      'نأسف، لكن حدث خطأ. سيحاول التطبيق الاستعادة تلقائياً.';
+
+  @override
+  String get tryAgain => 'حاول مرة أخرى';
+
+  @override
+  String get profileUpdatedSuccessfully => 'تم تحديث الملف الشخصي بنجاح';
+
+  @override
+  String get enableLocationServices => 'تفعيل خدمات الموقع';
+
+  @override
+  String get locationServicesDescription =>
+      'ابحث عن الصيدليات القريبة واحصل على تذكيرات مبنية على الموقع';
+
+  @override
+  String get locationServicesDetailedDescription =>
+      'نستخدم موقعك لمساعدتك في العثور على أقرب الصيدليات وتقديم تذكيرات دقيقة للأدوية بناءً على موقعك.';
+
+  @override
+  String get enableCameraAccess => 'تفعيل الوصول إلى الكاميرا';
+
+  @override
+  String get cameraAccessDescription =>
+      'امسح ملصقات الأدوية والتقط معلومات صحية';
+
+  @override
+  String get enableMicrophoneAccess => 'تفعيل الوصول إلى الميكروفون';
+
+  @override
+  String get microphoneAccessDescription =>
+      'استخدم الأوامر الصوتية وسجل الأعراض';
+
+  @override
+  String get youCanChangeAnytimeInSettings =>
+      'يمكنك تغيير هذا في أي وقت في الإعدادات';
+
+  @override
+  String get notNow => 'ليس الآن';
+
+  @override
+  String get allow => 'السماح';
+
+  @override
+  String get today => 'اليوم';
+
+  @override
+  String get yesterday => 'أمس';
+
+  @override
+  String get noActivityForThisDate => 'لا يوجد نشاط في هذا التاريخ';
+
+  @override
+  String get open24Hours => '24/7';
+
+  @override
+  String get errorTitle => 'خطأ';
+
+  @override
+  String get pageNotFound => 'الصفحة غير موجودة';
+
+  @override
+  String todayAt(String time) {
+    return 'اليوم، $time';
+  }
+
+  @override
+  String get missedMedicationAlert => 'تنبيه جرعة فائتة';
+
+  @override
+  String patientMissedMedicationAt(
+      String patientOrUser, String medicineName, String time) {
+    return 'فوت $patientOrUser $medicineName في الساعة $time';
+  }
+
+  @override
+  String get user => 'المستخدم';
+
+  @override
+  String adherenceSummaryTitle(String type) {
+    return 'ملخص الالتزام $type';
+  }
+
+  @override
+  String adherenceSummaryBody(
+      String rate, String taken, String missed, String skipped) {
+    return 'الالتزام: $rate% | متناول: $taken | فائت: $missed | متخطى: $skipped';
+  }
+
+  @override
+  String get sideEffectAlert => 'تنبيه أثر جانبي';
+
+  @override
+  String sideEffectBody(String medicineName, String symptom, String severity) {
+    return '$medicineName: $symptom ($severity)';
+  }
+
+  @override
+  String get urgentHealthConcern => 'مشكلة صحية عاجلة';
+
+  @override
+  String get healthConcernAlert => 'تنبيه مشكلة صحية';
+
+  @override
+  String get noRemindersSet => 'لم يتم تعيين تذكيرات';
+
+  @override
+  String get noDoctorsFound => 'لم يتم العثور على أطباء';
+
+  @override
+  String get errorLoadingPatients => 'خطأ في تحميل المرضى';
+
+  @override
+  String get patientsWillAppearHere =>
+      'سيظهر المرضى هنا عندما\nيمنحونك الوصول كمقدم رعاية';
+
+  @override
+  String get howAreYouFeeling => 'كيف تشعر؟';
+
+  @override
+  String get describeSymptomsByVoiceOrText => 'صف أعراضك بالصوت أو النص';
+
+  @override
+  String get accountDeletedSuccessfully => 'تم حذف الحساب بنجاح';
+
+  @override
+  String get incorrectPassword => 'كلمة مرور غير صحيحة';
+
+  @override
+  String get pleaseLogInAgainBeforeDeletingAccount =>
+      'يرجى تسجيل الخروج وتسجيل الدخول مرة أخرى قبل حذف الحساب';
+
+  @override
+  String get genericNameLabel => 'الاسم العام:';
+
+  @override
+  String get manufacturerLabel => 'الشركة المصنعة:';
+
+  @override
+  String get translationLabel => '[ترجمة]';
+
+  @override
+  String get couldNotMakeCall => 'تعذر إجراء المكالمة';
+
+  @override
+  String get resetSettingsTitle => 'إعادة تعيين الإعدادات';
+
+  @override
+  String get resetSettingsConfirmation =>
+      'هل أنت متأكد أنك تريد إعادة تعيين جميع إعدادات الصوت إلى القيم الافتراضية؟';
+
+  @override
+  String get settingsResetToDefaults =>
+      'تم إعادة تعيين الإعدادات إلى القيم الافتراضية';
+
+  @override
+  String get resetButton => 'إعادة تعيين';
+
+  @override
+  String get apiRateLimitExceeded =>
+      'API rate limit exceeded. Please try again later.';
+
+  @override
+  String get apiInitializationFailed =>
+      'API initialization failed. Please check your configuration.';
+
+  @override
+  String get apiGenericError => 'An error occurred. Please try again.';
 }

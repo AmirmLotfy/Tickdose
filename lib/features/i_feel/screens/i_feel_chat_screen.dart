@@ -855,6 +855,7 @@ class _IFeelChatScreenState extends ConsumerState<IFeelChatScreen> {
       Logger.error('Voice input error: $e', tag: 'IFeelChat');
       setState(() => _isListening = false);
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(l10n.errorWithMessage(e.toString()))),
         );
@@ -1006,6 +1007,7 @@ class _IFeelChatScreenState extends ConsumerState<IFeelChatScreen> {
     } on ApiError catch (apiError) {
       if (mounted) {
         setState(() => _isLoading = false);
+        final l10n = AppLocalizations.of(context)!;
         final errorMessage = apiError.type.getLocalizedMessage(l10n);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(errorMessage)),
@@ -1014,6 +1016,7 @@ class _IFeelChatScreenState extends ConsumerState<IFeelChatScreen> {
     } catch (e) {
       if (mounted) {
         setState(() => _isLoading = false);
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(l10n.errorWithMessage(e.toString()))),
         );

@@ -1094,5 +1094,8 @@
   "resetSettingsTitle": "Reset Settings",
   "resetSettingsConfirmation": "Are you sure you want to reset all voice settings to defaults?",
   "settingsResetToDefaults": "Settings reset to defaults",
-  "resetButton": "Reset"
+  "resetButton": "Reset",
+  "apiRateLimitExceeded": "API rate limit exceeded. Please try again later.",
+  "apiInitializationFailed": "API initialization failed. Please check your configuration.",
+  "apiGenericError": "An error occurred. Please try again."
 }
