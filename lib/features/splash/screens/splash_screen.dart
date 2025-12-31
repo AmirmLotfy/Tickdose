@@ -163,7 +163,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen> with TickerProvider
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     
     return Scaffold(
@@ -191,11 +190,12 @@ class _SplashScreenState extends ConsumerState<SplashScreen> with TickerProvider
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24),
                           boxShadow: [
+                            // Subtle green glow instead of grey shadow
                             BoxShadow(
-                              color: AppColors.shadowColor(context).withValues(alpha: 0.2),
-                              blurRadius: 24,
-                              spreadRadius: 0,
-                              offset: const Offset(0, 8),
+                              color: AppColors.primaryGreen.withValues(alpha: 0.15),
+                              blurRadius: 20,
+                              spreadRadius: 2,
+                              offset: const Offset(0, 4),
                             ),
                           ],
                         ),

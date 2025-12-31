@@ -80,24 +80,24 @@ class _IFeelVoiceScreenState extends ConsumerState<IFeelVoiceScreen>
       await _elevenLabs.initialize();
       Logger.info('ElevenLabs service initialized');
       
+      // Try to get voices - if API key is not configured, this will return empty list silently
       final voices = await _elevenLabs.getAvailableVoices();
       if (voices.isNotEmpty) {
         setState(() {
           _selectedVoiceId = voices.first.id;
         });
         Logger.info('Selected voice: ${voices.first.name}');
+      } else {
+        Logger.info('No voices available - voice features may be disabled if API key is not configured', tag: 'IFeelVoice');
       }
       
       await _speech.initialize();
       Logger.info('Speech service initialized');
       
     } catch (e) {
-      Logger.error('Failed to initialize services: $e');
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Initialization error: $e')),
-        );
-      }
+      // Only show error for critical failures, not for missing API keys
+      Logger.warn('Service initialization warning: $e', tag: 'IFeelVoice');
+      // Don't show error banner - voice features are optional
     }
   }
   

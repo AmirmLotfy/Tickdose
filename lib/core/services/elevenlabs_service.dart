@@ -137,6 +137,12 @@ class ElevenLabsService {
     try {
       _ensureInitialized();
       
+      // If API key is empty, return empty list silently (voice features are optional)
+      if (_apiKey.isEmpty) {
+        Logger.info('ElevenLabs API key not configured - voice features disabled', tag: 'ElevenLabs');
+        return [];
+      }
+      
       // Return cached voices if available and valid
       if (!forceRefresh && _cachedVoices.isNotEmpty && _cacheTime != null) {
         if (DateTime.now().difference(_cacheTime!) < cacheValidDuration) {
@@ -174,21 +180,22 @@ class ElevenLabsService {
         Logger.info('Fetched ${_cachedVoices.length} voices from ElevenLabs');
         return _cachedVoices;
       } else if (response.statusCode == 401) {
-        Logger.error('ElevenLabs authentication failed when fetching voices', tag: 'ElevenLabs');
-        throw Exception('Voice service authentication failed. Please check API configuration.');
+        Logger.warn('ElevenLabs authentication failed when fetching voices - API key may be invalid', tag: 'ElevenLabs');
+        // Return empty list instead of throwing error - voice features are optional
+        return [];
       } else if (response.statusCode >= 500) {
         Logger.error('ElevenLabs server error when fetching voices: ${response.statusCode}', tag: 'ElevenLabs');
-        throw ApiError(ApiErrorType.serverError, 'Server error: ${response.statusCode}');
+        // Return empty list on server errors - voice features are optional
+        return [];
       } else {
-        Logger.error('Failed to fetch voices: ${response.statusCode} - ${response.body}', tag: 'ElevenLabs');
-        throw ApiError(ApiErrorType.unknownError, 'Request failed: ${response.statusCode}');
+        Logger.warn('Failed to fetch voices: ${response.statusCode} - returning empty list', tag: 'ElevenLabs');
+        // Return empty list instead of throwing error
+        return [];
       }
-    } on ApiError {
-      rethrow; // Re-throw ApiError as-is
     } catch (e) {
-      Logger.error('Error fetching voices: $e', tag: 'ElevenLabs');
-      // Convert to ApiError for consistent error handling
-      throw ApiError.fromException(e);
+      Logger.warn('Error fetching voices: $e - voice features will be disabled', tag: 'ElevenLabs');
+      // Return empty list instead of throwing error - voice features are optional
+      return [];
     }
   }
   
