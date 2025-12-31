@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tickdo - Routine Setup</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#162b1b", // Slightly lighter than bg-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Simulating iOS native-like scroll wheel feel */
+        .time-scroller {
+            mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-black">
+<div class="relative mx-auto flex h-screen max-w-md flex-col overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Top Bar -->
+<header class="flex items-center justify-between p-4 pt-6 pb-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="flex-1 text-center text-lg font-bold leading-tight tracking-tight">Routine Setup</h2>
+<button class="flex items-center justify-end px-2 text-primary text-base font-medium leading-normal hover:opacity-80 transition-opacity">
+                Skip
+            </button>
+</header>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 px-6 pt-2 pb-4">
+<div class="flex justify-between items-end">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Step 3 of 5</p>
+<span class="text-xs font-semibold text-primary">60% Completed</span>
+</div>
+<div class="h-1.5 w-full rounded-full bg-slate-200 dark:bg-surface-dark overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500 ease-out" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Main Content Scroll Area -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24">
+<!-- Headline & Body -->
+<div class="py-4">
+<h1 class="text-3xl font-bold leading-tight tracking-tight mb-3">Define your active hours</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed">
+                    Tickdo will only send reminders during your wake window to sync with your circadian rhythm.
+                </p>
+</div>
+<!-- Visualization / Graphic -->
+<div class="relative my-6 flex justify-center items-center">
+<!-- Abstract Day/Night Cycle Graphic -->
+<div class="relative w-48 h-48 rounded-full border-4 border-surface-dark dark:border-white/5 flex items-center justify-center bg-gradient-to-b from-primary/10 to-transparent">
+<div class="absolute inset-0 rounded-full border-t-4 border-l-4 border-primary transform -rotate-45 opacity-80"></div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-4xl mb-1">bedtime</span>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-widest">Sleep Goal</p>
+<p class="text-2xl font-bold text-white">8h 30m</p>
+</div>
+</div>
+</div>
+<!-- Input Cards Container -->
+<div class="flex flex-col gap-4">
+<!-- Wake Up Card -->
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark p-1 border border-transparent hover:border-primary/30 transition-all cursor-pointer shadow-sm">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-100 dark:bg-orange-500/20 text-orange-500 dark:text-orange-400">
+<span class="material-symbols-outlined" style="font-size: 28px;">wb_sunny</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Wake Up</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">07:00 <span class="text-base font-medium text-slate-400 dark:text-slate-500">AM</span></p>
+</div>
+</div>
+<button class="h-10 w-10 rounded-full flex items-center justify-center text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+</div>
+<!-- Bedtime Card (Active State Simulation) -->
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-surface-dark p-1 ring-2 ring-primary shadow-lg shadow-primary/10">
+<div class="flex items-center justify-between p-4 pb-2">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-100 dark:bg-indigo-500/20 text-indigo-500 dark:text-indigo-400">
+<span class="material-symbols-outlined" style="font-size: 28px;">dark_mode</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-medium text-primary">Bedtime</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">10:30 <span class="text-base font-medium text-slate-400 dark:text-slate-500">PM</span></p>
+</div>
+</div>
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</div>
+<!-- Inline Time Picker Visualization -->
+<div class="flex h-32 w-full items-center justify-center gap-4 bg-slate-50/50 dark:bg-black/20 rounded-xl mt-2 mb-1 relative overflow-hidden">
+<!-- Selection Highlight Bar -->
+<div class="absolute h-10 w-[80%] bg-primary/10 rounded-lg pointer-events-none z-0"></div>
+<!-- Hours Column -->
+<div class="flex flex-col items-center gap-2 h-full overflow-hidden time-scroller z-10 w-16">
+<span class="text-2xl text-slate-300 dark:text-slate-600 font-medium opacity-40">09</span>
+<span class="text-3xl text-slate-900 dark:text-white font-bold py-1">10</span>
+<span class="text-2xl text-slate-300 dark:text-slate-600 font-medium opacity-40">11</span>
+</div>
+<span class="text-2xl font-bold text-slate-300 dark:text-slate-600 pb-1">:</span>
+<!-- Minutes Column -->
+<div class="flex flex-col items-center gap-2 h-full overflow-hidden time-scroller z-10 w-16">
+<span class="text-2xl text-slate-300 dark:text-slate-600 font-medium opacity-40">29</span>
+<span class="text-3xl text-slate-900 dark:text-white font-bold py-1">30</span>
+<span class="text-2xl text-slate-300 dark:text-slate-600 font-medium opacity-40">31</span>
+</div>
+<!-- AM/PM Column -->
+<div class="flex flex-col items-center gap-2 h-full overflow-hidden time-scroller z-10 w-12 ml-2">
+<span class="text-base text-slate-300 dark:text-slate-600 font-medium opacity-0">AM</span>
+<span class="text-lg text-primary font-bold py-2">PM</span>
+<span class="text-base text-slate-300 dark:text-slate-600 font-medium opacity-40">AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Bar -->
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark from-80% to-transparent pt-12">
+<button class="w-full rounded-xl bg-primary py-4 text-center font-bold text-background-dark shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group">
+                Continue
+                <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

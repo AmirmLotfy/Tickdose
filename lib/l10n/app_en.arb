@@ -1,0 +1,1098 @@
+{
+  "appTitle": "TICKDOSE",
+  "yesAction": "Yes",
+  "noAction": "No",
+  "refillReminderTitle": "Refill Reminder",
+  "refillReminderBody": "It's time to refill your {medicineName}.",
+  "@refillReminderBody": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "home": "Home",
+  "reminders": "Reminders",
+  "tracking": "Tracking",
+  "pharmacy": "Pharmacy",
+  "profile": "Profile",
+  "settings": "Settings",
+  "language": "Language",
+  "settingsLanguage": "Language",
+  "settingsSoundEffects": "Sound Effects",
+  "settingsNotifications": "Notifications",
+  "settingsDarkMode": "Dark Mode",
+  "settingsTitle": "Settings",
+  "onboardingTitle1": "Never Miss Your Medicine",
+  "onboardingDesc1": "Get timely reminders for all your medications and keep your health on track.",
+  "onboardingTitle2": "Track Your Adherence",
+  "onboardingDesc2": "Monitor your progress with detailed statistics and history logs.",
+  "onboardingTitle3": "Find Nearby Pharmacies",
+  "onboardingDesc3": "Locate the nearest pharmacies and check their availability instantly.",
+  "getStarted": "Get Started",
+  "skip": "Skip",
+  "next": "Next",
+  "splashTagline": "Never Miss Your Medicine",
+  "reminderTitle": "Time to take your medicine",
+  "reminderBody": "Take {medicineName} now.",
+  "@reminderBody": {
+    "placeholders": {
+      "dosage": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "voiceReminderStandard": "It's time to take {dosage} of {medicineName}. Please take your medication now to stay on track with your health goals.",
+  "@voiceReminderStandard": {
+    "placeholders": {
+      "dosage": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "voiceReminderMeal": "It's {mealTime} time! Take {dosage} of {medicineName} WITH FOOD. Please take your medication now to stay on track with your health goals.",
+  "@voiceReminderMeal": {
+    "placeholders": {
+      "mealTime": {
+        "type": "String"
+      },
+      "dosage": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "goodMorning": "Good morning!",
+  "goodAfternoon": "Good afternoon!",
+  "goodEvening": "Good evening!",
+  "hello": "Hello!",
+
+  "medicineDetailsTitle": "Medicine Details",
+  "deleteMedicineTitle": "Delete Medicine",
+  "deleteMedicineQuestion": "Delete Medicine?",
+  "deleteMedicineContent": "This action cannot be undone.",
+  "dialogCancel": "Cancel",
+  "dialogDelete": "Delete",
+  "tabDetails": "Details",
+  "tabSideEffects": "Side Effects",
+  "tabInteractions": "Interactions",
+  "logSideEffect": "Log Side Effect",
+  "genericName": "Generic: {name}",
+  "@genericName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "imageNotAvailable": "Image not available",
+  "dosageInfo": "Dosage Information",
+  "strengthValue": "Strength: {strength}",
+  "@strengthValue": {
+    "placeholders": {
+      "strength": {
+        "type": "String"
+      }
+    }
+  },
+  "formValue": "Form: {form}",
+  "@formValue": {
+    "placeholders": {
+      "form": {
+        "type": "String"
+      }
+    }
+  },
+  "dosageValue": "Dosage: {dosage}",
+  "@dosageValue": {
+    "placeholders": {
+      "dosage": {
+        "type": "String"
+      }
+    }
+  },
+  "frequencyValue": "Frequency: {frequency}",
+  "@frequencyValue": {
+    "placeholders": {
+      "frequency": {
+        "type": "String"
+      }
+    }
+  },
+  "manufacturerInfo": "Manufacturer Info",
+  "manufacturerValue": "Manufacturer: {name}",
+  "@manufacturerValue": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "batchValue": "Batch: {batch}",
+  "@batchValue": {
+    "placeholders": {
+      "batch": {
+        "type": "String"
+      }
+    }
+  },
+  "expiresValue": "Expires: {date}",
+  "@expiresValue": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "prescriptionDetails": "Prescription Details",
+  "prescribedByValue": "Prescribed by: {name}",
+  "@prescribedByValue": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dateValue": "Date: {date}",
+  "@dateValue": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "knownSideEffects": "Known Side Effects",
+  "remindersLabel": "Reminders",
+  "refillReminderValue": "Refill reminder: {days} days before",
+  "@refillReminderValue": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "notesLabel": "Notes",
+  "expiringSoonWarning": "This medicine is expiring soon!",
+  "expiredWarning": "This medicine has expired!",
+  "interactionsTitle": "Medicine Interactions",
+  "noInteractions": "No known interactions found.",
+  "healthProfileCheck": "Health Profile Check",
+  "safeForHealth": "Safe for your health profile",
+  "foodInteractionsTitle": "Food Interactions",
+  "noFoodInteractions": "No known food interactions.",
+  "myMedicinesTitle": "My Medicines",
+  "noMedicinesAdded": "No medicines added yet",
+  "helloUser": "Hello, {name}",
+  "@helloUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeTagline": "Let's stay healthy today!",
+  "todaysMedicines": "Today's Medicines",
+  "seeAll": "See All",
+  "noMedicinesToday": "No medicines scheduled for today",
+  "addReminder": "Add Reminder",
+  "editReminder": "Edit Reminder",
+  "errorLoadingReminders": "Error loading reminders",
+  "markedAsTaken": "✓ Marked {medicine} as taken",
+  "@markedAsTaken": {
+    "placeholders": {
+      "medicine": {
+        "type": "String"
+      }
+    }
+  },
+  "skippedMedicine": "Skipped {medicine}",
+  "@skippedMedicine": {
+    "placeholders": {
+      "medicine": {
+        "type": "String"
+      }
+    }
+  },
+  "takeAction": "Take",
+  "skipAction": "Skip",
+
+  "adherenceLabel": "Adherence",
+  "streakLabel": "Streak",
+  "streakDays": "{days} days",
+  "@streakDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "iFeelTitle": "I Feel",
+  "iFeelSubtitle": "Check symptoms - Text or Voice",
+
+  "trackingTitle": "Tracking",
+  "analyzingReport": "Generating PDF report...",
+  "reportSuccess": "PDF report generated successfully!",
+  "reportError": "Error generating PDF: {error}",
+  "pleaseLogin": "Please log in to continue",
+  "medicineAddedSuccessfully": "Medicine added successfully!",
+  "saving": "Saving...",
+  "@reportError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "historyTitle": "History",
+  "profileTitle": "Profile",
+  "editProfile": "Edit Profile",
+  "settingsTitle": "Settings",
+  "notificationsLabel": "Notifications",
+  "notificationsSubtitle": "Receive medication reminders",
+  "languageLabel": "Language",
+  "privacyPolicyLabel": "Privacy Policy",
+  "darkModeLabel": "Dark Mode",
+  "darkModeSubtitle": "Use dark theme",
+  "accountTitle": "Account",
+  "caregiversLabel": "Caregivers",
+  "acceptInvitationLabel": "Accept Invitation",
+  "changePasswordLabel": "Change Password",
+  "deleteAccountLabel": "Delete Account",
+  "logoutLabel": "Log Out",
+
+  "findPharmacyTitle": "Find Pharmacy",
+  "locationAccessRequired": "Location Access Required",
+  "locationAccessRationale": "Enable location services to find nearby pharmacies",
+  "enableLocationAction": "Enable Location",
+  "pharmacyError": "Error: {error}",
+  "@pharmacyError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "noPharmaciesFound": "No pharmacies found nearby",
+  "pharmaciesFoundCount": "{count} found",
+  "@pharmaciesFoundCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "directionsAction": "Directions",
+  "callAction": "Call",
+  "websiteAction": "Website",
+  "showMapAction": "Show Map",
+  "showListAction": "Show List",
+
+  "myDoctorsTitle": "My Doctors",
+  "addDoctorTitle": "Add Doctor",
+  "deleteDoctorTitle": "Delete Doctor?",
+  "deleteDoctorContent": "Are you sure you want to remove this doctor from your list?",
+  "cancelButton": "Cancel",
+  "deleteButton": "Delete",
+  "pleaseLogIn": "Please log in",
+  "noDoctorsAdded": "No doctors added yet",
+  "tapToAddDoctor": "Tap \"Add Doctor\" to get started",
+  "doctorNameLabel": "Doctor Name",
+  "doctorNameHint": "e.g. Dr. Smith",
+  "doctorNameRequired": "Please enter a name",
+  "specializationLabel": "Specialization",
+  "specializationRequired": "Please select a specialization",
+  "phoneNumberLabel": "Phone Number",
+  "phoneRequired": "Please enter a valid phone number",
+  "doctorAddedSuccess": "Doctor added successfully",
+  "doctorAddError": "Error adding doctor: {error}",
+  "@doctorAddError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "specializationGeneral": "General Practitioner",
+  "specializationCardiologist": "Cardiologist",
+  "specializationDermatologist": "Dermatologist",
+  "specializationNeurologist": "Neurologist",
+  "specializationPsychiatrist": "Psychiatrist",
+  "specializationEndocrinologist": "Endocrinologist",
+  "specializationPediatrician": "Pediatrician",
+  "specializationSurgeon": "Surgeon",
+  "specializationDentist": "Dentist",
+  "specializationOther": "Other",
+
+  "caregiverDashboardTitle": "Caregiver Dashboard",
+  "patientMedicationsTitle": "Patient Medications",
+  "readOnlyView": "Read-only view",
+  "todaysMedicationsTitle": "Today''s Medications",
+  "noMedicationsToday": "No medications scheduled for today",
+  "sendVoiceReminderTooltip": "Send voice reminder",
+  "voiceReminderSent": "Voice reminder sent",
+  "allMedicationsTitle": "All Medications",
+  "noMedicationsAdded": "No medications added",
+  "errorLabel": "Error: {error}",
+  "@errorLabel": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+
+  "acceptInvitationTitle": "Accept Invitation",
+  "invitationCodeLabel": "Invitation Code",
+  "enterInvitationCodePrompt": "Enter 64-character code",
+  "invitationCodeInputLabel": "Enter Invitation Code",
+  "invitationCodeInputDescription": "Enter the invitation code you received from the patient to become their caregiver.",
+  "validateCodeButton": "Validate Code",
+  "acceptInvitationButton": "Accept Invitation",
+  "declineButton": "Decline",
+  "pleaseLogInToAccept": "Please log in first to accept an invitation",
+  "invitationAcceptedSuccess": "Invitation accepted successfully!",
+  "invitationAcceptedView": "Invitation accepted! You can now view patient medications.",
+  "invitationFailed": "Failed to accept invitation. Code may be invalid or expired.",
+  "invitationError": "Error accepting invitation. Please try again.",
+  "invalidInvitationFormat": "Invalid invitation code format",
+  "invitationNotFound": "Invitation code not found",
+  "invitationUsed": "This invitation has already been used",
+  "invitationExpired": "This invitation has expired",
+  "loginRequiredNote": "Note: You need to be logged in to accept an invitation.",
+  "howToFindCodeTitle": "How to find your invitation code:",
+  "howToFindCodeStep1": "1. Ask the patient to share the invitation code",
+  "howToFindCodeStep2": "2. Or scan the QR code they provided",
+  "howToFindCodeStep3": "3. Enter the code in the field above",
+  "invalidInvitationTitle": "Invalid Invitation",
+  "invalidInvitationMessage": "This invitation is invalid or has expired.",
+  "invitationUsedTitle": "Invitation Used",
+  "invitationUsedMessage": "This invitation has already been used.",
+  "invitedTitle": "You've been invited!",
+  "invitedMessage": "You've been invited to help manage medications.",
+  "permissionsTitle": "You will have access to:",
+  
+  "invitationLinkCopied": "Invitation link copied to clipboard",
+  "invitationCodeCopied": "Invitation code copied to clipboard",
+  "shareInvitationText": "You've been invited to be a caregiver on Tickdose!\n\nClick here to accept: {url}\n\nOr enter this code in the app: {token}",
+  "@shareInvitationText": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      },
+      "token": {
+        "type": "String"
+      }
+    }
+  },
+  "shareInvitationSubject": "Caregiver Invitation from Tickdose",
+  "errorSharing": "Error sharing: {error}",
+  "@errorSharing": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitationTitle": "Invitation",
+  "shareInvitationTitle": "Share Invitation",
+  "shareInvitationSubtitle": "Share this invitation with {email}",
+  "@shareInvitationSubtitle": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "scanQrCodeTitle": "Scan QR Code",
+  "scanQrCodeDescription": "Caregiver can scan this QR code with their phone camera or Tickdose app",
+  "invitationLinkTitle": "Invitation Link",
+  "copyLinkTooltip": "Copy link",
+  "ifQrNotWorking": "If QR code doesn't work, caregiver can enter this code manually:",
+  "copyCodeTooltip": "Copy code",
+  "shareInvitationButton": "Share Invitation",
+  "howToShareTitle": "How to share:",
+  "howToShareStep1Title": "1. Show QR code to caregiver",
+  "howToShareStep1Desc": "They can scan it with their phone camera",
+  "howToShareStep2Title": "2. Share the link",
+  "howToShareStep2Desc": "Send via message, email, or any messaging app",
+  "howToShareStep3Title": "3. Share the code",
+  "howToShareStep3Desc": "Caregiver can enter the code manually in the app",
+
+  "microphonePermissionRequired": "Microphone permission required",
+  "recordingError": "Error starting recording: {error}",
+  "@recordingError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "voiceMessageSaved": "Voice message saved!",
+  "recordVoiceMessageTitle": "Record Voice Message",
+  "voiceMessageFor": "Voice Message for {medicineName}",
+  "@voiceMessageFor": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "recordVoiceMessageDescription": "Record a personal voice reminder (up to 15 seconds)",
+  "startRecordingButton": "Start Recording",
+  "stopRecordingButton": "Stop Recording",
+  "saveVoiceMessageButton": "Save Voice Message",
+
+  "generatingPdfMessage": "Generating PDF report for {month}...",
+  "@generatingPdfMessage": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfGeneratedSuccess": "Report generated! Saved to {path}",
+  "@pdfGeneratedSuccess": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfGenerationError": "Error generating report: {error}",
+  "@pdfGenerationError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "exportPdfButton": "Export PDF Report",
+  "userDataNotAvailable": "User data not available",
+
+  "welcomeBack": "Welcome Back!",
+  "signInContinue": "Sign in to continue",
+  "emailLabel": "Email",
+  "emailValidation": "Please enter your email",
+  "passwordLabel": "Password",
+  "passwordValidation": "Please enter your password",
+  "forgotPasswordButton": "Forgot Password?",
+  "loginButton": "Login",
+  "continueGoogle": "Continue with Google",
+  "continueApple": "Continue with Apple",
+  "useBiometricLogin": "Use Biometric Login",
+  "biometricNotAvailable": "Biometric authentication not available on this device",
+  "biometricEnablePrompt": "Please login normally first to enable biometric login",
+  "biometricAuthFailed": "Biometric authentication failed",
+  "biometricLoginFailed": "Biometric login failed: {error}",
+  "@biometricLoginFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "noAccountPrompt": "Don't have an account? ",
+  "signUpButton": "Sign Up",
+  "createAccountTitle": "Create Account",
+  "nameLabel": "Name",
+  "confirmPasswordLabel": "Confirm Password",
+  "alreadyHaveAccount": "Already have an account? ",
+  "signInButton": "Sign In",
+
+  "startJourneySubtitle": "Start your journey to better health",
+  "termsAgreementValidation": "Please agree to the Terms of Service and Privacy Policy",
+  "registrationSuccess": "Registration successful! Please verify your email.",
+  "nameHint": "Enter your full name",
+  "nameValidation": "Please enter your name",
+  "emailHint": "Enter your email",
+  "emailInvalid": "Please enter a valid email",
+  "passwordHint": "Create a strong password",
+  "passwordEmpty": "Please enter a password",
+  "confirmPasswordHint": "Confirm your password",
+  "passwordsDoNotMatch": "Passwords do not match",
+  "termsAgreementPrefix": "I agree to the ",
+  "termsOfService": "Terms of Service",
+  "termsAgreementAnd": " and ",
+  "privacyPolicy": "Privacy Policy",
+  "orSeparator": "OR",
+  "loginLink": "Login",
+
+  "forgotPasswordTitle": "Forgot Password",
+  "forgotPasswordSubtitle": "Enter your email to receive a password reset link",
+  "sendResetLinkButton": "Send Reset Link",
+  "passwordResetSent": "Password reset email sent! Please check your inbox.",
+  "resetPasswordButton": "Reset Password",
+  "emailVerifiedSuccess": "Email verified successfully!",
+  "emailNotVerifiedYet": "Email not verified yet. Please check your inbox.",
+  "resendEmailButton": "Resend Email",
+  "verificationEmailSent": "Verification email sent! Please check your inbox.",
+  "verifyEmailTitle": "Verify Your Email",
+  "verifyEmailSubtitle": "We have sent a verification link to your email address. Please verify to continue.",
+  "iHaveVerifiedButton": "I have verified",
+
+  "speechNotAvailable": "Speech recognition not available",
+  "tapToAddImage": "Tap to add medicine image",
+  "cameraLabel": "Camera",
+  "galleryLabel": "Gallery",
+  "medicineNameLabel": "Medicine Name",
+  "medicineNameHint": "Enter medicine name",
+  "medicineNameRequired": "Please enter medicine name",
+  "strengthLabel": "Strength (Optional)",
+  "strengthHint": "e.g., 500mg",
+  "dosageLabel": "Dosage",
+  "dosageHint": "e.g., 1 tablet",
+  "dosageRequired": "Please enter dosage",
+  "formLabel": "Form",
+  "formHint": "Select form",
+  "frequencyLabel": "Frequency",
+  "frequencyHint": "Select frequency",
+  "prescribingDoctorLabel": "Prescribing Doctor (Optional)",
+  "noneOption": "None",
+  "selectDoctorHint": "Select Doctor",
+  "doctorLoadError": "Error loading doctors: {error}",
+  "@doctorLoadError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "refillReminderLabel": "Refill Reminder",
+  "refillReminderOff": "Off",
+  "refillReminderDaysBefore": "{days} days before",
+  "@refillReminderDaysBefore": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "sideEffectsLabel": "Known Side Effects",
+  "addSideEffectHint": "Add side effect (e.g. Drowsiness)",
+  "notesLabel": "Notes",
+  "notesHint": "Add notes...",
+  "addMedicineButton": "Add Medicine",
+  "updateMedicineButton": "Update Medicine",
+  "addMedicineImageTitle": "Add Medicine Image",
+  "chooseImageSource": "Choose image source",
+  "captureFailed": "Failed to capture image: {error}",
+  "@captureFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "pickFailed": "Failed to pick image: {error}",
+  "@pickFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "extractedText": "Extracted: {text}",
+  "@extractedText": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "extractFailed": "Could not extract text. Please enter details manually.",
+  "extractionError": "Text extraction failed. Please enter manually.",
+  "medicineAutoName": "Medicine ({form}) - {time}",
+  "@medicineAutoName": {
+    "placeholders": {
+      "form": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "tabletForm": "Tablet",
+  "capsuleForm": "Capsule",
+  "liquidForm": "Liquid",
+  "injectionForm": "Injection",
+  "dailyFrequency": "Daily",
+  "twiceDailyFrequency": "Twice Daily",
+  "threeTimesDailyFrequency": "Three Times Daily",
+  "weeklyFrequency": "Weekly",
+  "asNeededFrequency": "As Needed"
+,
+  "selectLanguage": "Select Language",
+  "english": "English",
+  "arabic": "Arabic",
+  "theme": "Theme",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "aiHealthAssistant": "AI Health Assistant",
+  "typeMessage": "Type a message...",
+  "analyze": "Analyze",
+  "symptoms": "Symptoms",
+  "medicines": "Medicines",
+  "addMedicine": "Add Medicine",
+  "save": "Save",
+  "cancel": "Cancel",
+  "aiEnrichmentInProgress": "AI is gathering medicine details...",
+  "aiEnrichmentSuccess": "Medicine details enriched by AI!",
+  "commonUsesLabel": "Common Uses:",
+  "mealBreakfast": "Breakfast",
+  "mealLunch": "Lunch",
+  "mealDinner": "Dinner",
+  "mealSnack": "Snack",
+  "notificationSettings": "Notification Settings",
+  "privacyPolicyTitle": "Privacy Policy",
+  "termsOfServiceTitle": "Terms of Service",
+  "aboutTitle": "About",
+  "aboutSubtitle": "App version and information",
+  "helpSupportTitle": "Help & Support",
+  "helpSupportSubtitle": "FAQs and contact",
+  "testCrashTitle": "Test Crash",
+  "testCrashSubtitle": "Force a crash (Dev only)",
+  "manageNotificationsSubtitle": "Manage notification preferences",
+  "readPrivacyPolicySubtitle": "Read our privacy policy",
+  "readTermsSubtitle": "Read our terms of service",
+  "showFavoritesTooltip": "Show Favorites",
+  "showAllTooltip": "Show All",
+  "noFavoritePharmacies": "No favorite pharmacies found",
+  "timezoneUpdatedTitle": "Timezone Updated",
+  "timezoneUpdatedBody": "Your reminders have been updated to {newTimezone}",
+  "logInTitle": "Log In",
+  "newHere": "New here?",
+  "createAccount": "Create an Account",
+  "orContinueWith": "Or continue with",
+  "joinTickdo": "Join Tickdose",
+  "startManagingHealth": "Start managing your health journey today.",
+  "rememberPassword": "Remember your password?",
+  "createNewPassword": "Create new password",
+  "passwordDifferent": "Your new password must be different from previous used passwords.",
+  "newPassword": "New Password",
+  "confirmNewPassword": "Confirm New Password",
+  "passwordRequirements": "Password requirements:",
+  "atLeast8Characters": "At least 8 characters",
+  "containsNumber": "Contains a number",
+  "containsSymbol": "Contains a symbol",
+  "passwordResetSuccess": "Password reset successfully",
+  "defineActiveHours": "Define your active hours",
+  "wakeWindowReminders": "Tickdose will only send reminders during your wake window to sync with your circadian rhythm.",
+  "wakeUp": "Wake Up",
+  "bedtime": "Bedtime",
+  "continueButton": "Continue",
+  "routineSetup": "Routine Setup",
+  "medicalBackground": "Medical Background",
+  "aiAnalyzeSymptoms": "This helps our AI analyze your symptoms more accurately and provide personalized insights.",
+  "doYouHaveAllergies": "Do you have any allergies?",
+  "currentTimeDetected": "CURRENT TIME DETECTED",
+  "preferences": "Preferences",
+  "privacySecurity": "Privacy & Security",
+  "deleteAccountConfirmation": "Are you sure you want to delete your account? This action cannot be undone.",
+  "feelingUnwell": "Feeling unwell?",
+  "logSideEffectButton": "Log Side Effect",
+  "supplyTracking": "Supply Tracking",
+  "requestRefill": "Request Refill",
+  "remaining": "Remaining",
+  "passwordWeak": "Weak",
+  "passwordMedium": "Medium",
+  "passwordStrong": "Strong",
+  "passwordVeryStrong": "Very Strong",
+  "medicationReminders": "Medication Reminders",
+  "refillAlerts": "Refill Alerts",
+  "healthAnalysis": "Health Analysis",
+  "selectTimezone": "Select Timezone",
+  "noKnownAllergies": "I have no known allergies",
+  "chronicConditions": "Chronic Conditions",
+  "logTaken": "Log Taken",
+  "interactionWarning": "Interaction Warning",
+  "noInteractionsDetected": "No Interactions Detected",
+  "interactionsFound": "Interactions Found",
+  "proceedAnyway": "Proceed Anyway",
+  "thisMedicineInteracts": "This medicine interacts with your current medications",
+  "active": "ACTIVE",
+  "nextDose": "NEXT DOSE",
+  "noUpcomingDose": "No upcoming dose",
+  "symptomCheck": "SYMPTOM CHECK",
+  "aboutThisDrug": "About this drug",
+  "readFullMonograph": "Read full monograph",
+  "monographTitle": "{medicineName} Monograph",
+  "@monographTitle": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "close": "Close",
+  "editSchedule": "Edit Schedule",
+  "editMedicine": "Edit Medicine",
+  "shareMedicine": "Share Medicine",
+  "iFeelAssistant": "I Feel Assistant",
+  "online": "ONLINE",
+  "activeContext": "ACTIVE CONTEXT",
+  "noActiveMedications": "No active medications",
+  "viewMeds": "View Meds",
+  "iFeelAI": "I Feel AI",
+  "describeSymptoms": "Describe your symptoms to check for side effects",
+  "logSymptom": "Log \"Dizziness\"",
+  "reportSideEffect": "Report Side Effect",
+  "callDoctor": "Call Doctor",
+  "patient": "Patient",
+  "heartRate": "HEART RATE",
+  "voiceReminder": "Voice Reminder",
+  "recordNudge": "Record Nudge",
+  "viewFullList": "View Full List",
+  "noRemindersToday": "No reminders scheduled for today",
+  "overdue": "Overdue",
+  "pending": "Pending",
+  "pillList": "Pill List",
+  "refills": "Refills",
+  "barcodeScanned": "Barcode Scanned: {code}",
+  "@barcodeScanned": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "noBarcodeFound": "No barcode found in image",
+  "scanBarcode": "Scan Barcode",
+  "selectUnit": "Select Unit",
+  "schedule": "Schedule",
+  "notifyLowStock": "Notify when stock is low",
+  "translating": "Translating... / جاري الترجمة...",
+  "scanLabel": "Scan Label",
+  "takePhoto": "Take Photo",
+  "upload": "Upload",
+  "interactionCheckActive": "Interaction Check Active",
+  "interactions": "Interactions",
+  "monograph": "Monograph",
+  "viewDetails": "View Details",
+  "drops": "Drops",
+  "loadingMedicines": "Loading medicines...",
+  "apiKeyNotConfigured": "API key not configured",
+  "loadingSchedule": "Loading schedule...",
+  "more": "More",
+  "reminderSchedule": "Reminder Schedule",
+  "inactive": "Inactive",
+  "yourPrivacyMatters": "Your Privacy Matters",
+  "privacyPolicyIntro": "At TICKDOSE, we are committed to protecting your personal information and your right to privacy.",
+  "whatDataWeCollect": "1. What Data We Collect",
+  "whatDataWeCollectContent": "We collect information that you provide directly to us, including:\n\n• Medicines: Names, dosages, and schedules you add.\n• Reminders: Times and frequencies for your notifications.\n• Location: Used only when you access the Pharmacy Finder feature.\n• Health Profile: Conditions, allergies, and other health data you choose to save.\n• Usage Data: Anonymous analytics to help us improve the app.",
+  "howWeUseYourData": "2. How We Use Your Data",
+  "howWeUseYourDataContent": "We use the information we collect to:\n\n• Send you timely medication reminders and notifications.\n• Track your medication adherence and provide statistics.\n• Improve app features and user experience.\n• Analyze usage patterns to fix bugs and enhance performance.\n• Comply with legal obligations.",
+  "dataStorageSecurity": "3. Data Storage & Security",
+  "dataStorageSecurityContent": "• All your personal data is stored securely in Google Firebase.\n• Data is encrypted in transit using HTTPS.\n• We implement robust security measures to protect your information.\n• We perform regular backups to prevent data loss.\n• We are committed to GDPR compliance and data protection standards.",
+  "yourRights": "4. Your Rights",
+  "yourRightsContent": "You have the following rights regarding your data:\n\n• Access: You can view your data within the app at any time.\n• Export: You can request a copy of your data.\n• Deletion: You can delete your account and all associated data via the Settings menu.\n• Opt-out: You can opt-out of anonymous analytics tracking.",
+  "thirdPartyServices": "5. Third-Party Services",
+  "thirdPartyServicesContent": "We use trusted third-party services to operate the app:\n\n• Google & Apple: For secure authentication.\n• Firebase: For secure cloud database and storage.\n• Google Maps / OpenStreetMap: For the pharmacy finder feature.\n• Google Generative AI (Gemini): For the \"I Feel\" symptom checker and medication information enrichment (optional, can be disabled in settings).",
+  "aiUsageDisclosure": "AI Usage Disclosure",
+  "aiUsageDisclosureContent": "TICKDOSE uses Google Generative AI (Gemini) for the following features:\n\n• Symptom Analysis: The \"I Feel\" feature uses AI to analyze your symptoms and provide general health information. This is NOT medical diagnosis.\n• Medication Enrichment: AI may be used to enrich medication information when you add medicines.\n\nIMPORTANT:\n• AI features are OPTIONAL and can be disabled in Settings.\n• AI responses are for informational purposes only and are NOT a substitute for professional medical advice.\n• Your health data is processed securely and is not used to train AI models.\n• You can opt-out of AI features at any time.\n• AI usage requires internet connection.\n\nFor more details, see our Privacy Policy.",
+  "aiUsageOptIn": "Enable AI Features",
+  "aiUsageOptOut": "Disable AI Features",
+  "aiUsageStatus": "AI Features: {status}",
+  "@aiUsageStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "contactUsPrivacy": "6. Contact Us",
+  "contactUsPrivacyContent": "If you have any questions about this Privacy Policy, please contact us at:\n\nEmail: privacy@tickdose.app\n\nWe take your privacy seriously and will respond to all inquiries promptly.",
+  "policyChanges": "7. Policy Changes",
+  "policyChangesContent": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the \"Last Updated\" date.",
+  "lastUpdated": "Last Updated: November 24, 2024",
+  "sharePrivacyPolicyText": "Check out Tickdose Privacy Policy: https://tickdosedemo.web.app/privacy-policy",
+  "sharePrivacyPolicySubject": "Tickdose Privacy Policy",
+  "couldNotOpenPrivacyPolicy": "Could not open privacy policy",
+  "termsOfServiceIntro": "Please read these terms carefully before using the TICKDOSE application.",
+  "licenseToUse": "1. License to Use",
+  "licenseToUseContent": "TICKDOSE grants you a personal, non-transferable, non-exclusive, revocable license to use the software for your personal, non-commercial use in accordance with these Terms. You own your personal data, but we retain all rights to the application code, design, and intellectual property.",
+  "restrictions": "2. Restrictions",
+  "restrictionsContent": "You agree not to:\n\n• Use the app for any illegal purpose.\n• Attempt to reverse engineer or decompile the app.\n• Share your account credentials with others.\n• Use the app to spam or harass others.\n• Attempt to breach the app's security measures.",
+  "medicalDisclaimer": "3. Medical Disclaimer",
+  "medicalDisclaimerContent": "⚠️ TICKDOSE IS NOT A DOCTOR.\n\n• This app is not a substitute for professional medical advice, diagnosis, or treatment.\n• Never disregard professional medical advice or delay in seeking it because of something you have read on this app.\n• The data provided is for informational purposes only.\n• In case of a medical emergency, call your doctor or emergency services immediately.\n• We cannot diagnose, treat, or cure any condition.",
+  "userResponsibilities": "4. User Responsibilities",
+  "userResponsibilitiesContent": "• You are responsible for the accuracy of the health data you enter.\n• You are responsible for maintaining the confidentiality of your account.\n• You agree to comply with all applicable laws and regulations.\n• You are solely liable for your use of the application.",
+  "limitationOfLiability": "5. Limitation of Liability",
+  "limitationOfLiabilityContent": "To the maximum extent permitted by law, TICKDOSE shall NOT be liable for:\n\n• Any indirect, incidental, special, consequential, or punitive damages.\n• Any loss of data, use, goodwill, or other intangible losses.\n• Any missed doses or reminders due to technical failures.\n• Any adverse health outcomes resulting from reliance on the app.\n\nOur maximum liability is limited to the amount you paid for the app, if any.",
+  "termination": "6. Termination",
+  "terminationContent": "We reserve the right to terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.",
+  "changesToTerms": "7. Changes to Terms",
+  "changesToTermsContent": "We reserve the right to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.",
+  "contactUsTerms": "8. Contact Us",
+  "contactUsTermsContent": "If you have any questions about these Terms, please contact us at:\n\nEmail: support@tickdose.app",
+  "couldNotOpenTerms": "Could not open terms of service",
+  "deleteAccountQuestion": "Delete Account?",
+  "deleteAccountWarning": "This action cannot be undone. All your medicines, reminders, tracking data, and account information will be permanently deleted.",
+  "deleteAccountPermanently": "Permanently delete your account and all data",
+  "accountDeletedSuccess": "Account deleted successfully",
+  "errorDeletingAccount": "Error deleting account: {error}",
+  "errorGeneric": "An error occurred",
+  "delete": "Delete",
+  "@errorDeletingAccount": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "yourPersonalMedicationReminder": "Your personal medication reminder",
+  "faq": "FAQ",
+  "howToAddMedicine": "How do I add a medicine?",
+  "howToAddMedicineAnswer": "Tap the + button on the home screen to add a new medicine.",
+  "howToSetReminders": "How do I set reminders?",
+  "howToSetRemindersAnswer": "Go to Reminders tab and tap + to create a new reminder.",
+  "canIEditMedicines": "Can I edit my medicines?",
+  "canIEditMedicinesAnswer": "Yes, tap on any medicine to view details and tap Edit.",
+  "contactSupport": "Contact Support",
+  "version": "Version 1.0.0",
+  "text": "Text",
+  "voice": "Voice",
+  "history": "History",
+  "emergency": "Emergency",
+  "profile": "Profile",
+  "createInvitation": "Create Invitation",
+  "selectAtLeastOnePermission": "Please select at least one permission",
+  "relationship": "Relationship",
+  "permissions": "Permissions",
+  "permissionsUpdated": "Permissions updated",
+  "family": "Family",
+  "friend": "Friend",
+  "nurse": "Nurse",
+  "other": "Other",
+  "addTime": "Add Time",
+  "noInteractionsDetected": "No interactions detected",
+  "errorOccurred": "Error: {error}",
+  "@errorOccurred": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "barcodeLabel": "Barcode: {code}",
+  "@barcodeLabel": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "timesLabel": "Times",
+  "doctorDisplayFormat": "Dr. {name} ({specialization})",
+  "@doctorDisplayFormat": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "specialization": {
+        "type": "String"
+      }
+    }
+  },
+  "dosageHintExample": "10",
+  "unitMg": "mg",
+  "unitG": "g",
+  "unitMl": "ml",
+  "unitUnits": "units",
+  "unitTablets": "tablets",
+  "unitCapsules": "capsules",
+  "noKnownConflicts": "No known conflicts with your current list.",
+  "addMedicineTitle": "Add Medicine",
+  "failedToUploadImage": "Failed to upload image: {error}",
+  "@failedToUploadImage": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "editSchedule": "Edit Schedule",
+  "errorFailedToShare": "Error: Failed to share: {error}",
+  "@errorFailedToShare": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "failedToDelete": "Failed to delete: {error}",
+  "@failedToDelete": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "pleaseLogInToViewSideEffects": "Please log in to view side effects",
+  "errorLoadingSideEffects": "Error: {error}",
+  "@errorLoadingSideEffects": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "deleteSideEffectQuestion": "Delete Side Effect?",
+  "deleteSideEffectWarning": "This action cannot be undone.",
+  "sideEffectDeleted": "Side effect deleted",
+  "logSideEffectTitle": "Log Side Effect",
+  "sideEffectLoggedSuccess": "Side effect logged successfully",
+  "effectNameLabel": "Effect Name",
+  "effectNameHint": "e.g., Nausea, Headache",
+  "whenDidThisOccur": "When did this occur?",
+  "notesOptionalLabel": "Notes (optional)",
+  "notesOptionalHint": "Additional details about the side effect",
+  "iUnderstandTheRisks": "I understand the risks",
+  "searchMedicinesHint": "Search medicines...",
+  "streakLabel": "STREAK",
+  "medsLabel": "MEDS",
+  "plusOneToday": "+1 today",
+  "adherencePercentage": "{percentage}% adherence",
+  "@adherencePercentage": {
+    "placeholders": {
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "xpToNextLevel": "{xp} XP to Level {level}",
+  "@xpToNextLevel": {
+    "placeholders": {
+      "xp": {
+        "type": "String"
+      },
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "noChatHistoryYet": "No chat history yet",
+  "noPatientsFound": "No patients found",
+  "noLogsForThisDay": "No logs for this day",
+  "errorOccurredMessage": "An error occurred",
+  "errorWithMessage": "Error: {error}",
+  "@errorWithMessage": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "somethingWentWrong": "Something went wrong",
+  "errorRecoveryMessage": "We're sorry, but an error occurred. The app will try to recover automatically.",
+  "tryAgain": "Try Again",
+  "profileUpdatedSuccessfully": "Profile updated successfully",
+  "enableLocationServices": "Enable Location Services",
+  "locationServicesDescription": "Find nearby pharmacies and get location-based reminders",
+  "locationServicesDetailedDescription": "We use your location to help you find the nearest pharmacies and provide accurate medication reminders based on your location.",
+  "enableCameraAccess": "Enable Camera Access",
+  "cameraAccessDescription": "Scan medication labels and capture health information",
+  "enableMicrophoneAccess": "Enable Microphone Access",
+  "microphoneAccessDescription": "Use voice commands and record symptoms",
+  "youCanChangeAnytimeInSettings": "You can change this anytime in Settings",
+  "notNow": "Not Now",
+  "allow": "Allow",
+  "today": "Today",
+  "yesterday": "Yesterday",
+  "noActivityForThisDate": "No activity for this date",
+  "open24Hours": "24/7",
+  "errorTitle": "Error",
+  "pageNotFound": "Page not found",
+  "todayAt": "Today, {time}",
+  "@todayAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "missedMedicationAlert": "Missed Medication Alert",
+  "patientMissedMedicationAt": "{patientOrUser} missed {medicineName} at {time}",
+  "@patientMissedMedicationAt": {
+    "placeholders": {
+      "patientOrUser": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "Patient",
+  "user": "User",
+  "adherenceSummaryTitle": "{type} Adherence Summary",
+  "@adherenceSummaryTitle": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "adherenceSummaryBody": "Adherence: {rate}% | Taken: {taken} | Missed: {missed} | Skipped: {skipped}",
+  "@adherenceSummaryBody": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      },
+      "taken": {
+        "type": "String"
+      },
+      "missed": {
+        "type": "String"
+      },
+      "skipped": {
+        "type": "String"
+      }
+    }
+  },
+  "sideEffectAlert": "Side Effect Alert",
+  "sideEffectBody": "{medicineName}: {symptom} ({severity})",
+  "@sideEffectBody": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      },
+      "symptom": {
+        "type": "String"
+      },
+      "severity": {
+        "type": "String"
+      }
+    }
+  },
+  "urgentHealthConcern": "URGENT Health Concern",
+  "healthConcernAlert": "Health Concern Alert",
+  "noRemindersSet": "No reminders set",
+  "noDoctorsFound": "No doctors found",
+  "errorLoadingPatients": "Error loading patients",
+  "patientsWillAppearHere": "Patients will appear here when they\ngrant you access as their caregiver",
+  "howAreYouFeeling": "How are you feeling?",
+  "describeSymptomsByVoiceOrText": "Describe your symptoms by voice or text",
+  "accountDeletedSuccessfully": "Account deleted successfully",
+  "incorrectPassword": "Incorrect password",
+  "pleaseLogInAgainBeforeDeletingAccount": "Please log out and log in again before deleting account",
+  "genericNameLabel": "Generic Name:",
+  "manufacturerLabel": "Manufacturer:",
+  "translationLabel": "[Translation]",
+  "couldNotMakeCall": "Could not make call",
+  "resetSettingsTitle": "Reset Settings",
+  "resetSettingsConfirmation": "Are you sure you want to reset all voice settings to defaults?",
+  "settingsResetToDefaults": "Settings reset to defaults",
+  "resetButton": "Reset"
+}

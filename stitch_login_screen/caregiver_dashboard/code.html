@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caregiver Dashboard - Tickdo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#19331e",
+                        "surface-darker": "#112214",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", // rounded-md roughly
+                        "md": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for clean UI */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(25, 51, 30, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased selection:bg-primary selection:text-background-dark pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-40 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-white/5 transition-colors">
+<div class="flex items-center justify-between px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary" data-alt="Elderly man smiling profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnz3b4fo9TvbStOSu72BUixIk1b5A0Hu0wvA8t5ppOfKHnZLVkUg3DdMxfKGDdUM1F2dWbnvnCZlHCVXM-6zYG6jJZOQoHvQjpPnyuWUT5tSmu0zVPtbWInlHnrRlES2WUtK7Wn84t_zYFGodnbxRjsFTievw-ol1cPen7Y3NsXTrft1Gu61UY32HP4Y5plrsGuE1Yk5DsJWMQWX8bMOrlC94ydsnisNzdl4Rs56b7gBs7CbmoJuLeMF3vA47-jFne1hS7RRVecrs");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-primary rounded-full border-2 border-background-dark"></div>
+</div>
+<div class="flex flex-col">
+<h2 class="text-base font-bold leading-tight tracking-tight">Dad's Dashboard</h2>
+<p class="text-xs font-medium text-green-600 dark:text-primary/80">Status: On Track</p>
+</div>
+</div>
+<button aria-label="Call Patient" class="flex size-10 items-center justify-center rounded-full bg-surface-dark border border-white/10 text-primary hover:bg-white/5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-xl">call</span>
+</button>
+</div>
+</header>
+<main class="w-full max-w-md mx-auto flex flex-col gap-6 px-4 pt-4">
+<!-- Stats Overview -->
+<section aria-label="Health Statistics">
+<div class="flex flex-wrap gap-3">
+<!-- Adherence Card -->
+<div class="flex flex-1 min-w-[100px] flex-col gap-2 rounded-2xl bg-surface-dark border border-white/5 p-4 items-center justify-center text-center shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
+<div class="relative z-10">
+<div class="size-16 rounded-full border-4 border-primary/20 flex items-center justify-center border-t-primary border-r-primary mb-1">
+<span class="text-xl font-bold text-white">80%</span>
+</div>
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Adherence</p>
+</div>
+</div>
+<!-- Vitals Group -->
+<div class="flex flex-col gap-3 flex-1 min-w-[100px]">
+<div class="flex flex-1 items-center justify-between gap-3 rounded-2xl bg-surface-dark border border-white/5 px-4 py-3 shadow-md">
+<div>
+<p class="text-gray-400 text-xs font-medium uppercase">BP</p>
+<p class="text-lg font-bold text-white leading-none mt-1">120/80</p>
+</div>
+<span class="material-symbols-outlined text-red-400">favorite</span>
+</div>
+<div class="flex flex-1 items-center justify-between gap-3 rounded-2xl bg-surface-dark border border-white/5 px-4 py-3 shadow-md">
+<div>
+<p class="text-gray-400 text-xs font-medium uppercase">Heart Rate</p>
+<p class="text-lg font-bold text-white leading-none mt-1">98 <span class="text-xs font-normal text-gray-500">bpm</span></p>
+</div>
+<span class="material-symbols-outlined text-primary">ecg_heart</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Voice Reminder Card -->
+<section aria-label="Voice Reminder Action">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface-dark to-[#0f1f12] border border-white/10 shadow-xl">
+<!-- Background Image Decoration -->
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-20 bg-cover bg-center mix-blend-overlay pointer-events-none" data-alt="Abstract sound waves visualization" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwFQYN9zP-KJZpwJJENkcH2EFYFmVAmd5t9R7mmRKEmfZ0KO7doMUQ3SPv2Xe6QXMPvlLa8rTPqMXeF0wgXgEyVR2FZlU_7ENee_BLbOmj8CTRqTu0JcwpYUxWPWNhxQYrnViENg2ekbPiX_RwkK4DIezN7xKre7FbSi70FUUNETLUVJS3fLJz74-HcITqerlHY74IHI86Ogmo6RLxZCfFOs-BbX-2yvfPH_fdH0psUEfS6OVAKK6dSa5ktsEEv7rpgdnWy0sO6e4");'>
+</div>
+<div class="relative z-10 p-5 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-white text-lg font-bold leading-tight">Voice Reminder</h3>
+<p class="text-gray-400 text-sm mt-1">Send a quick audio nudge to Dad.</p>
+</div>
+<span class="flex size-8 items-center justify-center rounded-full bg-white/5">
+<span class="material-symbols-outlined text-primary text-lg">graphic_eq</span>
+</span>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<button class="flex-1 h-12 flex items-center justify-center gap-2 bg-primary hover:bg-green-400 active:scale-[0.98] transition-all text-background-dark rounded-xl font-bold shadow-[0_0_15px_rgba(19,236,55,0.3)]">
+<span class="material-symbols-outlined filled">mic</span>
+                            Record Nudge
+                        </button>
+<button class="size-12 flex shrink-0 items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10">
+<span class="material-symbols-outlined">history</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-xs text-gray-500">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                        Last nudge delivered 15m ago
+                    </div>
+</div>
+</div>
+</section>
+<!-- Timeline Schedule -->
+<section aria-label="Medication Timeline">
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-xl font-bold text-white tracking-tight">Today's Schedule</h3>
+<button class="text-xs text-primary font-semibold hover:text-green-300">View Full List</button>
+</div>
+<div class="bg-surface-dark rounded-3xl p-5 border border-white/5 shadow-inner">
+<div class="grid grid-cols-[40px_1fr] gap-x-3">
+<!-- Item 1: Done -->
+<div class="flex flex-col items-center pt-1">
+<div class="flex size-6 items-center justify-center rounded-full bg-primary text-background-dark ring-4 ring-surface-dark z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="w-[2px] bg-primary/20 h-full -mt-2 mb-[-8px]"></div>
+</div>
+<div class="flex flex-col pb-6 pl-2">
+<div class="flex justify-between items-start">
+<p class="text-white text-base font-semibold">Lisinopril</p>
+<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-0.5 rounded">Taken</span>
+</div>
+<p class="text-gray-400 text-sm mt-0.5">8:00 AM • 10mg</p>
+</div>
+<!-- Item 2: Warning/Pending -->
+<div class="flex flex-col items-center pt-1">
+<div class="flex size-6 items-center justify-center rounded-full bg-surface-dark border-2 border-yellow-500/50 text-yellow-500 ring-4 ring-surface-dark z-10">
+<span class="material-symbols-outlined text-sm">priority_high</span>
+</div>
+<div class="w-[2px] bg-white/10 h-full -mt-2 mb-[-8px]"></div>
+</div>
+<div class="flex flex-col pb-6 pl-2">
+<div class="flex justify-between items-start">
+<p class="text-white text-base font-semibold">Metformin</p>
+<span class="text-xs font-mono text-yellow-500 bg-yellow-500/10 px-2 py-0.5 rounded">Overdue</span>
+</div>
+<p class="text-gray-400 text-sm mt-0.5">1:00 PM • 500mg with food</p>
+</div>
+<!-- Item 3: Future -->
+<div class="flex flex-col items-center pt-1">
+<div class="flex size-6 items-center justify-center rounded-full bg-surface-dark border-2 border-gray-600 text-gray-400 ring-4 ring-surface-dark z-10">
+<div class="size-2 bg-gray-600 rounded-full"></div>
+</div>
+<div class="w-[2px] bg-white/10 h-full -mt-2 mb-[-8px]"></div>
+</div>
+<div class="flex flex-col pb-6 pl-2">
+<div class="flex justify-between items-start">
+<p class="text-gray-300 text-base font-semibold">Atorvastatin</p>
+<span class="text-xs font-mono text-gray-500 bg-white/5 px-2 py-0.5 rounded">Pending</span>
+</div>
+<p class="text-gray-500 text-sm mt-0.5">8:00 PM • 20mg</p>
+</div>
+<!-- Item 4: Activity -->
+<div class="flex flex-col items-center pt-1">
+<div class="flex size-6 items-center justify-center rounded-full bg-surface-dark border-2 border-blue-400/50 text-blue-400 ring-4 ring-surface-dark z-10">
+<span class="material-symbols-outlined text-sm">directions_walk</span>
+</div>
+</div>
+<div class="flex flex-col pl-2">
+<div class="flex justify-between items-start">
+<p class="text-gray-300 text-base font-semibold">Evening Walk</p>
+<span class="text-xs font-mono text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded">Activity</span>
+</div>
+<p class="text-gray-500 text-sm mt-0.5">8:30 PM • 15 mins</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section aria-label="Quick Actions">
+<div class="grid grid-cols-2 gap-3 pb-8">
+<button class="bg-surface-dark border border-white/5 p-4 rounded-xl flex flex-col items-center gap-2 hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">medication</span>
+<span class="text-xs font-medium text-gray-300">Pill List</span>
+</button>
+<button class="bg-surface-dark border border-white/5 p-4 rounded-xl flex flex-col items-center gap-2 hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">calendar_month</span>
+<span class="text-xs font-medium text-gray-300">Refills</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Floating Bottom Navigation -->
+<nav class="fixed bottom-6 left-4 right-4 z-50 rounded-2xl glass h-[68px] flex items-center justify-around px-2 shadow-2xl shadow-black/50">
+<a class="flex flex-col items-center justify-center gap-1 w-14 h-full text-primary relative" href="#">
+<span class="material-symbols-outlined text-[26px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+<!-- Active Indicator -->
+<span class="absolute -bottom-[1px] w-6 h-1 bg-primary rounded-t-full shadow-[0_-2px_8px_rgba(19,236,55,0.6)]"></span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-14 h-full text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">notifications</span>
+<span class="text-[10px] font-medium">Remind</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-14 h-full text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">monitoring</span>
+<span class="text-[10px] font-medium">Track</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-14 h-full text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">local_pharmacy</span>
+<span class="text-[10px] font-medium">Rx</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-14 h-full text-gray-400 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medicine Detail Screen</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#1a2c1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-nav {
+            background: rgba(16, 34, 19, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-background-dark">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-30 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 pb-2 transition-colors">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Medicine Details</h2>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">more_vert</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex flex-col gap-6 p-4">
+<!-- Profile/Hero Header -->
+<section class="flex flex-col items-center gap-6 pt-2">
+<div class="relative flex items-center justify-center">
+<!-- Glow effect behind image -->
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75"></div>
+<div class="relative z-10 bg-center bg-no-repeat bg-cover rounded-full h-32 w-32 shadow-xl shadow-black/20 ring-4 ring-surface-dark/50" data-alt="3D render of a green and white pill capsule floating" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAaA4grjJe6ntxo8pVGe1QSBqHtrvFM1u1SYfhXmVdpDYMbR9tapkY0bAIFGYwUXfbQjIRiRrxyrNqlywNYaXK3D4PAH9MGKwkcGJfhkGGQmJ2vf67qX0qyQHuMqMuyVZOILowQrrvd1k-uo-n-mzlSwSYRU5S8Sqw1KYUMxSVHuhkGIaHAx09HgZoCDZoawtmYFxXEYrff18sk8WUiCdt1cMBR4A0re5m-rj7fwlJVKuwF2VWZ0iZfODAbyNp5glW8Utl6tVn_YQ"); background-position: center;'>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center gap-1">
+<h1 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tight text-center">Lisinopril</h1>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-xs font-semibold bg-primary/20 text-primary-700 dark:text-primary uppercase tracking-wider">ACE Inhibitor</span>
+</div>
+<p class="text-slate-500 dark:text-[#92c99b] text-base font-normal mt-1 text-center">10mg • Tablet</p>
+<div class="mt-3 flex items-center gap-2 rounded-full bg-surface-dark/50 px-4 py-2 border border-white/5">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">alarm</span>
+<p class="text-slate-700 dark:text-white text-sm font-medium">Next Dose: <span class="text-primary font-bold">Today, 8:00 PM</span></p>
+</div>
+</div>
+</section>
+<!-- Stats / Dosage Info -->
+<section class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2 rounded-2xl p-5 bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">update</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Frequency</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-xl font-bold leading-tight">Twice Daily</p>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-5 bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">science</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Strength</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-xl font-bold leading-tight">10mg</p>
+</div>
+</section>
+<!-- Supply Tracker -->
+<section class="flex flex-col gap-4 rounded-2xl bg-white dark:bg-surface-dark p-5 border border-slate-200 dark:border-white/5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">inventory_2</span>
+<p class="text-slate-900 dark:text-white text-base font-bold">Supply Remaining</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">12/30</p>
+</div>
+<div class="relative h-3 w-full rounded-full bg-slate-100 dark:bg-black/40 overflow-hidden">
+<div class="absolute top-0 left-0 h-full rounded-full bg-primary transition-all duration-500" style="width: 40%;"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<p class="text-slate-500 dark:text-[#92c99b]">12 pills left</p>
+<p class="text-orange-500 font-medium">Low Supply</p>
+</div>
+<!-- Refill Alert Action -->
+<div class="mt-2 flex flex-col gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-sm font-bold">Refill Suggested</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">You have less than 40% remaining.</p>
+</div>
+<button class="mt-2 sm:mt-0 flex w-full sm:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-background-dark text-sm font-bold shadow-lg shadow-primary/20">
+                        Order Refill
+                    </button>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section class="grid grid-cols-3 gap-3">
+<button class="group flex flex-col items-center gap-2 rounded-2xl bg-white dark:bg-surface-dark p-4 border border-slate-200 dark:border-white/5 hover:border-primary/50 transition-all active:scale-95 shadow-sm">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">add</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Log Dose</span>
+</button>
+<button class="group flex flex-col items-center gap-2 rounded-2xl bg-white dark:bg-surface-dark p-4 border border-slate-200 dark:border-white/5 hover:border-red-500/50 transition-all active:scale-95 shadow-sm">
+<div class="flex size-12 items-center justify-center rounded-full bg-red-500/10 text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">report_problem</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Side Effect</span>
+</button>
+<button class="group flex flex-col items-center gap-2 rounded-2xl bg-white dark:bg-surface-dark p-4 border border-slate-200 dark:border-white/5 hover:border-blue-500/50 transition-all active:scale-95 shadow-sm">
+<div class="flex size-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">History</span>
+</button>
+</section>
+<!-- Monograph Accordion -->
+<section class="flex flex-col gap-1 rounded-2xl overflow-hidden bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 shadow-sm">
+<!-- Item 1 -->
+<div class="group border-b border-slate-100 dark:border-white/5 last:border-0">
+<details class="w-full">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none [&amp;::-webkit-details-marker]:hidden">
+<div class="flex items-center gap-3">
+<div class="size-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-lg">info</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">Uses &amp; Indication</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400 pl-[3.25rem]">
+                            Lisinopril is used to treat high blood pressure (hypertension) in adults and children who are at least 6 years old. It is also used to treat congestive heart failure in adults.
+                        </div>
+</details>
+</div>
+<!-- Item 2 -->
+<div class="group border-b border-slate-100 dark:border-white/5 last:border-0">
+<details class="w-full">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none [&amp;::-webkit-details-marker]:hidden">
+<div class="flex items-center gap-3">
+<div class="size-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-lg">warning</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">Side Effects</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400 pl-[3.25rem]">
+                            Common side effects may include: headache, dizziness, cough, or chest pain. Contact your doctor if you experience swelling or difficulty breathing.
+                        </div>
+</details>
+</div>
+<!-- Item 3 -->
+<div class="group border-b border-slate-100 dark:border-white/5 last:border-0">
+<details class="w-full">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none [&amp;::-webkit-details-marker]:hidden">
+<div class="flex items-center gap-3">
+<div class="size-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-lg">medication_liquid</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">Interactions</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400 pl-[3.25rem]">
+                            Avoid drinking alcohol. It can further lower your blood pressure and may increase some of the side effects of lisinopril.
+                        </div>
+</details>
+</div>
+</section>
+<div class="h-8"></div> <!-- Spacer for scrolling -->
+</main>
+<!-- Glassmorphic Floating Navigation Bar -->
+<nav class="fixed bottom-6 left-4 right-4 rounded-2xl glass-nav shadow-2xl shadow-black/50 z-50">
+<div class="flex items-center justify-between px-2 py-3">
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[26px]">home</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-white transition-colors">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[26px]">notifications</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-white transition-colors">Reminders</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group relative" href="#">
+<div class="absolute -top-10 bg-primary rounded-full p-3 shadow-[0_0_15px_rgba(19,236,55,0.4)] border-4 border-background-dark transform transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-background-dark font-bold text-[28px]">show_chart</span>
+</div>
+<div class="h-6 w-6"></div> <!-- Spacer for the floating button -->
+<span class="text-[10px] font-medium text-primary mt-1">Tracking</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[26px]">local_pharmacy</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-white transition-colors">Pharmacy</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[26px]">person</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-white transition-colors">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

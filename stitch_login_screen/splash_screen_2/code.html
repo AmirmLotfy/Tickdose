@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tickdo Splash Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'progress': 'progress 1.5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        progress: {
+                            '0%': { width: '0%', marginLeft: '0%' },
+                            '50%': { width: '50%', marginLeft: '25%' },
+                            '100%': { width: '0%', marginLeft: '100%' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom subtle gradient for the background to give it depth */
+        .bg-gradient-radial {
+            background-image: radial-gradient(circle at center, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-between relative overflow-hidden transition-colors duration-300">
+<!-- Decorative Background Glow -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Top Spacer for vertical centering -->
+<div class="flex-1"></div>
+<!-- Main Content Container -->
+<div class="relative z-10 flex flex-col items-center justify-center w-full max-w-xs p-6 animate-fade-in-up">
+<!-- Logo Section -->
+<div class="mb-8 relative group">
+<!-- Glow Effect behind Logo -->
+<div class="absolute -inset-1 bg-primary/30 rounded-3xl blur-md opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
+<!-- Logo Container -->
+<div class="relative flex items-center justify-center w-28 h-28 bg-white dark:bg-[#1A2E1D] border border-gray-100 dark:border-[#2a452e] rounded-3xl shadow-xl">
+<!-- App Icon using Material Symbols -->
+<span class="material-symbols-outlined text-6xl text-primary transform transition-transform group-hover:scale-110 duration-500">
+                    check_circle
+                </span>
+</div>
+</div>
+<!-- Typography Section -->
+<div class="text-center space-y-2 mb-12">
+<h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                Tickdo
+            </h1>
+<p class="text-sm font-medium text-gray-500 dark:text-[#92c99b] tracking-wide uppercase">
+                AI Health Assistant
+            </p>
+</div>
+<!-- Loading Indicator -->
+<div class="w-full flex flex-col items-center gap-3">
+<!-- Custom Progress Bar -->
+<div class="w-32 h-1.5 bg-gray-200 dark:bg-[#1c3822] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full animate-[progress_1.5s_ease-in-out_infinite] w-1/3"></div>
+</div>
+<p class="text-[10px] text-gray-400 dark:text-gray-600 font-medium">Loading...</p>
+</div>
+</div>
+<!-- Bottom Spacer & Footer -->
+<div class="flex-1 flex flex-col justify-end w-full pb-8 z-10">
+<div class="text-center">
+<!-- Abstract background image for texture/branding if needed, keeping it very subtle or invisible for clean splash -->
+<div class="hidden" data-alt="Abstract subtle geometric pattern overlay"></div>
+<p class="text-[10px] text-gray-300 dark:text-gray-700 tracking-wider">v2.0.1</p>
+</div>
+</div>
+</body></html>

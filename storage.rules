@@ -1,0 +1,57 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    function isImage() {
+      return request.resource.contentType.matches('image/.*');
+    }
+    
+    function isUnder5MB() {
+      return request.resource.size < 5 * 1024 * 1024;
+    }
+    
+    function isVoiceFile() {
+      return request.resource.contentType.matches('audio/.*');
+    }
+    
+    // User files - all files in user's directory (images, voice recordings, etc.)
+    match /users/{userId}/{allPaths=**} {
+      allow read: if request.auth.uid == userId;
+      allow write: if request.auth.uid == userId && 
+                     request.resource.size < 5 * 1024 * 1024;
+      allow delete: if request.auth.uid == userId;
+    }
+    
+    // Voice recordings for I Feel feature
+    match /voice/{userId}/{allPaths=**} {
+      allow read: if request.auth.uid == userId;
+      allow write: if request.auth.uid == userId && 
+                     isVoiceFile() &&
+                     request.resource.size < 10 * 1024 * 1024;  // 10MB limit for voice files
+      allow delete: if request.auth.uid == userId;
+    }
+    
+    // Voice messages for voice reminders and conversations
+    match /voice_messages/{userId}/{allPaths=**} {
+      allow read: if request.auth.uid == userId;
+      allow write: if request.auth.uid == userId && 
+                     isVoiceFile() &&
+                     request.resource.size < 10 * 1024 * 1024;  // 10MB limit for voice files
+      allow delete: if request.auth.uid == userId;
+    }
+    
+    // Deny all other paths
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Firebase Extensions Configuration
+# Run: firebase ext:install firebase/delete-user-data --project=tickdose-13e7c
+# Run: firebase ext:install firebase/storage-resize-images --project=tickdose-13e7c
+
+# Delete User Data Extension
+# Automatically removes user data when auth account is deleted
+delete-user-data:
+  - CloudFunctionsLocation: us-central1
+  - RECURSIVE_DELETE: yes
+  - FIRESTORE_PATHS: users/{UID}
+  - FIREBASE_STORAGE_PATHS: medicines/{UID}
+
+# Resize Images Extension  
+# Automatically creates 200x200 thumbnails for medicine images
+resize-images:
+  - CloudFunctionsLocation: us-central1
+  - DELETE_ORIGINAL_FILE: no
+  - IMG_SIZES: 200x200
+  - INCLUDE_PATH_LIST: medicines
+  - MAKE_PUBLIC: no

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Timezone Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213", // A dark forest/charcoal green as base
+                        "surface-dark": "#1A2E1D", // Slightly lighter for cards
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl">
+<!-- Navigation Header -->
+<div class="flex items-center p-4 pt-6 justify-between z-10">
+<button class="flex size-10 items-center justify-center rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<!-- Page Indicators (Reusing component style) -->
+<div class="flex items-center gap-2">
+<div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-white/20"></div>
+<div class="h-2 w-8 rounded-full bg-primary shadow-[0_0_10px_rgba(19,236,55,0.5)]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-white/20"></div>
+</div>
+<div class="size-10"></div> <!-- Spacer for balance -->
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col items-center w-full px-6 pt-2 pb-24 overflow-y-auto">
+<!-- Hero Illustration -->
+<div class="relative w-full flex justify-center py-8">
+<!-- Abstract glow behind -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/20 rounded-full blur-[60px]"></div>
+<div class="relative w-48 h-48 rounded-full overflow-hidden border border-white/10 shadow-2xl">
+<div class="w-full h-full bg-center bg-cover" data-alt="Abstract 3D digital globe wireframe glowing green in dark space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJGHeIsTOhO5pzAdJnV0Q5_ek6bpRiCsMjmKclNr8li2CzOgKjlZjc0jEi3ZVluUZcgHAqzN6Asd1e7nh6b8WCe_-cy4qCBhDXSgaJKDtalAEhC5ZFXSgW_gansCBut7u5Ha4cS9aGA5NYpaiu4HVg7QOyd3Sc_Atestkm1ZBN77WKx6eHejNGIn0oLOyXS5YUgq9px7KWkP_ShJjf87oNbDrBh6RdutUX8jA9abzJzVP6LF7jTk12htYilnQipvqJwZKsEtUv2GU");'>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+<!-- Headline -->
+<h2 class="text-3xl font-bold tracking-tight text-center text-slate-900 dark:text-white mb-2">
+                Where are you based?
+            </h2>
+<!-- Body Text -->
+<p class="text-slate-500 dark:text-slate-400 text-base text-center max-w-[80%] mb-8">
+                We use your local time to ensure your reminders arrive exactly when you need them.
+            </p>
+<!-- Current Time Display -->
+<div class="flex flex-col items-center justify-center w-full mb-8">
+<span class="text-sm font-medium uppercase tracking-widest text-primary mb-1">Current time detected</span>
+<div class="text-[64px] font-extrabold leading-none text-slate-900 dark:text-white tracking-tight tabular-nums relative">
+                    09:41
+                    <span class="text-2xl font-semibold text-slate-400 dark:text-slate-500 ml-1">AM</span>
+</div>
+</div>
+<!-- Timezone Selector Card -->
+<div class="w-full group">
+<button class="w-full flex items-center justify-between p-4 bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/5 rounded-2xl shadow-sm hover:border-primary/50 dark:hover:border-primary/50 transition-all active:scale-[0.98]">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="flex flex-col items-start text-left">
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Region</span>
+<span class="text-base font-semibold text-slate-900 dark:text-white">Los Angeles, USA</span>
+<span class="text-xs text-slate-400 dark:text-slate-500">GMT-7 (PDT)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">edit</span>
+</button>
+</div>
+<!-- Map Preview (Optional Visual Enhancement) -->
+<div class="w-full mt-4 rounded-xl overflow-hidden h-24 relative opacity-60 grayscale hover:grayscale-0 transition-all duration-500 border border-white/5">
+<img class="w-full h-full object-cover" data-alt="Stylized dark map view of a city grid" data-location="Los Angeles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCBxzcVZlHEkl8cujBWoE597G6irOdrjEdfFu29p8EqFMBhyCcaJNwu0JNto6-rvHY8dZ54Ja_TpCIgfxWYPxw5pn9NOv_xrHqTBs3gq8P9A9NGozHC6sqXVCpeT0ReMmfk_VI02_WsITmPetiDHj51OtEfIXIFK5fRpIVX0n1uwO2VXUaiZsZKdbNWJKqNIXdu0AyezC7Q0HCK1W0cK5flDRC3i39sJrl2omTM1akdxkSlWiVUVEQcUEycECLnVvaaQftT8x1SaY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light/80 dark:from-background-dark/90 to-transparent"></div>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent pt-12">
+<button class="w-full flex items-center justify-center gap-2 h-14 bg-primary hover:bg-[#11d832] text-background-dark font-bold text-lg rounded-xl shadow-[0_4px_20px_rgba(19,236,55,0.3)] transition-all active:scale-[0.98]">
+<span>Confirm &amp; Continue</span>
+<span class="material-symbols-outlined" style="font-weight: 600;">check</span>
+</button>
+</div>
+</div>
+</body></html>

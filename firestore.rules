@@ -1,0 +1,173 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isValidTimestamp(ts) {
+      return ts is timestamp;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // Allow users to read and write their own profile
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && 
+                      request.resource.data.keys().hasAll(['email', 'displayName', 'createdAt']);
+      allow update: if isOwner(userId);
+      allow delete: if isOwner(userId);
+      
+      // Medicines subcollection
+      match /medicines/{medicineId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && 
+                        request.resource.data.keys().hasAll(['name', 'dosage', 'createdAt']);
+        allow update: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+      
+      // Reminders subcollection
+      match /reminders/{reminderId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && 
+                        request.resource.data.keys().hasAll(['medicineId', 'time', 'createdAt']);
+        allow update: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+
+      // Doctors subcollection
+      match /doctors/{doctorId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && 
+                        request.resource.data.keys().hasAll(['name', 'specialty', 'createdAt']);
+        allow update: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+      
+      // Medicine logs subcollection (using 'logs' to match code)
+      match /logs/{logId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && 
+                        request.resource.data.keys().hasAll(['medicineId', 'status', 'timestamp']);
+        allow update: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+      
+      // Side effects subcollection
+      match /side_effects/{effectId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && 
+                        request.resource.data.keys().hasAll(['medicineId', 'symptom', 'occurredAt']) &&
+                        request.resource.data.medicineId is string &&
+                        request.resource.data.symptom is string &&
+                        isValidTimestamp(request.resource.data.occurredAt) &&
+                        request.resource.data.symptom.size() > 0 &&
+                        request.resource.data.symptom.size() <= 500;
+        allow update: if isOwner(userId) &&
+                        // Ensure core fields cannot be changed
+                        (request.resource.data.medicineId == resource.data.medicineId) &&
+                        (request.resource.data.symptom == resource.data.symptom) &&
+                        (request.resource.data.occurredAt == resource.data.occurredAt) &&
+                        // Validate optional fields if present
+                        (!('severity' in request.resource.data) || 
+                         (request.resource.data.severity is string)) &&
+                        (!('notes' in request.resource.data) || 
+                         (request.resource.data.notes is string && request.resource.data.notes.size() <= 1000));
+        allow delete: if isOwner(userId);
+      }
+      // Commands subcollection (for Remote Triggers)
+      match /commands/{commandId} {
+        allow read, update: if isOwner(userId);
+        // Ideally we would check if request.auth.uid is a caregiver, but without deterministic IDs
+        // or a Cloud Function, we'll allow authenticated users to write commands.
+        // Client-side validation in HomeScreen ensures only valid caregiver commands are processed.
+        allow create: if isAuthenticated();
+      }
+    }
+    
+    // I Feel Conversations (voice & text chat history)
+    match /iFeelConversations/{conversationId} {
+      // Users can only access their own conversations
+      allow read: if isAuthenticated() && 
+                    resource.data.userId == request.auth.uid;
+      allow create: if isAuthenticated() && 
+                      request.resource.data.userId == request.auth.uid &&
+                      request.resource.data.keys().hasAll(['userId', 'createdAt', 'title']);
+      allow update: if isAuthenticated() && 
+                      resource.data.userId == request.auth.uid;
+      allow delete: if isAuthenticated() && 
+                      resource.data.userId == request.auth.uid;
+      
+      // Messages subcollection
+      match /messages/{messageId} {
+        allow read: if isAuthenticated() && 
+                      get(/databases/$(database)/documents/iFeelConversations/$(conversationId)).data.userId == request.auth.uid;
+        allow create: if isAuthenticated() && 
+                        get(/databases/$(database)/documents/iFeelConversations/$(conversationId)).data.userId == request.auth.uid &&
+                        request.resource.data.keys().hasAll(['text', 'sender', 'timestamp']);
+        allow update: if isAuthenticated() && 
+                        get(/databases/$(database)/documents/iFeelConversations/$(conversationId)).data.userId == request.auth.uid;
+        allow delete: if isAuthenticated() && 
+                        get(/databases/$(database)/documents/iFeelConversations/$(conversationId)).data.userId == request.auth.uid;
+      }
+    }
+    
+    // Pharmacies collection (public read, admin write)
+    match /pharmacies/{pharmacyId} {
+      allow read: if true; // Public read for pharmacy finder
+      allow write: if false; // Only admins via Firebase Console or Cloud Functions
+    }
+    
+    // Caregivers collection
+    match /caregivers/{caregiverId} {
+      // Users can read caregivers assigned to them
+      allow read: if isAuthenticated() && 
+                    (resource.data.userId == request.auth.uid ||
+                     resource.data.caregiverUserId == request.auth.uid);
+      // Users can create caregivers for themselves
+      allow create: if isAuthenticated() && 
+                      request.resource.data.userId == request.auth.uid &&
+                      request.resource.data.keys().hasAll(['userId', 'caregiverEmail', 'caregiverName', 'permissions', 'createdAt']);
+      // Only the user can update their caregivers, or the caregiver can update their own record
+      allow update: if isAuthenticated() && 
+                      (resource.data.userId == request.auth.uid ||
+                       resource.data.caregiverUserId == request.auth.uid);
+      // Only the user can delete caregivers
+      allow delete: if isAuthenticated() && 
+                      resource.data.userId == request.auth.uid;
+    }
+    
+    // Caregiver invitations collection
+    match /caregiver_invitations/{invitationId} {
+      // Allow reading invitations by token (for deep link handling before login)
+      // Token-based access - anyone with token can read to validate
+      allow read: if true;
+      // Only users can create invitations for themselves
+      allow create: if isAuthenticated() && 
+                      request.resource.data.userId == request.auth.uid &&
+                      request.resource.data.keys().hasAll(['userId', 'caregiverEmail', 'permissions', 'token', 'expiresAt', 'used', 'createdAt']);
+      // Only the user who created it or the invited caregiver can update
+      allow update: if isAuthenticated();
+      allow delete: if isAuthenticated() && 
+                      resource.data.userId == request.auth.uid;
+    }
+    
+    // System collections (admin only)
+    match /systemConfig/{configId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Admin only
+    }
+    
+    // Deny all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

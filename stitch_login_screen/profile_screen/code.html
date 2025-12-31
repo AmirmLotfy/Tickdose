@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tickdo Profile</title>
+<!-- Fonts and Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#234829",
+                        "text-secondary": "#92c99b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary selection:text-black antialiased">
+<div class="relative flex h-full w-full flex-col min-h-screen pb-28 mx-auto max-w-md bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-20 flex items-center bg-background-dark/95 backdrop-blur-sm p-4 pb-2 justify-between">
+<div class="text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-[28px]">calendar_month</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Profile</h2>
+<div class="flex size-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-xl bg-transparent text-white p-0 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">settings</span>
+</button>
+</div>
+</div>
+<!-- Profile Header -->
+<div class="flex flex-col items-center pt-2 pb-6 px-4">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-32 w-32 border-4 border-surface-dark shadow-xl" data-alt="User profile picture showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr3cOFCoNHEAZmAPFHMWKikAGjSaK1El0s_6ReAQrHTVdlf8lVh4Y8nZhD79jYz5P17_bCNhMxhxNsBqL270X_thmmouTQqd10gFGiAHKCOF7oLYYX2c6RtMNfqqhDT53PyzsopP70f5b9apR74-if7Fjh8Egb9XNo0NHDlnD_8l3k-HMQntwJz9u5zyaRj1v4B3QDkJIL8qrvlKd8xFslIo8id-AV6sizAJOBwmz7SQN-spGK5YThIczH2SL8acg2knUNJa1-qPU");'>
+</div>
+<!-- Status Indicator -->
+<div class="absolute bottom-1 right-1 h-6 w-6 rounded-full bg-primary border-4 border-background-dark"></div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] text-center">Alex Doe</p>
+<div class="mt-2 flex items-center gap-2 bg-surface-dark px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<p class="text-primary text-sm font-bold leading-normal">Level 5: Health Guardian</p>
+</div>
+</div>
+</div>
+<!-- Level Progress -->
+<div class="flex flex-col gap-2 px-4 mb-6">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-white text-base font-medium leading-normal">Level Progress</p>
+<p class="text-text-secondary text-sm font-normal leading-normal">850 / 1000 XP</p>
+</div>
+<div class="rounded-full bg-surface-dark h-3 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary shadow-[0_0_10px_rgba(19,236,55,0.5)] transition-all duration-1000 ease-out" style="width: 85%;"></div>
+</div>
+<p class="text-text-secondary text-xs text-center mt-1">150 XP to Level 6</p>
+</div>
+<!-- Stats Grid -->
+<div class="flex gap-3 px-4 mb-8 overflow-x-auto no-scrollbar">
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-2xl p-4 bg-surface-dark border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-orange-400">local_fire_department</span>
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">Streak</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold">12</p>
+<p class="text-primary text-sm font-medium">+1 today</p>
+</div>
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-2xl p-4 bg-surface-dark border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-blue-400">pill</span>
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">Meds</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold">450</p>
+<p class="text-primary text-sm font-medium">98% adherence</p>
+</div>
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-2xl p-4 bg-surface-dark border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-yellow-400">stars</span>
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">Points</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold">1.2k</p>
+<p class="text-primary text-sm font-medium">Rank #42</p>
+</div>
+</div>
+<!-- Daily Quests -->
+<div class="flex flex-col mb-2">
+<div class="flex items-center justify-between px-4 pb-3">
+<h3 class="text-white text-lg font-bold leading-tight">Daily Quests</h3>
+<a class="text-primary text-sm font-medium" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-3 px-4">
+<!-- Quest Item: Completed -->
+<div class="group flex items-center justify-between p-4 rounded-xl bg-surface-dark border border-white/5 opacity-60">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-base font-medium line-through decoration-white/50">Morning Meds</p>
+<p class="text-text-secondary text-xs">Completed • +50 XP</p>
+</div>
+</div>
+<div class="h-6 w-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-sm font-bold">check</span>
+</div>
+</div>
+<!-- Quest Item: Active -->
+<div class="group flex items-center justify-between p-4 rounded-xl bg-surface-dark border border-primary/30 shadow-[0_4px_20px_-10px_rgba(19,236,55,0.1)]">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+<span class="material-symbols-outlined">mood</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-base font-medium">Log Mood</p>
+<p class="text-primary text-xs">Pending • +25 XP</p>
+</div>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-white/20 group-hover:border-primary transition-colors"></div>
+</div>
+<!-- Quest Item: Active -->
+<div class="group flex items-center justify-between p-4 rounded-xl bg-surface-dark border border-white/5">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-base font-medium">Drink Water</p>
+<p class="text-text-secondary text-xs">0/2 Liters • +15 XP</p>
+</div>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-white/20 group-hover:border-primary transition-colors"></div>
+</div>
+</div>
+</div>
+<div class="h-6"></div>
+<!-- Achievements Scroller -->
+<div class="flex flex-col mb-4">
+<h3 class="text-white text-lg font-bold leading-tight px-4 pb-3">Achievements</h3>
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 no-scrollbar">
+<!-- Badge 1 -->
+<div class="flex flex-col items-center gap-2 min-w-[88px]">
+<div class="h-20 w-20 rounded-full bg-gradient-to-br from-yellow-600 to-yellow-800 p-1 shadow-lg">
+<div class="h-full w-full rounded-full bg-surface-dark flex items-center justify-center border-2 border-yellow-500/50">
+<span class="material-symbols-outlined text-yellow-500 text-4xl">emoji_events</span>
+</div>
+</div>
+<span class="text-xs text-center font-medium text-white w-full truncate">7 Day Streak</span>
+</div>
+<!-- Badge 2 -->
+<div class="flex flex-col items-center gap-2 min-w-[88px]">
+<div class="h-20 w-20 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 p-1 shadow-lg">
+<div class="h-full w-full rounded-full bg-surface-dark flex items-center justify-center border-2 border-blue-500/50">
+<span class="material-symbols-outlined text-blue-500 text-4xl">medical_services</span>
+</div>
+</div>
+<span class="text-xs text-center font-medium text-white w-full truncate">Perfect Week</span>
+</div>
+<!-- Badge 3 (Locked) -->
+<div class="flex flex-col items-center gap-2 min-w-[88px] opacity-50 grayscale">
+<div class="h-20 w-20 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 p-1">
+<div class="h-full w-full rounded-full bg-surface-dark flex items-center justify-center border-2 border-gray-500/50">
+<span class="material-symbols-outlined text-gray-400 text-4xl">psychology</span>
+</div>
+</div>
+<span class="text-xs text-center font-medium text-white w-full truncate">Symptom Pro</span>
+</div>
+<!-- Badge 4 (Locked) -->
+<div class="flex flex-col items-center gap-2 min-w-[88px] opacity-50 grayscale">
+<div class="h-20 w-20 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 p-1">
+<div class="h-full w-full rounded-full bg-surface-dark flex items-center justify-center border-2 border-gray-500/50">
+<span class="material-symbols-outlined text-gray-400 text-4xl">fitness_center</span>
+</div>
+</div>
+<span class="text-xs text-center font-medium text-white w-full truncate">Gym Rat</span>
+</div>
+</div>
+</div>
+<!-- Settings Menu -->
+<div class="flex flex-col px-4 gap-1 mb-8">
+<h3 class="text-white text-lg font-bold leading-tight pb-2 pt-2">Settings</h3>
+<button class="flex items-center justify-between w-full p-4 rounded-xl bg-surface-dark hover:bg-surface-dark/80 active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">person</span>
+<span class="text-white text-base font-medium">Edit Profile</span>
+</div>
+<span class="material-symbols-outlined text-white/40 text-xl">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 rounded-xl bg-surface-dark hover:bg-surface-dark/80 active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">notifications</span>
+<span class="text-white text-base font-medium">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-white/40 text-xl">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 rounded-xl bg-surface-dark hover:bg-surface-dark/80 active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary">monitor_heart</span>
+<span class="text-white text-base font-medium">Linked Devices</span>
+</div>
+<span class="material-symbols-outlined text-white/40 text-xl">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 mt-2 rounded-xl border border-red-900/30 bg-red-900/10 hover:bg-red-900/20 active:scale-[0.99] transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-400">logout</span>
+<span class="text-red-400 text-base font-medium">Log Out</span>
+</div>
+</button>
+</div>
+<!-- Floating Bottom Navigation -->
+<div class="fixed bottom-6 left-4 right-4 z-50 mx-auto max-w-[416px]">
+<div class="flex h-16 w-full items-center justify-between rounded-2xl bg-[#152a1a]/80 backdrop-blur-xl border border-white/10 px-6 shadow-2xl shadow-black/50">
+<button class="flex flex-col items-center justify-center gap-1 text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="text-[10px] font-medium">Reminders</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">query_stats</span>
+<span class="text-[10px] font-medium">Tracking</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">local_pharmacy</span>
+<span class="text-[10px] font-medium">Pharmacy</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-primary">
+<div class="relative">
+<span class="material-symbols-outlined text-[24px] fill-current">person</span>
+<span class="absolute -top-0 -right-0.5 block h-2 w-2 rounded-full bg-primary ring-2 ring-background-dark"></span>
+</div>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

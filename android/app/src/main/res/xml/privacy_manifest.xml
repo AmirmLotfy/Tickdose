@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Android 14+ Privacy Manifest -->
+    <!-- Declares data usage and required reasons -->
+    
+    <!-- Data types collected -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <!-- Required reasons for data access -->
+    <property
+        android:name="android.privacy.USE_AI_FEATURES"
+        android:value="true" />
+    
+    <!-- AI usage disclosure -->
+    <property
+        android:name="android.privacy.USE_AI_FEATURES_DISCLOSURE"
+        android:value="This app uses Google Generative AI (Gemini) for symptom analysis and medication information enrichment. AI features are optional and can be disabled in settings." />
+</manifest>

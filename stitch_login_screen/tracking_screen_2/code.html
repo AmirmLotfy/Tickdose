@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tracking Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec37",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102213",
+              "surface-dark": "#1A2E1E",
+              "card-dark": "#234829"
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white pb-24">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-white/5 px-4 pt-4 pb-2">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] flex-1">Tracking</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 px-4 pt-6">
+<!-- Headline & Action -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-[28px] font-bold leading-tight">Progress &amp; Reports</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Keep track of your health journey.</p>
+</div>
+<button class="flex w-full items-center justify-center overflow-hidden rounded-xl h-12 bg-primary text-background-dark gap-2 px-4 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-opacity shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+<span>Export PDF Report</span>
+</button>
+</div>
+<!-- Stats Overview -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3 rounded-xl p-5 bg-white dark:bg-card-dark shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+<p class="text-sm font-medium text-gray-600 dark:text-gray-300">Adherence</p>
+</div>
+<div class="flex items-baseline gap-1">
+<p class="text-3xl font-bold tracking-tight">95%</p>
+<span class="text-xs text-primary font-medium">↑ 2%</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl p-5 bg-white dark:bg-card-dark shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-400 text-[20px]">local_fire_department</span>
+<p class="text-sm font-medium text-gray-600 dark:text-gray-300">Streak</p>
+</div>
+<div class="flex items-baseline gap-1">
+<p class="text-3xl font-bold tracking-tight">12</p>
+<span class="text-sm font-medium text-gray-500 dark:text-gray-400">Days</span>
+</div>
+</div>
+</div>
+<!-- Visualization Widget -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-card-dark p-5 shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-bold text-lg">Activity</h3>
+<div class="flex h-8 items-center rounded-lg bg-gray-100 dark:bg-background-dark p-1">
+<button class="flex h-full items-center justify-center rounded-md px-3 bg-white dark:bg-card-dark shadow-sm text-xs font-bold text-gray-900 dark:text-white">
+                        Weekly
+                    </button>
+<button class="flex h-full items-center justify-center rounded-md px-3 text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        Monthly
+                    </button>
+</div>
+</div>
+<!-- Bar Chart Simulation -->
+<div class="flex items-end justify-between h-32 w-full gap-2 mt-2">
+<!-- Mon -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end relative group">
+<div class="w-full bg-primary rounded-t-sm h-[80%] relative"></div>
+<!-- Tooltip -->
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">4/5 Doses</div>
+</div>
+<span class="text-[10px] font-medium text-gray-400">M</span>
+</div>
+<!-- Tue -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end group relative">
+<div class="w-full bg-primary rounded-t-sm h-[100%]"></div>
+</div>
+<span class="text-[10px] font-medium text-gray-400">T</span>
+</div>
+<!-- Wed -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end group relative">
+<div class="w-full bg-primary rounded-t-sm h-[60%]"></div>
+</div>
+<span class="text-[10px] font-medium text-gray-400">W</span>
+</div>
+<!-- Thu -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end group relative">
+<div class="w-full bg-primary rounded-t-sm h-[90%]"></div>
+</div>
+<span class="text-[10px] font-medium text-gray-400">T</span>
+</div>
+<!-- Fri -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end group relative">
+<div class="w-full bg-primary rounded-t-sm h-[100%]"></div>
+</div>
+<span class="text-[10px] font-medium text-gray-400">F</span>
+</div>
+<!-- Sat -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end group relative">
+<div class="w-full bg-orange-400 rounded-t-sm h-[40%]"></div>
+</div>
+<span class="text-[10px] font-medium text-gray-400">S</span>
+</div>
+<!-- Sun -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-primary/20 rounded-t-sm h-full flex items-end group relative">
+<div class="w-full bg-primary rounded-t-sm h-[85%]"></div>
+</div>
+<span class="text-[10px] font-medium text-white">S</span>
+</div>
+</div>
+</div>
+<!-- Interactive Calendar -->
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold px-1">October 2023</h3>
+<div class="w-full bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm">
+<div class="grid grid-cols-7 mb-2">
+<div class="text-center text-xs font-medium text-gray-400 py-1">M</div>
+<div class="text-center text-xs font-medium text-gray-400 py-1">T</div>
+<div class="text-center text-xs font-medium text-gray-400 py-1">W</div>
+<div class="text-center text-xs font-medium text-gray-400 py-1">T</div>
+<div class="text-center text-xs font-medium text-gray-400 py-1">F</div>
+<div class="text-center text-xs font-medium text-gray-400 py-1">S</div>
+<div class="text-center text-xs font-medium text-gray-400 py-1">S</div>
+</div>
+<div class="grid grid-cols-7 gap-y-2">
+<!-- Previous month days -->
+<div class="aspect-square flex flex-col items-center justify-center text-gray-600 opacity-30">28</div>
+<div class="aspect-square flex flex-col items-center justify-center text-gray-600 opacity-30">29</div>
+<div class="aspect-square flex flex-col items-center justify-center text-gray-600 opacity-30">30</div>
+<!-- Current month days -->
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">1</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">2</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">3</span>
+<div class="w-1.5 h-1.5 rounded-full bg-red-500 mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">4</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">5</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">6</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">7</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">8</span>
+<div class="w-1.5 h-1.5 rounded-full bg-orange-400 mt-1"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative bg-primary/20 rounded-lg">
+<span class="text-sm font-bold text-primary">9</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1 shadow-[0_0_4px_#13ec37]"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">10</span>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">11</span>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">12</span>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">13</span>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center relative">
+<span class="text-sm font-medium">14</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History List -->
+<div class="flex flex-col gap-4 pb-20">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-lg font-bold">History</h3>
+<button class="text-xs font-medium text-primary uppercase tracking-wider">See All</button>
+</div>
+<div class="flex flex-col gap-2">
+<!-- History Item 1 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-card-dark shadow-sm">
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">pill</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-bold truncate">Amoxicillin</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Today, 9:00 AM • After Meal</p>
+</div>
+<div class="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-background-dark shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-card-dark shadow-sm">
+<div class="h-10 w-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-bold truncate">Vitamin D</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Yesterday, 8:00 PM</p>
+</div>
+<div class="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-background-dark shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+<!-- History Item 3 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-card-dark shadow-sm">
+<div class="h-10 w-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 shrink-0">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-bold truncate">Metformin</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Yesterday, 1:00 PM</p>
+</div>
+<div class="h-8 w-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">close</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Bottom Navigation -->
+<div class="fixed bottom-6 left-4 right-4 h-16 rounded-2xl bg-white/10 dark:bg-background-dark/80 backdrop-blur-md shadow-2xl border border-white/10 dark:border-white/5 flex items-center justify-between px-2 z-50">
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="text-[10px] font-medium">Reminders</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full text-primary transition-colors">
+<div class="h-8 w-12 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+</div>
+<span class="text-[10px] font-bold">Tracking</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">local_pharmacy</span>
+<span class="text-[10px] font-medium">Pharmacy</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-1 h-full text-gray-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</body></html>

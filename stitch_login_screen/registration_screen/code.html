@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tickdo - Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-gray-200 dark:border-gray-800/50">
+<button class="flex items-center justify-center p-2 -ml-2 rounded-full text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight flex-1 text-center pr-8">Create Account</h2>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col w-full max-w-[480px] mx-auto px-4 pt-4 pb-8">
+<!-- Header Text -->
+<div class="mb-8">
+<h1 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight mb-2">Join Tickdo</h1>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Start managing your health journey today.</p>
+</div>
+<!-- Form Fields -->
+<form class="space-y-5" onsubmit="event.preventDefault();">
+<!-- Name Input -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-white text-sm font-medium" for="fullname">Full Name</label>
+<div class="relative">
+<input class="w-full h-14 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#19331e] text-gray-900 dark:text-white px-4 text-base focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-[#92c99b]" id="fullname" name="fullname" placeholder="Enter your full name" type="text"/>
+</div>
+</div>
+<!-- Email Input -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-white text-sm font-medium" for="email">Email Address</label>
+<div class="relative">
+<input class="w-full h-14 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#19331e] text-gray-900 dark:text-white px-4 text-base focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-[#92c99b]" id="email" name="email" placeholder="name@example.com" type="email"/>
+<!-- Success Indicator Example -->
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none">check_circle</span>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-white text-sm font-medium" for="password">Password</label>
+<div class="relative">
+<input class="w-full h-14 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#19331e] text-gray-900 dark:text-white px-4 text-base focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-[#92c99b]" id="password" name="password" placeholder="Create a password" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-[#92c99b] hover:text-gray-700 dark:hover:text-white transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility_off</span>
+</button>
+</div>
+<!-- Password Strength Meter -->
+<div class="flex gap-1.5 mt-1">
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+<div class="h-1 flex-1 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Medium strength</p>
+</div>
+<!-- Confirm Password Input -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-white text-sm font-medium" for="confirm-password">Confirm Password</label>
+<div class="relative">
+<input class="w-full h-14 rounded-xl border border-red-500 bg-white dark:bg-[#19331e] text-gray-900 dark:text-white px-4 text-base focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-[#92c99b]" id="confirm-password" name="confirm-password" placeholder="Re-enter password" type="password"/>
+</div>
+<!-- Error Message Example -->
+<div class="flex items-center gap-1 text-red-500 text-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Passwords do not match</span>
+</div>
+</div>
+<!-- Terms -->
+<p class="text-xs text-gray-500 dark:text-gray-400 text-center leading-relaxed px-4">
+                By signing up, you agree to our 
+                <a class="text-primary hover:underline" href="#">Terms of Service</a> and 
+                <a class="text-primary hover:underline" href="#">Privacy Policy</a>.
+            </p>
+<!-- Submit Button -->
+<button class="w-full h-12 bg-primary text-black font-bold text-base rounded-xl hover:bg-[#0fd630] transition-colors shadow-[0_0_20px_rgba(19,236,55,0.3)] mt-2">
+                Create Account
+            </button>
+</form>
+<!-- Divider -->
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-gray-200 dark:border-gray-800"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-background-light dark:bg-background-dark text-gray-500">Or continue with</span>
+</div>
+</div>
+<!-- Social Buttons -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-12 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors bg-white dark:bg-transparent">
+<img alt="Google" class="w-5 h-5" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6txizXMKN-pW-_Jzn0Zvsm9TIpEz19_LSA0Oih7MMfQRuDo_l2lZqhISiBSvWuXapIhu0T33ZGdyCxWu9pByGnaHsOOP5GGPHsMb2aYzDYf6RCBUPQJxvUNlivqJKfcd8K7GB6eEmsxBOrX45XipzHpfoT0DM12o1V4GoyGzY3O6mHLJ8EOacefWXuUlvR52vbROxsZslb4MSOGN9DwpeV1d6voTBBQX25MIbCPB0EQLxUSXaId9cAsos58x87NxbJVk60RA26E"/>
+<span class="text-gray-900 dark:text-white font-medium text-sm">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-12 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors bg-white dark:bg-transparent">
+<span class="material-symbols-outlined text-gray-900 dark:text-white text-xl">ios</span>
+<span class="text-gray-900 dark:text-white font-medium text-sm">Apple</span>
+</button>
+</div>
+<!-- Login Redirect -->
+<div class="mt-8 text-center">
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                Already have an account? 
+                <a class="text-primary font-semibold hover:underline" href="#">Log In</a>
+</p>
+</div>
+</main>
+</body></html>

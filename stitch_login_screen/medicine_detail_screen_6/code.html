@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medicine Detail Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#13ec37",
+                "background-light": "#f6f8f6",
+                "background-dark": "#112214", // Adjusted to match the deep green-black of the examples
+                "surface-dark": "#19331e",
+                "surface-light": "#234829",
+                "text-secondary": "#92c99b",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-black">
+<div class="relative flex min-h-screen w-full flex-col pb-24">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-20 flex items-center bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-white/5">
+<div class="text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-white/5 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<div class="flex items-center justify-end gap-2">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full hover:bg-white/5 transition-colors text-white">
+<span class="material-symbols-outlined text-2xl">history</span>
+</button>
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full hover:bg-white/5 transition-colors text-white">
+<span class="material-symbols-outlined text-2xl">edit</span>
+</button>
+</div>
+</div>
+<!-- ProfileHeader (Medicine Hero) -->
+<div class="flex p-4 flex-col items-center animate-fade-in">
+<div class="relative group">
+<!-- Glow effect -->
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+<div class="relative bg-center bg-no-repeat aspect-square bg-cover rounded-2xl min-h-40 w-40 shadow-2xl border border-white/5" data-alt="3D render of a white medicine bottle with green label and spilled pills" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2mhmcrJWbpeoUVuI1fjtICrrMXW6WiZ9da5EHBPa145ySOJmXOIMkXp_kTGpwxOjZLOEYT3n6l8YA84wSeW9uGbkM0OdT-dnSVfeEk2UtdWVrs0tqz88pJJHByrQc7vE3NcVQRTzMHT8926O50mL4hJNwCfS8W3CoYlsRrJwRiHgQ_2qjlvTcPmWU8ordquRO9eGmb7GLw7Pb4KTFxPBehnBmYSWViyoKe34Mk3p_NpzNb-LUH1q6ZG_ahx_2KJ5sj7d3ZXzcyH4");'>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center mt-6 gap-1">
+<h1 class="text-white text-3xl font-bold leading-tight tracking-tight text-center">Atorvastatin</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-light text-primary text-xs font-semibold uppercase tracking-wider">Active</span>
+<p class="text-text-secondary text-base font-normal">Generic: Lipitor</p>
+</div>
+<p class="text-white text-lg font-medium mt-1">20mg • Tablet</p>
+</div>
+</div>
+<!-- Action Grid (Quick Actions) -->
+<div class="grid grid-cols-4 gap-3 px-4 py-2">
+<button class="flex flex-col items-center gap-2 group">
+<div class="size-14 rounded-2xl bg-surface-dark border border-white/5 flex items-center justify-center group-hover:bg-surface-light transition-colors shadow-lg">
+<span class="material-symbols-outlined text-primary text-2xl">description</span>
+</div>
+<span class="text-xs text-text-secondary">Monograph</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="size-14 rounded-2xl bg-surface-dark border border-white/5 flex items-center justify-center group-hover:bg-surface-light transition-colors shadow-lg">
+<span class="material-symbols-outlined text-[#ff9f43] text-2xl">medication_liquid</span>
+</div>
+<span class="text-xs text-text-secondary">Interactions</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="size-14 rounded-2xl bg-surface-dark border border-white/5 flex items-center justify-center group-hover:bg-surface-light transition-colors shadow-lg">
+<span class="material-symbols-outlined text-[#ff6b6b] text-2xl">healing</span>
+</div>
+<span class="text-xs text-text-secondary">Side Effects</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="size-14 rounded-2xl bg-surface-dark border border-white/5 flex items-center justify-center group-hover:bg-surface-light transition-colors shadow-lg">
+<span class="material-symbols-outlined text-[#54a0ff] text-2xl">calendar_month</span>
+</div>
+<span class="text-xs text-text-secondary">Schedule</span>
+</button>
+</div>
+<!-- Next Dose Card -->
+<div class="p-4">
+<div class="relative overflow-hidden rounded-2xl bg-surface-dark border border-white/5 p-5 shadow-lg">
+<!-- Decorative background accent -->
+<div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 blur-2xl"></div>
+<div class="flex items-center justify-between gap-4 relative z-10">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<span class="text-text-secondary text-sm font-medium uppercase tracking-wider">Next Dose</span>
+</div>
+<p class="text-white text-2xl font-bold leading-tight font-mono">8:00 PM</p>
+<p class="text-text-secondary text-sm font-normal">Take with food • 1 Tablet</p>
+</div>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-5 bg-primary text-black hover:bg-opacity-90 transition-all shadow-[0_0_15px_rgba(19,236,55,0.3)] gap-2 text-sm font-bold leading-normal active:scale-95">
+<span class="material-symbols-outlined text-lg">check</span>
+<span>Log Taken</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Supply Tracking Section -->
+<div>
+<div class="px-4 pb-2 pt-2 flex justify-between items-end">
+<h3 class="text-white text-lg font-bold leading-tight tracking-tight">Supply Tracking</h3>
+<button class="text-primary text-sm font-medium hover:underline">Request Refill</button>
+</div>
+<div class="flex flex-col gap-3 p-4 pt-2">
+<div class="rounded-2xl bg-surface-dark border border-white/5 p-4">
+<div class="flex gap-6 justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="p-1.5 bg-surface-light rounded-lg">
+<span class="material-symbols-outlined text-text-secondary text-lg">pill</span>
+</div>
+<p class="text-white text-sm font-medium leading-normal">Remaining</p>
+</div>
+<p class="text-white text-sm font-bold leading-normal">14 <span class="text-text-secondary font-normal">/ 30 pills</span></p>
+</div>
+<div class="relative h-2.5 w-full rounded-full bg-[#0d1a10]">
+<div class="absolute left-0 top-0 h-full rounded-full bg-primary shadow-[0_0_10px_rgba(19,236,55,0.5)]" style="width: 45%;"></div>
+</div>
+<div class="mt-3 flex items-start gap-2">
+<span class="material-symbols-outlined text-yellow-500 text-sm mt-0.5">warning</span>
+<p class="text-text-secondary text-xs font-normal leading-normal">Refill recommended soon. Supply will last approx. 7 days.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Monograph Section -->
+<div class="px-4 pb-6">
+<h3 class="text-white text-lg font-bold leading-tight tracking-tight mb-3">About this drug</h3>
+<div class="p-4 rounded-2xl bg-surface-dark border border-white/5">
+<p class="text-gray-300 text-sm leading-relaxed">
+                    Atorvastatin is a statin medication used to prevent cardiovascular disease in those at high risk and treat abnormal lipid levels. It works by decreasing the amount of cholesterol made by the liver.
+                </p>
+<button class="mt-3 text-primary text-sm font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                    Read full monograph
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Glassmorphic Bottom Navigation -->
+<div class="fixed bottom-0 left-0 z-50 w-full px-4 pb-6 pt-2">
+<div class="relative flex h-16 w-full items-center justify-around rounded-2xl border border-white/10 bg-background-dark/85 backdrop-blur-xl shadow-2xl">
+<button class="group flex flex-col items-center justify-center gap-1 p-2">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-medium text-text-secondary group-hover:text-white">Home</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-1 p-2">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">notifications</span>
+<span class="text-[10px] font-medium text-text-secondary group-hover:text-white">Reminders</span>
+</button>
+<!-- Active Tab -->
+<button class="group flex flex-col items-center justify-center gap-1 p-2 relative">
+<div class="absolute -top-10 p-3 bg-primary rounded-full shadow-[0_0_20px_rgba(19,236,55,0.4)] border-4 border-background-dark transform transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-black">add</span>
+</div>
+<div class="h-6"></div> <!-- Spacer for floating button -->
+<span class="text-[10px] font-bold text-primary">Track</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-1 p-2">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">local_pharmacy</span>
+<span class="text-[10px] font-medium text-text-secondary group-hover:text-white">Pharmacy</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-1 p-2">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">person</span>
+<span class="text-[10px] font-medium text-text-secondary group-hover:text-white">Profile</span>
+</button>
+</div>
+</div>
+</body></html>

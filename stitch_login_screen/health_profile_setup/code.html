@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Health Profile Setup - Tickdo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec37",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102213",
+              "surface-dark": "#162e1a",
+              "surface-light": "#ffffff",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal scrolling if needed */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<div class="flex items-center px-4 pt-6 pb-2 justify-between sticky top-0 z-10 bg-background-light dark:bg-background-dark">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-gray-900 dark:text-white" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<div class="flex items-center justify-end">
+<p class="text-primary text-sm font-bold tracking-wide">Step 2/4</p>
+</div>
+</div>
+<!-- Progress Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-2 py-4 px-6">
+<div class="h-1.5 flex-1 rounded-full bg-primary/30 dark:bg-primary/20"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-gray-200 dark:bg-white/10"></div>
+<div class="h-1.5 flex-1 rounded-full bg-gray-200 dark:bg-white/10"></div>
+</div>
+<!-- Main Content Scroll Area -->
+<div class="flex-1 overflow-y-auto px-6 pb-24">
+<!-- Headline Text -->
+<div class="pt-2 pb-4">
+<h2 class="text-gray-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight">Medical Background</h2>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal pt-2">This helps our AI analyze your symptoms more accurately and provide personalized insights.</p>
+</div>
+<!-- Form Section 1: Allergies -->
+<div class="mt-6 space-y-4">
+<div class="flex justify-between items-end">
+<label class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Do you have any allergies?</label>
+</div>
+<!-- Input Field -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3.5 border-none rounded-xl bg-white dark:bg-surface-dark text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary shadow-sm text-base" placeholder="Search allergies (e.g., Peanuts)" type="text"/>
+</div>
+<!-- Selected Tags (Chips) -->
+<div class="flex flex-wrap gap-2">
+<div class="inline-flex items-center px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-dark dark:text-primary text-sm font-medium">
+                        Penicillin
+                        <button class="ml-2 flex items-center justify-center rounded-full hover:bg-black/10 dark:hover:bg-white/20">
+<span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+</button>
+</div>
+</div>
+<!-- "None" Toggle -->
+<div class="flex items-center space-x-3 pt-1">
+<div class="relative inline-block w-11 h-6 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer peer checked:right-0 checked:translate-x-full" id="toggle-allergies" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 dark:bg-white/10 cursor-pointer peer-checked:bg-primary/50" for="toggle-allergies"></label>
+<!-- Note: Tailwind forms plugin usually handles styling, implementing custom visual logic here for demo -->
+<div class="w-11 h-6 bg-gray-200 dark:bg-white/10 rounded-full peer-checked:bg-primary transition-colors duration-200 relative">
+<div class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform peer-checked:translate-x-5"></div>
+</div>
+</div>
+<label class="text-gray-700 dark:text-gray-300 text-sm font-medium" for="toggle-allergies">I have no known allergies</label>
+</div>
+</div>
+<div class="h-px bg-gray-200 dark:bg-white/10 w-full my-8"></div>
+<!-- Form Section 2: Chronic Conditions -->
+<div class="space-y-4">
+<label class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Chronic Conditions</label>
+<!-- Input Field -->
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">ecg_heart</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3.5 border-none rounded-xl bg-white dark:bg-surface-dark text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary shadow-sm text-base" placeholder="Search conditions (e.g., Asthma)" type="text"/>
+</div>
+<!-- Empty State / Suggestion -->
+<div class="flex flex-wrap gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-400 text-sm border border-transparent transition-colors">
+                        Diabetes
+                    </button>
+<button class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-400 text-sm border border-transparent transition-colors">
+                        Hypertension
+                    </button>
+<button class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-400 text-sm border border-transparent transition-colors">
+                        Asthma
+                    </button>
+</div>
+</div>
+<!-- Optional: Blood Type -->
+<div class="mt-8 space-y-3">
+<div class="flex justify-between items-center">
+<label class="text-gray-900 dark:text-white text-base font-bold">Blood Type <span class="text-gray-400 font-normal text-sm">(Optional)</span></label>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+<button class="shrink-0 w-12 h-12 rounded-xl bg-primary text-black font-bold flex items-center justify-center shadow-lg shadow-primary/20 ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark">
+                        A+
+                    </button>
+<button class="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-surface-dark text-gray-600 dark:text-gray-300 font-medium flex items-center justify-center border border-gray-200 dark:border-white/10">
+                        A-
+                    </button>
+<button class="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-surface-dark text-gray-600 dark:text-gray-300 font-medium flex items-center justify-center border border-gray-200 dark:border-white/10">
+                        B+
+                    </button>
+<button class="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-surface-dark text-gray-600 dark:text-gray-300 font-medium flex items-center justify-center border border-gray-200 dark:border-white/10">
+                        B-
+                    </button>
+<button class="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-surface-dark text-gray-600 dark:text-gray-300 font-medium flex items-center justify-center border border-gray-200 dark:border-white/10">
+                        O+
+                    </button>
+<button class="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-surface-dark text-gray-600 dark:text-gray-300 font-medium flex items-center justify-center border border-gray-200 dark:border-white/10">
+                        O-
+                    </button>
+</div>
+</div>
+</div>
+<!-- Sticky Footer CTA -->
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light dark:from-background-dark to-transparent pt-12 pb-8 px-6">
+<button class="w-full bg-primary hover:bg-[#0fd630] text-black font-bold text-lg py-4 rounded-xl shadow-lg shadow-primary/25 transition-transform active:scale-[0.98] flex items-center justify-center gap-2">
+                Continue
+                <span class="material-symbols-outlined" style="font-size: 20px; font-weight: 600;">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Background decorative blur element -->
+<div class="fixed top-20 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-20 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+</body></html>

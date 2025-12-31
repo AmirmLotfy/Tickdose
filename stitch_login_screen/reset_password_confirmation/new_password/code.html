@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reset Password - Tickdo</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec37",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102213",
+              "surface-dark": "#162e1b", // Slightly lighter than background-dark for inputs
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden mx-auto max-w-md shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<header class="flex items-center px-4 pt-12 pb-4 justify-between bg-transparent z-10">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Reset Password</h2>
+<div class="size-10"></div> <!-- Spacer for centering title -->
+</header>
+<!-- Main Content Scroll Area -->
+<main class="flex-1 flex flex-col px-6 pb-6 overflow-y-auto no-scrollbar">
+<!-- Headline Text -->
+<div class="mt-4">
+<h3 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight text-left">Create new password</h3>
+</div>
+<!-- Body Text -->
+<div class="mt-3 mb-8">
+<p class="text-slate-600 dark:text-gray-300 text-base font-normal leading-normal">
+                    Your new password must be different from previous used passwords.
+                </p>
+</div>
+<!-- New Password Field -->
+<div class="mb-5">
+<label class="block mb-2">
+<p class="text-slate-900 dark:text-white text-sm font-semibold leading-normal mb-2">New Password</p>
+<div class="relative flex items-center">
+<input class="peer flex w-full rounded-xl border border-gray-300 dark:border-[#32673b] bg-white dark:bg-surface-dark h-14 px-4 pr-12 text-base text-slate-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200" placeholder="••••••••••••" type="password" value="TickdoSecure1!"/>
+<button class="absolute right-0 top-0 h-full w-12 flex items-center justify-center text-gray-500 dark:text-[#92c99b] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</label>
+<!-- Password Strength Meter -->
+<div class="mt-3 flex gap-2">
+<div class="h-1.5 flex-1 rounded-full bg-primary shadow-[0_0_8px_rgba(19,236,55,0.4)]"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary shadow-[0_0_8px_rgba(19,236,55,0.4)]"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary shadow-[0_0_8px_rgba(19,236,55,0.4)]"></div>
+<div class="h-1.5 flex-1 rounded-full bg-gray-200 dark:bg-white/10"></div>
+</div>
+<p class="mt-1.5 text-xs font-medium text-primary text-right">Strong</p>
+</div>
+<!-- Confirm Password Field -->
+<div class="mb-6">
+<label class="block">
+<p class="text-slate-900 dark:text-white text-sm font-semibold leading-normal mb-2">Confirm New Password</p>
+<div class="relative flex items-center">
+<input class="peer flex w-full rounded-xl border border-gray-300 dark:border-[#32673b] bg-white dark:bg-surface-dark h-14 px-4 pr-12 text-base text-slate-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200" placeholder="••••••••••••" type="password"/>
+<button class="absolute right-0 top-0 h-full w-12 flex items-center justify-center text-gray-500 dark:text-[#92c99b] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</label>
+</div>
+<!-- Validation Checklist -->
+<div class="bg-gray-100 dark:bg-white/5 rounded-xl p-5 mb-8 border border-transparent dark:border-white/5">
+<h4 class="text-sm font-semibold text-slate-900 dark:text-gray-200 mb-3">Password requirements:</h4>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-gray-300">At least 8 characters</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-gray-300">Contains a number</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-gray-400 dark:text-gray-600">radio_button_unchecked</span>
+<span class="text-sm text-slate-400 dark:text-gray-500">Contains a symbol</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="mt-auto">
+<button class="w-full h-14 rounded-xl bg-primary hover:bg-[#0fd630] active:scale-[0.98] transition-all duration-200 flex items-center justify-center shadow-[0_4px_14px_rgba(19,236,55,0.3)]">
+<span class="text-[#0a160c] text-base font-bold tracking-wide">Reset Password</span>
+</button>
+</div>
+</main>
+<!-- Bottom Safe Area Spacer -->
+<div class="h-6 w-full bg-background-light dark:bg-background-dark"></div>
+</div>
+</body></html>

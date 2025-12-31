@@ -1,0 +1,1086 @@
+{
+  "appTitle": "تيك دوس",
+  "yesAction": "نعم",
+  "noAction": "لا",
+  "refillReminderTitle": "تذكير إعادة التعبئة",
+  "refillReminderBody": "حان وقت إعادة تعبئة {medicineName}.",
+  "@refillReminderBody": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "home": "الرئيسية",
+  "reminders": "التذكيرات",
+  "tracking": "المتابعة",
+  "pharmacy": "الصيدلية",
+  "profile": "الملف الشخصي",
+  "settings": "الإعدادات",
+  "language": "اللغة",
+  "settingsLanguage": "اللغة",
+  "settingsSoundEffects": "تأثيرات صوتية",
+  "settingsNotifications": "الإشعارات",
+  "settingsDarkMode": "الوضع الداكن",
+  "settingsTitle": "الإعدادات",
+
+  "onboardingTitle1": "لا تفوت موعد دوائك أبداً",
+  "onboardingDesc1": "احصل على تذكيرات في الوقت المناسب لجميع أدويتك وحافظ على صحتك في المسار الصحيح.",
+  "onboardingTitle2": "تتبع التزامك",
+  "onboardingDesc2": "راقب تقدمك باستخدام إحصائيات مفصلة وسجلات التاريخ.",
+  "onboardingTitle3": "اعثر على الصيدليات القريبة",
+  "onboardingDesc3": "حدد موقع أقرب الصيدليات وتحقق من توفرها فوراً.",
+  "getStarted": "ابدأ الآن",
+  "skip": "تخطي",
+  "next": "التالي",
+  "splashTagline": "لا تفوت موعد دوائك أبداً",
+
+  "reminderTitle": "حان وقت تناول الدواء",
+  "reminderBody": "تناول {medicineName} الآن.",
+  "@reminderBody": {
+    "placeholders": {
+      "dosage": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "voiceReminderStandard": "حان وقت تناول {dosage} من {medicineName}. يرجى تناول دوائك الآن للحفاظ على صحتك.",
+  "@voiceReminderStandard": {
+    "placeholders": {
+      "dosage": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "voiceReminderMeal": "إنه وقت {mealTime}! تناول {dosage} من {medicineName} مع الطعام. يرجى تناول دوائك الآن للحفاظ على صحتك.",
+  "@voiceReminderMeal": {
+    "placeholders": {
+      "mealTime": {
+        "type": "String"
+      },
+      "dosage": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "goodMorning": "صباح الخير!",
+  "goodAfternoon": "طاب مساؤك!",
+  "goodEvening": "مساء الخير!",
+  "hello": "مرحباً!",
+
+  "medicineDetailsTitle": "تفاصيل الدواء",
+  "deleteMedicineTitle": "حذف الدواء",
+  "deleteMedicineQuestion": "حذف الدواء؟",
+  "deleteMedicineContent": "لا يمكن التراجع عن هذا الإجراء.",
+  "dialogCancel": "إلغاء",
+  "dialogDelete": "حذف",
+  "tabDetails": "التفاصيل",
+  "tabSideEffects": "الآثار الجانبية",
+  "tabInteractions": "تفاعلات الأدوية",
+  "logSideEffect": "تسجيل أثر جانبي",
+  "genericName": "الاسم العلمي: {name}",
+  "@genericName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "imageNotAvailable": "الصورة غير متوفرة",
+  "dosageInfo": "معلومات الجرعة",
+  "strengthLabel": "التركيز: {strength}",
+  "@strengthLabel": {
+    "placeholders": {
+      "strength": {
+        "type": "String"
+      }
+    }
+  },
+  "formLabel": "الشكل الدوائي: {form}",
+  "@formLabel": {
+    "placeholders": {
+      "form": {
+        "type": "String"
+      }
+    }
+  },
+  "dosageLabel": "الجرعة: {dosage}",
+  "@dosageLabel": {
+    "placeholders": {
+      "dosage": {
+        "type": "String"
+      }
+    }
+  },
+  "frequencyLabel": "التكرار: {frequency}",
+  "@frequencyLabel": {
+    "placeholders": {
+      "frequency": {
+        "type": "String"
+      }
+    }
+  },
+  "manufacturerInfo": "الشركة المصنعة",
+  "manufacturerLabel": "المصنع: {name}",
+  "@manufacturerLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "batchLabel": "رقم التشغيلة: {batch}",
+  "@batchLabel": {
+    "placeholders": {
+      "batch": {
+        "type": "String"
+      }
+    }
+  },
+  "expiresLabel": "تاريخ الانتهاء: {date}",
+  "@expiresLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "prescriptionDetails": "تفاصيل الوصفة",
+  "prescribedByLabel": "وصف بواسطة: {name}",
+  "@prescribedByLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dateLabel": "التاريخ: {date}",
+  "@dateLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "knownSideEffects": "الآثار الجانبية المعروفة",
+  "remindersLabel": "التذكيرات",
+  "refillReminderLabel": "تذكير إعادة التعبئة: قبل {days} أيام",
+  "@refillReminderLabel": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "notesLabel": "ملاحظات",
+  "expiringSoonWarning": "هذا الدواء سينتهي قريباً!",
+  "expiredWarning": "هذا الدواء منتهي الصلاحية!",
+  "interactionsTitle": "التفاعلات الدوائية",
+  "noInteractions": "لا توجد تفاعلات معروفة.",
+  "healthProfileCheck": "فحص الملف الصحي",
+  "safeForHealth": "آمن بالنسبة لملفك الصحي",
+  "foodInteractionsTitle": "تفاعلات الطعام",
+  "noFoodInteractions": "لا توجد تفاعلات طعام معروفة.",
+  "myMedicinesTitle": "أدويتي",
+  "noMedicinesAdded": "لم تتم إضافة أدوية بعد",
+  "helloUser": "مرحباً، {name}",
+  "@helloUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeTagline": "لنحافظ على صحتك اليوم!",
+  "todaysMedicines": "أدوية اليوم",
+  "seeAll": "عرض الكل",
+  "noMedicinesToday": "لا توجد أدوية مجدولة لليوم",
+  "addReminder": "إضافة تذكير",
+  "editReminder": "تعديل تذكير",
+  "errorLoadingReminders": "خطأ في تحميل التذكيرات",
+  "markedAsTaken": "✓ تم تحديد {medicine} كـ مأخوذ",
+  "@markedAsTaken": {
+    "placeholders": {
+      "medicine": {
+        "type": "String"
+      }
+    }
+  },
+  "skippedMedicine": "تخطي {medicine}",
+  "@skippedMedicine": {
+    "placeholders": {
+      "medicine": {
+        "type": "String"
+      }
+    }
+  },
+  "takeAction": "تناول",
+  "skipAction": "تخطي",
+
+  "adherenceLabel": "الالتزام",
+  "streakLabel": "التتابع",
+  "streakDays": "{days} أيام",
+  "@streakDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "iFeelTitle": "أشعر بـ",
+  "iFeelSubtitle": "افحص الأعراض - نص أو صوت",
+
+  "trackingTitle": "تتبع",
+  "analyzingReport": "جاري إنشاء تقرير PDF...",
+  "reportSuccess": "تم إنشاء التقرير بنجاح!",
+  "reportError": "خطأ في إنشاء التقرير: {error}",
+  "@reportError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "historyTitle": "السجل",
+  "profileTitle": "الملف الشخصي",
+  "editProfile": "تعديل الملف الشخصي",
+  "settingsTitle": "الإعدادات",
+  "notificationsLabel": "الإشعارات",
+  "notificationsSubtitle": "استلام تذكيرات الدواء",
+  "languageLabel": "اللغة",
+  "privacyPolicyLabel": "سياسة الخصوصية",
+  "darkModeLabel": "الوضع الداكن",
+  "darkModeSubtitle": "استخدام المظهر الداكن",
+  "accountTitle": "الحساب",
+  "caregiversLabel": "مقدمو الرعاية",
+  "acceptInvitationLabel": "قبول دعوة",
+  "changePasswordLabel": "تغيير كلمة المرور",
+  "deleteAccountLabel": "حذف الحساب",
+  "logoutLabel": "تسجيل الخروج",
+
+  "findPharmacyTitle": "ابحث عن صيدلية",
+  "locationAccessRequired": "مطلوب إذن الموقع",
+  "locationAccessRationale": "قم بتفعيل خدمات الموقع للعثور على الصيدليات القريبة",
+  "enableLocationAction": "تفعيل الموقع",
+  "pharmacyError": "خطأ: {error}",
+  "@pharmacyError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "noPharmaciesFound": "لم يتم العثور على صيدليات قريبة",
+  "pharmaciesFoundCount": "{count} صيدلية",
+  "@pharmaciesFoundCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "directionsAction": "الاتجاهات",
+  "callAction": "اتصال",
+  "websiteAction": "الموقع الإلكتروني",
+  "showMapAction": "عرض الخريطة",
+  "showListAction": "عرض القائمة",
+
+  "myDoctorsTitle": "أطبائي",
+  "addDoctorTitle": "إضافة دكتور",
+  "deleteDoctorTitle": "حذف الدكتور؟",
+  "deleteDoctorContent": "هل أنت متأكد أنك تريد إزالة هذا الدكتور من قائمتك؟",
+  "cancelButton": "إلغاء",
+  "deleteButton": "حذف",
+  "pleaseLogIn": "يرجى تسجيل الدخول",
+  "noDoctorsAdded": "لم يتم إضافة أطباء بعد",
+  "tapToAddDoctor": "اضغط على \"إضافة دكتور\" للبدء",
+  "doctorNameLabel": "اسم الدكتور",
+  "doctorNameHint": "مثال: د. أحمد",
+  "doctorNameRequired": "يرجى إدخال الاسم",
+  "specializationLabel": "التخصص",
+  "specializationRequired": "يرجى اختيار التخصص",
+  "phoneNumberLabel": "رقم الهاتف",
+  "phoneRequired": "يرجى إدخال رقم هاتف صحيح",
+  "doctorAddedSuccess": "تم إضافة الدكتور بنجاح",
+  "doctorAddError": "خطأ في إضافة الدكتور: {error}",
+  "@doctorAddError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "specializationGeneral": "طبيب عام",
+  "specializationCardiologist": "طبيب قلب",
+  "specializationDermatologist": "طبيب جلدية",
+  "specializationNeurologist": "طبيب أعصاب",
+  "specializationPsychiatrist": "طبيب نفسي",
+  "specializationEndocrinologist": "طبيب غدد صماء",
+  "specializationPediatrician": "طبيب أطفال",
+  "specializationSurgeon": "جراح",
+  "specializationDentist": "طبيب أسنان",
+  "specializationOther": "آخر",
+
+  "caregiverDashboardTitle": "لوحة تحكم مقدم الرعاية",
+  "patientMedicationsTitle": "أدوية المريض",
+  "readOnlyView": "عرض للقراءة فقط",
+  "todaysMedicationsTitle": "أدوية اليوم",
+  "noMedicationsToday": "لا توجد أدوية مجدولة لليوم",
+  "sendVoiceReminderTooltip": "إرسال تذكير صوتي",
+  "voiceReminderSent": "تم إرسال التذكير الصوتي",
+  "allMedicationsTitle": "كل الأدوية",
+  "noMedicationsAdded": "لم يتم إضافة أدوية",
+  "errorLabel": "خطأ: {error}",
+  "@errorLabel": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+
+  "acceptInvitationTitle": "قبول الدعوة",
+  "invitationCodeLabel": "رمز الدعوة",
+  "enterInvitationCodePrompt": "أدخل الرمز المكون من 64 حرفاً",
+  "invitationCodeInputLabel": "أدخل رمز الدعوة",
+  "invitationCodeInputDescription": "أدخل رمز الدعوة الذي استلمته من المريض لتصبح مقدم رعاية له.",
+  "validateCodeButton": "التحقق من الرمز",
+  "acceptInvitationButton": "قبول الدعوة",
+  "declineButton": "رفض",
+  "pleaseLogInToAccept": "يرجى تسجيل الدخول أولاً لقبول الدعوة",
+  "invitationAcceptedSuccess": "تم قبول الدعوة بنجاح!",
+  "invitationAcceptedView": "تم قبول الدعوة! يمكنك الآن عرض أدوية المريض.",
+  "invitationFailed": "فشل قبول الدعوة. قد يكون الرمز غير صالح أو منتهي الصلاحية.",
+  "invitationError": "خطأ في قبول الدعوة. يرجى المحاولة مرة أخرى.",
+  "invalidInvitationFormat": "صيغة رمز الدعوة غير صالحة",
+  "invitationNotFound": "رمز الدعوة غير موجود",
+  "invitationUsed": "تم استخدام هذه الدعوة مسبقاً",
+  "invitationExpired": "انتهت صلاحية هذه الدعوة",
+  "loginRequiredNote": "ملاحظة: يجب أن تكون مسجلاً للدخول لقبول الدعوة.",
+  "howToFindCodeTitle": "كيف تجد رمز الدعوة الخاص بك:",
+  "howToFindCodeStep1": "1. اطلب من المريض مشاركة رمز الدعوة",
+  "howToFindCodeStep2": "2. أو امسح رمز الاستجابة السريعة (QR) الذي قدموه",
+  "howToFindCodeStep3": "3. أدخل الرمز في الحقل أعلاه",
+  "invalidInvitationTitle": "دعوة غير صالحة",
+  "invalidInvitationMessage": "هذه الدعوة غير صالحة أو منتهية الصلاحية.",
+  "invitationUsedTitle": "الدعوة مستخدمة",
+  "invitationUsedMessage": "تم استخدام هذه الدعوة بالفعل.",
+  "invitedTitle": "لقد تمت دعوتك!",
+  "invitedMessage": "لقد تمت دعوتك للمساعدة في إدارة الأدوية.",
+  "permissionsTitle": "سيكون لديك صلاحية الوصول إلى:",
+
+  "invitationLinkCopied": "تم نسخ رابط الدعوة إلى الحافظة",
+  "invitationCodeCopied": "تم نسخ رمز الدعوة إلى الحافظة",
+  "shareInvitationText": "لقد تمت دعوتك لتكون مقدم رعاية على Tickdose!\n\nانقر هنا للقبول: {url}\n\nأو أدخل هذا الرمز في التطبيق: {token}",
+  "@shareInvitationText": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      },
+      "token": {
+        "type": "String"
+      }
+    }
+  },
+  "shareInvitationSubject": "دعوة مقدم رعاية من Tickdose",
+  "errorSharing": "خطأ في المشاركة: {error}",
+  "@errorSharing": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitationTitle": "دعوة",
+  "shareInvitationTitle": "مشاركة الدعوة",
+  "shareInvitationSubtitle": "شارك هذه الدعوة مع {email}",
+  "@shareInvitationSubtitle": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "scanQrCodeTitle": "مسح رمز QR",
+  "scanQrCodeDescription": "يمكن لمقدم الرعاية مسح هذا الرمز بكاميرا الهاتف أو تطبيق Tickdose",
+  "invitationLinkTitle": "رابط الدعوة",
+  "copyLinkTooltip": "نسخ الرابط",
+  "ifQrNotWorking": "إذا لم يعمل رمز QR، يمكن لمقدم الرعاية إدخال الرمز يدوياً:",
+  "copyCodeTooltip": "نسخ الرمز",
+  "shareInvitationButton": "مشاركة الدعوة",
+  "howToShareTitle": "كيفية المشاركة:",
+  "howToShareStep1Title": "1. اعرض رمز QR لمقدم الرعاية",
+  "howToShareStep1Desc": "يمكنهم مسحه بكاميرا هواتفهم",
+  "howToShareStep2Title": "2. شارك الرابط",
+  "howToShareStep2Desc": "أرسل عبر الرسائل أو البريد الإلكتروني أو أي تطبيق مراسلة",
+  "howToShareStep3Title": "3. شارك الرمز",
+  "howToShareStep3Desc": "يمكن لمقدم الرعاية إدخال الرمز يدوياً في التطبيق",
+
+  "microphonePermissionRequired": "إذن الميكروفون مطلوب",
+  "recordingError": "خطأ في بدء التسجيل: {error}",
+  "@recordingError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "voiceMessageSaved": "تم حفظ الرسالة الصوتية!",
+  "recordVoiceMessageTitle": "تسجيل رسالة صوتية",
+  "voiceMessageFor": "رسالة صوتية لـ {medicineName}",
+  "@voiceMessageFor": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "recordVoiceMessageDescription": "سجل تذكيراً صوتياً شخصياً (مجرد 15 ثانية كحد أقصى)",
+  "startRecordingButton": "بدء التسجيل",
+  "stopRecordingButton": "إيقاف التسجيل",
+  "saveVoiceMessageButton": "حفظ الرسالة الصوتية",
+
+  "generatingPdfMessage": "جاري إنشاء تقرير PDF لشهر {month}...",
+  "@generatingPdfMessage": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfGeneratedSuccess": "تم إنشاء التقرير! محفوظ في {path}",
+  "@pdfGeneratedSuccess": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "pdfGenerationError": "خطأ في إنشاء التقرير: {error}",
+  "@pdfGenerationError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "exportPdfButton": "تصدير تقرير PDF",
+  "userDataNotAvailable": "بيانات المستخدم غير متوفرة",
+
+  "welcomeBack": "مرحباً بعودتك!",
+  "signInContinue": "سجل الدخول للمتابعة",
+  "emailLabel": "البريد الإلكتروني",
+  "emailValidation": "الرجاء إدخال البريد الإلكتروني",
+  "passwordLabel": "كلمة المرور",
+  "passwordValidation": "الرجاء إدخال كلمة المرور",
+  "forgotPasswordButton": "نسيت كلمة المرور؟",
+  "loginButton": "تسجيل الدخول",
+  "continueGoogle": "المتابعة باستخدام Google",
+  "continueApple": "المتابعة باستخدام Apple",
+  "useBiometricLogin": "استخدام الدخول بالبصمة",
+  "biometricNotAvailable": "المصادقة البيومترية غير متوفرة على هذا الجهاز",
+  "biometricEnablePrompt": "يرجى تسجيل الدخول بشكل طبيعي أولاً لتفعيل الدخول بالبصمة",
+  "biometricAuthFailed": "فشلت المصادقة البيومترية",
+  "biometricLoginFailed": "فشل الدخول بالبصمة: {error}",
+  "@biometricLoginFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "noAccountPrompt": "ليس لديك حساب؟ ",
+  "signUpButton": "إنشاء حساب",
+  "createAccountTitle": "إنشاء حساب",
+  "nameLabel": "الاسم",
+  "confirmPasswordLabel": "تأكيد كلمة المرور",
+  "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
+  "signInButton": "تسجيل الدخول",
+
+  "startJourneySubtitle": "ابدأ رحلتك نحو صحة أفضل",
+  "termsAgreementValidation": "يرجى الموافقة على شروط الخدمة وسياسة الخصوصية",
+  "registrationSuccess": "تم التسجيل بنجاح! يرجى التحقق من بريدك الإلكتروني.",
+  "nameHint": "أدخل اسمك الكامل",
+  "nameValidation": "الرجاء إدخال الاسم",
+  "emailHint": "أدخل بريدك الإلكتروني",
+  "emailInvalid": "الرجاء إدخال بريد إلكتروني صالح",
+  "passwordHint": "أدخل كلمة مرور قوية",
+  "passwordEmpty": "الرجاء إدخال كلمة المرور",
+  "confirmPasswordHint": "تأكيد كلمة المرور",
+  "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+  "termsAgreementPrefix": "أوافق على ",
+  "termsOfService": "شروط الخدمة",
+  "termsAgreementAnd": " و ",
+  "privacyPolicy": "سياسة الخصوصية",
+  "orSeparator": "أو",
+  "loginLink": "تسجيل الدخول",
+
+  "forgotPasswordTitle": "نسيت كلمة المرور",
+  "forgotPasswordSubtitle": "أدخل بريدك الإلكتروني لاستلام رابط إعادة تعيين كلمة المرور",
+  "sendResetLinkButton": "إرسال الرابط",
+  "passwordResetSent": "تم إرسال رابط إعادة تعيين كلمة المرور! يرجى التحقق من بريدك الإلكتروني.",
+  "resetPasswordButton": "إعادة تعيين كلمة المرور",
+  "emailVerifiedSuccess": "تم التحقق من البريد الإلكتروني بنجاح!",
+  "emailNotVerifiedYet": "لم يتم التحقق من البريد الإلكتروني بعد. يرجى التحقق من بريدك.",
+  "resendEmailButton": "إعادة إرسال البريد الإلكتروني",
+  "verificationEmailSent": "تم إرسال بريد التحقق! يرجى التحقق من بريدك الإلكتروني.",
+  "verifyEmailTitle": "تحقق من بريدك الإلكتروني",
+  "verifyEmailSubtitle": "لقد أرسلنا رابط التحقق إلى عنوان بريدك الإلكتروني. يرجى التحقق للمتابعة.",
+  "iHaveVerifiedButton": "لقد قمت بالتحقق",
+
+  "speechNotAvailable": "خدمة التعرف على الصوت غير متوفرة",
+  "tapToAddImage": "اضغط لإضافة صورة الدواء",
+  "cameraLabel": "الكاميرا",
+  "galleryLabel": "المعرض",
+  "medicineNameLabel": "اسم الدواء",
+  "medicineNameHint": "أدخل اسم الدواء",
+  "medicineNameRequired": "يرجى إدخال اسم الدواء",
+  "strengthLabel": "القوة (اختياري)",
+  "strengthHint": "مثال: 500 ملغ",
+  "dosageLabel": "الجرعة",
+  "dosageHint": "مثال: 1 قرص",
+  "dosageRequired": "يرجى إدخال الجرعة",
+  "formLabel": "الشكل الصيدلاني",
+  "formHint": "اختر الشكل",
+  "frequencyLabel": "التكرار",
+  "frequencyHint": "اختر التكرار",
+  "prescribingDoctorLabel": "الدكتور المعالج (اختياري)",
+  "noneOption": "لا شيء",
+  "selectDoctorHint": "اختر الدكتور",
+  "doctorLoadError": "خطأ في تحميل الأطباء: {error}",
+  "@doctorLoadError": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "refillReminderLabel": "تذكير إعادة التعبئة",
+  "refillReminderOff": "إيقاف",
+  "refillReminderDaysBefore": "قبل {days} أيام",
+  "@refillReminderDaysBefore": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "sideEffectsLabel": "الآثار الجانبية المعروفة",
+  "addSideEffectHint": "أضف أثر جانبي (مثال: النعاس)",
+  "notesLabel": "ملاحظات",
+  "notesHint": "أضف ملاحظات...",
+  "addMedicineButton": "إضافة الدواء",
+  "updateMedicineButton": "تحديث الدواء",
+  "addMedicineImageTitle": "إضافة صورة الدواء",
+  "chooseImageSource": "اختر مصدر الصورة",
+  "captureFailed": "فشل التقاط الصورة: {error}",
+  "@captureFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "pickFailed": "فشل اختيار الصورة: {error}",
+  "@pickFailed": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "extractedText": "تم استخراج: {text}",
+  "@extractedText": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "extractFailed": "تعذر استخراج النص. يرجى إدخال التفاصيل يدوياً.",
+  "extractionError": "فشل استخراج النص. يرجى الإدخال يدوياً.",
+  "medicineAutoName": "دواء ({form}) - {time}",
+  "@medicineAutoName": {
+    "placeholders": {
+      "form": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "tabletForm": "قرص",
+  "capsuleForm": "كبسولة",
+  "liquidForm": "سائل",
+  "injectionForm": "حقنة",
+  "dailyFrequency": "يومياً",
+  "twiceDailyFrequency": "مرتين يومياً",
+  "threeTimesDailyFrequency": "3 مرات يومياً",
+  "weeklyFrequency": "أسبوعياً",
+  "asNeededFrequency": "عند الحاجة",
+
+  "selectLanguage": "اختر اللغة",
+  "english": "الإنجليزية",
+  "arabic": "العربية",
+  "theme": "المظهر",
+  "darkMode": "الوضع الداكن",
+  "lightMode": "الوضع الفاتح",
+  "aiHealthAssistant": "الم مساعد صحي ذكي",
+  "typeMessage": "اكتب رسالة...",
+  "analyze": "تحليل",
+  "symptoms": "الأعراض",
+  "medicines": "الأدوية",
+  "addMedicine": "إضافة دواء",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "aiEnrichmentInProgress": "الذكاء الاصطناعي يجمع تفاصيل الدواء...",
+  "aiEnrichmentSuccess": "تم إثراء تفاصيل الدواء بواسطة الذكاء الاصطناعي!",
+  "commonUsesLabel": "الاستخدامات الشائعة:",
+  "mealBreakfast": "الإفطار",
+  "mealLunch": "الغداء",
+  "mealDinner": "العشاء",
+  "mealSnack": "وجبة خفيفة",
+  "notificationSettings": "إعدادات الإشعارات",
+  "privacyPolicyTitle": "سياسة الخصوصية",
+  "termsOfServiceTitle": "شروط الخدمة",
+  "aboutTitle": "حول التطبيق",
+  "aboutSubtitle": "نسخة التطبيق والمعلومات",
+  "helpSupportTitle": "المساعدة والدعم",
+  "helpSupportSubtitle": "الأسئلة الشائعة والاتصال",
+  "testCrashTitle": "تجربة الانهيار",
+  "testCrashSubtitle": "فرض انهيار (للمطورين فقط)",
+  "manageNotificationsSubtitle": "إدارة تفضيلات الإشعارات",
+  "readPrivacyPolicySubtitle": "قراءة سياسة الخصوصية",
+  "readTermsSubtitle": "قراءة شروط الخدمة",
+  "showFavoritesTooltip": "عرض المفضلة",
+  "showAllTooltip": "عرض الكل",
+  "noFavoritePharmacies": "لم يتم العثور على صيدليات مفضلة",
+  "timezoneUpdatedTitle": "تم تحديث المنطقة الزمنية",
+  "timezoneUpdatedBody": "تم تحديث التذكيرات الخاصة بك إلى {newTimezone}",
+  "logInTitle": "تسجيل الدخول",
+  "newHere": "جديد هنا؟",
+  "createAccount": "إنشاء حساب",
+  "orContinueWith": "أو تابع مع",
+  "joinTickdo": "انضم إلى تيك دوز",
+  "startManagingHealth": "ابدأ إدارة رحلتك الصحية اليوم.",
+  "rememberPassword": "تذكرت كلمة المرور؟",
+  "createNewPassword": "إنشاء كلمة مرور جديدة",
+  "passwordDifferent": "يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمات المرور المستخدمة سابقاً.",
+  "newPassword": "كلمة المرور الجديدة",
+  "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+  "passwordRequirements": "متطلبات كلمة المرور:",
+  "atLeast8Characters": "8 أحرف على الأقل",
+  "containsNumber": "يحتوي على رقم",
+  "containsSymbol": "يحتوي على رمز",
+  "passwordResetSuccess": "تم إعادة تعيين كلمة المرور بنجاح",
+  "defineActiveHours": "حدد ساعات نشاطك",
+  "wakeWindowReminders": "سيقوم تيك دوس بإرسال التذكيرات فقط خلال نافذة الاستيقاظ الخاصة بك لمزامنة إيقاعك اليومي.",
+  "wakeUp": "الاستيقاظ",
+  "bedtime": "وقت النوم",
+  "continueButton": "متابعة",
+  "routineSetup": "إعداد الروتين",
+  "medicalBackground": "الخلفية الطبية",
+  "aiAnalyzeSymptoms": "يساعد هذا الذكاء الاصطناعي لدينا في تحليل أعراضك بدقة أكبر وتقديم رؤى مخصصة.",
+  "doYouHaveAllergies": "هل لديك أي حساسية؟",
+  "currentTimeDetected": "الوقت الحالي المكتشف",
+  "preferences": "التفضيلات",
+  "privacySecurity": "الخصوصية والأمان",
+  "deleteAccountConfirmation": "هل أنت متأكد من أنك تريد حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء.",
+  "feelingUnwell": "تشعر بتوعك؟",
+  "logSideEffectButton": "تسجيل أثر جانبي",
+  "supplyTracking": "تتبع المخزون",
+  "requestRefill": "طلب إعادة التعبئة",
+  "remaining": "المتبقي",
+  "passwordWeak": "ضعيف",
+  "passwordMedium": "متوسط",
+  "passwordStrong": "قوي",
+  "passwordVeryStrong": "قوي جداً",
+  "medicationReminders": "تذكيرات الأدوية",
+  "refillAlerts": "تنبيهات إعادة التعبئة",
+  "healthAnalysis": "تحليل الصحة",
+  "selectTimezone": "اختر المنطقة الزمنية",
+  "noKnownAllergies": "ليس لدي حساسيات معروفة",
+  "chronicConditions": "الحالات المزمنة",
+  "logTaken": "تسجيل تناول الدواء",
+  "interactionWarning": "تحذير التفاعل",
+  "noInteractionsDetected": "لم يتم اكتشاف تفاعلات",
+  "interactionsFound": "تم العثور على تفاعلات",
+  "proceedAnyway": "المتابعة على أي حال",
+  "thisMedicineInteracts": "هذا الدواء يتفاعل مع أدويتك الحالية",
+  "active": "نشط",
+  "nextDose": "الجرعة التالية",
+  "noUpcomingDose": "لا توجد جرعة قادمة",
+  "symptomCheck": "فحص الأعراض",
+  "aboutThisDrug": "حول هذا الدواء",
+  "readFullMonograph": "قراءة النشرة الكاملة",
+  "monographTitle": "نشرة {medicineName}",
+  "@monographTitle": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      }
+    }
+  },
+  "close": "إغلاق",
+  "editSchedule": "تعديل الجدول",
+  "editMedicine": "تعديل الدواء",
+  "shareMedicine": "مشاركة الدواء",
+  "iFeelAssistant": "مساعد أشعر بـ",
+  "online": "متصل",
+  "activeContext": "السياق النشط",
+  "noActiveMedications": "لا توجد أدوية نشطة",
+  "viewMeds": "عرض الأدوية",
+  "iFeelAI": "ذكاء اصطناعي أشعر بـ",
+  "describeSymptoms": "صف أعراضك للتحقق من الآثار الجانبية",
+  "logSymptom": "تسجيل \"دوار\"",
+  "reportSideEffect": "الإبلاغ عن أثر جانبي",
+  "callDoctor": "اتصل بالطبيب",
+  "patient": "المريض",
+  "heartRate": "معدل ضربات القلب",
+  "voiceReminder": "تذكير صوتي",
+  "recordNudge": "تسجيل تذكير",
+  "viewFullList": "عرض القائمة الكاملة",
+  "noRemindersToday": "لا توجد تذكيرات مجدولة لليوم",
+  "overdue": "متأخر",
+  "pending": "قيد الانتظار",
+  "pillList": "قائمة الأدوية",
+  "refills": "إعادة التعبئة",
+  "barcodeScanned": "تم مسح الباركود: {code}",
+  "@barcodeScanned": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "noBarcodeFound": "لم يتم العثور على باركود في الصورة",
+  "scanBarcode": "مسح الباركود",
+  "selectUnit": "اختر الوحدة",
+  "schedule": "الجدول",
+  "notifyLowStock": "إشعار عند انخفاض المخزون",
+  "translating": "جاري الترجمة...",
+  "scanLabel": "مسح الملصق",
+  "takePhoto": "التقاط صورة",
+  "upload": "رفع",
+  "interactionCheckActive": "فحص التفاعل نشط",
+  "interactions": "التفاعلات",
+  "monograph": "دليل الدواء",
+  "viewDetails": "عرض التفاصيل",
+  "drops": "قطرات",
+  "loadingMedicines": "جاري تحميل الأدوية...",
+  "apiKeyNotConfigured": "مفتاح API غير مُكوّن",
+  "loadingSchedule": "جاري تحميل الجدول...",
+  "more": "المزيد",
+  "reminderSchedule": "جدول التذكيرات",
+  "inactive": "غير نشط",
+  "yourPrivacyMatters": "خصوصيتك مهمة",
+  "privacyPolicyIntro": "في تيك دوس، نحن ملتزمون بحماية معلوماتك الشخصية وحقك في الخصوصية.",
+  "whatDataWeCollect": "1. البيانات التي نجمعها",
+  "whatDataWeCollectContent": "نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك:\n\n• الأدوية: الأسماء والجرعات والجداول التي تضيفها.\n• التذكيرات: الأوقات والتكرارات لإشعاراتك.\n• الموقع: يُستخدم فقط عند الوصول إلى ميزة البحث عن الصيدلية.\n• الملف الصحي: الحالات والحساسيات وبيانات الصحة الأخرى التي تختار حفظها.\n• بيانات الاستخدام: تحليلات مجهولة المصدر لمساعدتنا على تحسين التطبيق.",
+  "howWeUseYourData": "2. كيفية استخدام بياناتك",
+  "howWeUseYourDataContent": "نستخدم المعلومات التي نجمعها من أجل:\n\n• إرسال تذكيرات وإشعارات الأدوية في الوقت المناسب.\n• تتبع التزامك بالأدوية وتقديم إحصائيات.\n• تحسين ميزات التطبيق وتجربة المستخدم.\n• تحليل أنماط الاستخدام لإصلاح الأخطاء وتحسين الأداء.\n• الامتثال للالتزامات القانونية.",
+  "dataStorageSecurity": "3. تخزين البيانات والأمان",
+  "dataStorageSecurityContent": "• جميع بياناتك الشخصية مخزنة بأمان في Google Firebase.\n• البيانات مشفرة أثناء النقل باستخدام HTTPS.\n• ننفذ إجراءات أمنية قوية لحماية معلوماتك.\n• نقوم بعمل نسخ احتياطية منتظمة لمنع فقدان البيانات.\n• نحن ملتزمون بالامتثال لـ GDPR ومعايير حماية البيانات.",
+  "yourRights": "4. حقوقك",
+  "yourRightsContent": "لديك الحقوق التالية فيما يتعلق ببياناتك:\n\n• الوصول: يمكنك عرض بياناتك داخل التطبيق في أي وقت.\n• التصدير: يمكنك طلب نسخة من بياناتك.\n• الحذف: يمكنك حذف حسابك وجميع البيانات المرتبطة عبر قائمة الإعدادات.\n• إلغاء الاشتراك: يمكنك إلغاء الاشتراك في تتبع التحليلات المجهولة.",
+  "thirdPartyServices": "5. خدمات الطرف الثالث",
+  "thirdPartyServicesContent": "نستخدم خدمات طرف ثالث موثوقة لتشغيل التطبيق:\n\n• Google و Apple: للمصادقة الآمنة.\n• Firebase: لقاعدة البيانات السحابية الآمنة والتخزين.\n• Google Maps / OpenStreetMap: لميزة البحث عن الصيدلية.\n• Google Generative AI: لفحص الأعراض \"أشعر بـ\" (إذا تم تفعيله).",
+  "contactUsPrivacy": "6. اتصل بنا",
+  "contactUsPrivacyContent": "إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على:\n\nالبريد الإلكتروني: privacy@tickdose.app\n\nنحن نأخذ خصوصيتك على محمل الجد وسنرد على جميع الاستفسارات على الفور.",
+  "policyChanges": "7. تغييرات السياسة",
+  "policyChangesContent": "قد نحدث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق نشر سياسة الخصوصية الجديدة على هذه الصفحة وتحديث تاريخ \"آخر تحديث\".",
+  "lastUpdated": "آخر تحديث: 24 نوفمبر 2024",
+  "sharePrivacyPolicyText": "تحقق من سياسة خصوصية تيك دوس: https://tickdosedemo.web.app/privacy-policy",
+  "sharePrivacyPolicySubject": "سياسة خصوصية تيك دوس",
+  "couldNotOpenPrivacyPolicy": "تعذر فتح سياسة الخصوصية",
+  "termsOfServiceIntro": "يرجى قراءة هذه الشروط بعناية قبل استخدام تطبيق تيك دوس.",
+  "licenseToUse": "1. ترخيص الاستخدام",
+  "licenseToUseContent": "يمنحك تيك دوس ترخيصاً شخصياً وغير قابل للتحويل وغير حصري وقابل للإلغاء لاستخدام البرنامج لاستخدامك الشخصي وغير التجاري وفقاً لهذه الشروط. أنت تملك بياناتك الشخصية، لكننا نحتفظ بجميع الحقوق في كود التطبيق والتصميم والملكية الفكرية.",
+  "restrictions": "2. القيود",
+  "restrictionsContent": "أنت توافق على عدم:\n\n• استخدام التطبيق لأي غرض غير قانوني.\n• محاولة عكس هندسة التطبيق أو فك تشفيره.\n• مشاركة بيانات اعتماد حسابك مع الآخرين.\n• استخدام التطبيق لإرسال رسائل غير مرغوب فيها أو مضايقة الآخرين.\n• محاولة اختراق إجراءات أمان التطبيق.",
+  "medicalDisclaimer": "3. إخلاء المسؤولية الطبية",
+  "medicalDisclaimerContent": "⚠️ تيك دوس ليس طبيباً.\n\n• هذا التطبيق ليس بديلاً عن المشورة الطبية المهنية أو التشخيص أو العلاج.\n• لا تتجاهل أبداً المشورة الطبية المهنية أو تتأخر في طلبها بسبب شيء قرأته في هذا التطبيق.\n• البيانات المقدمة هي لأغراض إعلامية فقط.\n• في حالة الطوارئ الطبية، اتصل بطبيبك أو خدمات الطوارئ على الفور.\n• لا يمكننا تشخيص أو علاج أو شفاء أي حالة.",
+  "userResponsibilities": "4. مسؤوليات المستخدم",
+  "userResponsibilitiesContent": "• أنت مسؤول عن دقة بيانات الصحة التي تدخلها.\n• أنت مسؤول عن الحفاظ على سرية حسابك.\n• أنت توافق على الامتثال لجميع القوانين واللوائح المعمول بها.\n• أنت المسؤول الوحيد عن استخدامك للتطبيق.",
+  "limitationOfLiability": "5. تحديد المسؤولية",
+  "limitationOfLiabilityContent": "إلى أقصى حد يسمح به القانون، لن يكون تيك دوس مسؤولاً عن:\n\n• أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية.\n• أي فقدان للبيانات أو الاستخدام أو السمعة أو الخسائر غير الملموسة الأخرى.\n• أي جرعات فائتة أو تذكيرات بسبب الأعطال التقنية.\n• أي نتائج صحية سلبية ناتجة عن الاعتماد على التطبيق.\n\nمسؤوليتنا القصوى محدودة بمبلغ الذي دفعته للتطبيق، إن وجد.",
+  "termination": "6. الإنهاء",
+  "terminationContent": "نحتفظ بالحق في إنهاء أو تعليق حسابك فوراً، دون إشعار مسبق أو مسؤولية، لأي سبب كان، بما في ذلك على سبيل المثال لا الحصر إذا انتهكت الشروط. عند الإنهاء، سيتوقف حقك في استخدام الخدمة فوراً.",
+  "changesToTerms": "7. تغييرات الشروط",
+  "changesToTermsContent": "نحتفظ بالحق في تعديل أو استبدال هذه الشروط في أي وقت. من خلال الاستمرار في الوصول إلى خدمتنا أو استخدامها بعد أن تصبح هذه المراجعات سارية، أنت توافق على الالتزام بالشروط المنقحة.",
+  "contactUsTerms": "8. اتصل بنا",
+  "contactUsTermsContent": "إذا كان لديك أي أسئلة حول هذه الشروط، يرجى الاتصال بنا على:\n\nالبريد الإلكتروني: support@tickdose.app",
+  "couldNotOpenTerms": "تعذر فتح شروط الخدمة",
+  "deleteAccountQuestion": "حذف الحساب؟",
+  "deleteAccountWarning": "لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع أدويتك وتذكيراتك وبيانات التتبع ومعلومات الحساب بشكل دائم.",
+  "deleteAccountPermanently": "حذف حسابك وجميع البيانات بشكل دائم",
+  "accountDeletedSuccess": "تم حذف الحساب بنجاح",
+  "errorDeletingAccount": "خطأ في حذف الحساب: {error}",
+  "errorGeneric": "حدث خطأ",
+  "delete": "حذف",
+  "@errorDeletingAccount": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "yourPersonalMedicationReminder": "تذكيرك الشخصي للأدوية",
+  "faq": "الأسئلة الشائعة",
+  "howToAddMedicine": "كيف أضيف دواء؟",
+  "howToAddMedicineAnswer": "اضغط على زر + في الشاشة الرئيسية لإضافة دواء جديد.",
+  "howToSetReminders": "كيف أضبط التذكيرات؟",
+  "howToSetRemindersAnswer": "انتقل إلى تبويب التذكيرات واضغط + لإنشاء تذكير جديد.",
+  "canIEditMedicines": "هل يمكنني تعديل أدويتي؟",
+  "canIEditMedicinesAnswer": "نعم، اضغط على أي دواء لعرض التفاصيل واضغط تعديل.",
+  "contactSupport": "اتصل بالدعم",
+  "version": "الإصدار 1.0.0",
+  "text": "نص",
+  "voice": "صوت",
+  "history": "السجل",
+  "emergency": "طوارئ",
+  "profile": "الملف الشخصي",
+  "createInvitation": "إنشاء دعوة",
+  "selectAtLeastOnePermission": "يرجى اختيار إذن واحد على الأقل",
+  "relationship": "العلاقة",
+  "permissions": "الأذونات",
+  "permissionsUpdated": "تم تحديث الأذونات",
+  "family": "عائلة",
+  "friend": "صديق",
+  "nurse": "ممرض",
+  "other": "آخر",
+  "addTime": "إضافة وقت",
+  "noInteractionsDetected": "لم يتم اكتشاف تفاعلات",
+  "errorOccurred": "خطأ: {error}",
+  "@errorOccurred": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "barcodeLabel": "الرمز الشريطي: {code}",
+  "@barcodeLabel": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "timesLabel": "الأوقات",
+  "doctorDisplayFormat": "د. {name} ({specialization})",
+  "@doctorDisplayFormat": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "specialization": {
+        "type": "String"
+      }
+    }
+  },
+  "dosageHintExample": "10",
+  "unitMg": "ملغ",
+  "unitG": "جم",
+  "unitMl": "مل",
+  "unitUnits": "وحدات",
+  "unitTablets": "أقراص",
+  "unitCapsules": "كبسولات",
+  "noKnownConflicts": "لا توجد تعارضات معروفة مع قائمتك الحالية.",
+  "addMedicineTitle": "إضافة دواء",
+  "failedToUploadImage": "فشل رفع الصورة: {error}",
+  "@failedToUploadImage": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "editSchedule": "تعديل الجدول",
+  "errorFailedToShare": "خطأ: فشل المشاركة: {error}",
+  "@errorFailedToShare": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "failedToDelete": "فشل الحذف: {error}",
+  "@failedToDelete": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "pleaseLogInToViewSideEffects": "يرجى تسجيل الدخول لعرض الآثار الجانبية",
+  "errorLoadingSideEffects": "خطأ: {error}",
+  "@errorLoadingSideEffects": {
+    "placeholders": {
+      "error": {
+        "type": "Object"
+      }
+    }
+  },
+  "deleteSideEffectQuestion": "حذف الأثر الجانبي؟",
+  "deleteSideEffectWarning": "لا يمكن التراجع عن هذا الإجراء.",
+  "sideEffectDeleted": "تم حذف الأثر الجانبي",
+  "logSideEffectTitle": "تسجيل أثر جانبي",
+  "sideEffectLoggedSuccess": "تم تسجيل الأثر الجانبي بنجاح",
+  "effectNameLabel": "اسم الأثر",
+  "effectNameHint": "مثال: غثيان، صداع",
+  "whenDidThisOccur": "متى حدث هذا؟",
+  "notesOptionalLabel": "ملاحظات (اختياري)",
+  "notesOptionalHint": "تفاصيل إضافية حول الأثر الجانبي",
+  "iUnderstandTheRisks": "أفهم المخاطر",
+  "searchMedicinesHint": "البحث عن الأدوية...",
+  "streakLabel": "السلسلة",
+  "medsLabel": "الأدوية",
+  "plusOneToday": "+1 اليوم",
+  "adherencePercentage": "{percentage}% الالتزام",
+  "@adherencePercentage": {
+    "placeholders": {
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "xpToNextLevel": "{xp} نقطة إلى المستوى {level}",
+  "@xpToNextLevel": {
+    "placeholders": {
+      "xp": {
+        "type": "String"
+      },
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "noChatHistoryYet": "لا يوجد تاريخ محادثة بعد",
+  "noPatientsFound": "لم يتم العثور على مرضى",
+  "noLogsForThisDay": "لا توجد سجلات لهذا اليوم",
+  "errorOccurredMessage": "حدث خطأ",
+  "errorWithMessage": "خطأ: {error}",
+  "@errorWithMessage": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "somethingWentWrong": "حدث خطأ ما",
+  "errorRecoveryMessage": "نأسف، لكن حدث خطأ. سيحاول التطبيق الاستعادة تلقائياً.",
+  "tryAgain": "حاول مرة أخرى",
+  "profileUpdatedSuccessfully": "تم تحديث الملف الشخصي بنجاح",
+  "enableLocationServices": "تفعيل خدمات الموقع",
+  "locationServicesDescription": "ابحث عن الصيدليات القريبة واحصل على تذكيرات مبنية على الموقع",
+  "locationServicesDetailedDescription": "نستخدم موقعك لمساعدتك في العثور على أقرب الصيدليات وتقديم تذكيرات دقيقة للأدوية بناءً على موقعك.",
+  "enableCameraAccess": "تفعيل الوصول إلى الكاميرا",
+  "cameraAccessDescription": "امسح ملصقات الأدوية والتقط معلومات صحية",
+  "enableMicrophoneAccess": "تفعيل الوصول إلى الميكروفون",
+  "microphoneAccessDescription": "استخدم الأوامر الصوتية وسجل الأعراض",
+  "youCanChangeAnytimeInSettings": "يمكنك تغيير هذا في أي وقت في الإعدادات",
+  "notNow": "ليس الآن",
+  "allow": "السماح",
+  "today": "اليوم",
+  "yesterday": "أمس",
+  "noActivityForThisDate": "لا يوجد نشاط في هذا التاريخ",
+  "open24Hours": "24/7",
+  "errorTitle": "خطأ",
+  "pageNotFound": "الصفحة غير موجودة",
+  "todayAt": "اليوم، {time}",
+  "@todayAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "missedMedicationAlert": "تنبيه جرعة فائتة",
+  "patientMissedMedicationAt": "فوت {patientOrUser} {medicineName} في الساعة {time}",
+  "@patientMissedMedicationAt": {
+    "placeholders": {
+      "patientOrUser": {
+        "type": "String"
+      },
+      "medicineName": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "patient": "المريض",
+  "user": "المستخدم",
+  "adherenceSummaryTitle": "ملخص الالتزام {type}",
+  "@adherenceSummaryTitle": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "adherenceSummaryBody": "الالتزام: {rate}% | متناول: {taken} | فائت: {missed} | متخطى: {skipped}",
+  "@adherenceSummaryBody": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      },
+      "taken": {
+        "type": "String"
+      },
+      "missed": {
+        "type": "String"
+      },
+      "skipped": {
+        "type": "String"
+      }
+    }
+  },
+  "sideEffectAlert": "تنبيه أثر جانبي",
+  "sideEffectBody": "{medicineName}: {symptom} ({severity})",
+  "@sideEffectBody": {
+    "placeholders": {
+      "medicineName": {
+        "type": "String"
+      },
+      "symptom": {
+        "type": "String"
+      },
+      "severity": {
+        "type": "String"
+      }
+    }
+  },
+  "urgentHealthConcern": "مشكلة صحية عاجلة",
+  "healthConcernAlert": "تنبيه مشكلة صحية",
+  "noRemindersSet": "لم يتم تعيين تذكيرات",
+  "noDoctorsFound": "لم يتم العثور على أطباء",
+  "errorLoadingPatients": "خطأ في تحميل المرضى",
+  "patientsWillAppearHere": "سيظهر المرضى هنا عندما\nيمنحونك الوصول كمقدم رعاية",
+  "howAreYouFeeling": "كيف تشعر؟",
+  "describeSymptomsByVoiceOrText": "صف أعراضك بالصوت أو النص",
+  "accountDeletedSuccessfully": "تم حذف الحساب بنجاح",
+  "incorrectPassword": "كلمة مرور غير صحيحة",
+  "pleaseLogInAgainBeforeDeletingAccount": "يرجى تسجيل الخروج وتسجيل الدخول مرة أخرى قبل حذف الحساب",
+  "genericNameLabel": "الاسم العام:",
+  "manufacturerLabel": "الشركة المصنعة:",
+  "translationLabel": "[ترجمة]",
+  "couldNotMakeCall": "تعذر إجراء المكالمة",
+  "resetSettingsTitle": "إعادة تعيين الإعدادات",
+  "resetSettingsConfirmation": "هل أنت متأكد أنك تريد إعادة تعيين جميع إعدادات الصوت إلى القيم الافتراضية؟",
+  "settingsResetToDefaults": "تم إعادة تعيين الإعدادات إلى القيم الافتراضية",
+  "resetButton": "إعادة تعيين"
+}
+

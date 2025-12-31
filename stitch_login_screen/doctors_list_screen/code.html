@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doctors List Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#1A2E1D", // Lighter green/dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(16, 34, 19, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Hide scrollbar for clean look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen relative overflow-hidden text-gray-900 dark:text-white selection:bg-primary selection:text-background-dark">
+<!-- Main Scrollable Area -->
+<div class="h-screen w-full overflow-y-auto no-scrollbar pb-28">
+<!-- Top App Bar -->
+<div class="flex flex-col gap-4 px-5 pt-8 pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-3xl font-bold tracking-tight text-white">My Care Team</h1>
+<p class="text-gray-400 text-sm mt-1">Manage your healthcare providers</p>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary hover:bg-primary hover:text-background-dark transition-colors duration-200">
+<span class="material-symbols-outlined" style="font-size: 24px;">add</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-5 pb-6">
+<div class="flex w-full items-center rounded-xl bg-surface-dark/50 border border-white/5 h-12 px-4 focus-within:border-primary/50 focus-within:bg-surface-dark transition-all duration-200">
+<span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">search</span>
+<input class="w-full bg-transparent border-none text-white placeholder-gray-500 focus:ring-0 text-sm ml-2" placeholder="Search by name or specialty..." type="text"/>
+</div>
+</div>
+<!-- Doctor List -->
+<div class="px-5 flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-dark rounded-2xl p-4 flex items-center gap-4 shadow-sm border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="relative shrink-0">
+<div class="size-16 rounded-full bg-cover bg-center border-2 border-primary/20 group-hover:border-primary transition-colors" data-alt="Portrait of Dr. Sarah Smith smiling in a white coat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAB9-3EmwMSBj75LYChye_ndlb_bAq2QPwvFPutZRgOs-85ugm5O1Gn1ci99R8UISRIhw7aDfGy3tAIQd94sPk9QHo499c9e8z4S0P52l5MfId5Tbig86yew3wWCPLs1xAaqd4ZWbWgHAkMUJnstA7PBqP74K_-r1EWMlH-1qC5yeNOPE6qvSdW3Bsi1_RmcLwhRD89Zmt6EE08yKzYAf77yC-a_47Rtuof1SqwqJn282HeVb8hntDHgJCd7HbiCPioxs71Od_qQ7E");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-primary rounded-full border-2 border-surface-dark"></div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-lg truncate">Dr. Sarah Smith</h3>
+<p class="text-primary text-sm font-medium truncate">Cardiologist</p>
+<p class="text-gray-400 text-xs mt-0.5 truncate">City Heart Center</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="size-9 rounded-full bg-white/5 text-gray-300 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+</button>
+<button class="size-9 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">call</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-dark rounded-2xl p-4 flex items-center gap-4 shadow-sm border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="relative shrink-0">
+<div class="size-16 rounded-full bg-cover bg-center border-2 border-primary/20 group-hover:border-primary transition-colors" data-alt="Portrait of Dr. James Lee looking professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmZZLYEULIufaoYQ-JcPF9Y0wbVTqwPapMiRfTfXiRGlfA9qGXe991p9IKR5lPxL1jDcOqgQJrdtvSMyTsNt5mTM7CgrVwkY_cT_mYDC49QGfXgydmPD1d-n28fwiyA-DJ-8R3yvuDDF9ebtFm3fXSGWAeTdpNDUA8AO8xph3TgKieHfj5BeMncj90DwzjetRrcHOx14FU6M_u6ITTmkK5UrpeaV9jv6HuOkbPslAcBD6fw_X6Y5WAxqOPWnddIninzN2dWNffeeM");'>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-lg truncate">Dr. James Lee</h3>
+<p class="text-primary text-sm font-medium truncate">General Practitioner</p>
+<p class="text-gray-400 text-xs mt-0.5 truncate">Downtown Clinic</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="size-9 rounded-full bg-white/5 text-gray-300 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+</button>
+<button class="size-9 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">call</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-dark rounded-2xl p-4 flex items-center gap-4 shadow-sm border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="relative shrink-0">
+<div class="size-16 rounded-full bg-cover bg-center border-2 border-primary/20 group-hover:border-primary transition-colors" data-alt="Portrait of Dr. Emily Chen in medical scrubs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIt4snF0W-2TDxHmm__HHHkTgGejG0DFA-RgL--jB20zA4WWLHQfSa844_KBTUqymxVJrvGzw7TeTNkp8TgiNEnoF4jt78lWA6iQamdkRZPuq-yLwojG9Vsv8Ple1YpGEzDOulzLmkXbdnDHuSM7rdaPhJnEWJzK_rGGNowjs3ZwuPbnPxcd_-qXYTmNVUz8V2y9rouJO25PbOXqOmRen7qEY0VpnZ2zCQA-rCQ54Sy2LWj9FiN7aESHah9aSKH7W4Ia32sv8UBKo");'>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-lg truncate">Dr. Emily Chen</h3>
+<p class="text-primary text-sm font-medium truncate">Dermatologist</p>
+<p class="text-gray-400 text-xs mt-0.5 truncate">Skin Health Institute</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="size-9 rounded-full bg-white/5 text-gray-300 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+</button>
+<button class="size-9 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">call</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-dark rounded-2xl p-4 flex items-center gap-4 shadow-sm border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="relative shrink-0">
+<div class="size-16 rounded-full bg-cover bg-center border-2 border-primary/20 group-hover:border-primary transition-colors" data-alt="Portrait of Dr. Michael Ross with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQRkcdZSRsgdhIaUwcQ9S0kOa3ZVE_Qbag1bXwWtXpyuN1B-b7dj93W7hrzDfP5n5Bjh1SkJHvbMWAYfMaLauEf7v4dcvTtcH1M-Za5_KMxzTXsRfEeZ1FmmSeo1x7BQyOMrrh1VoGvlCKh1CbxuMF5n9rb_ySGqmPiyiOJx_rSBjQ6MRMmY9Q_ZQjbYhSFuOSruF73Wbj9l7rlZCD6nlRAU7tv8JDh48Kh1KOA_j48stNUQjnZYexY2uuHhQ9s0Jz2VFeIP77ABw");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-primary rounded-full border-2 border-surface-dark"></div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-lg truncate">Dr. Michael Ross</h3>
+<p class="text-primary text-sm font-medium truncate">Neurologist</p>
+<p class="text-gray-400 text-xs mt-0.5 truncate">Brain &amp; Spine Center</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="size-9 rounded-full bg-white/5 text-gray-300 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+</button>
+<button class="size-9 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">call</span>
+</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-dark rounded-2xl p-4 flex items-center gap-4 shadow-sm border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group opacity-60">
+<div class="relative shrink-0">
+<div class="size-16 rounded-full bg-white/10 border-2 border-transparent flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-500" style="font-size: 32px;">person_add</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-gray-300 font-medium text-lg truncate">Add New Provider</h3>
+<p class="text-gray-500 text-sm font-normal truncate">Expand your care team</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="size-9 rounded-full bg-white/5 text-gray-400 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Navigation Bar -->
+<div class="fixed bottom-6 inset-x-4">
+<div class="glass-nav h-16 rounded-full flex items-center justify-between px-2 sm:px-6 shadow-2xl shadow-black/50">
+<!-- Home -->
+<button class="flex flex-col items-center justify-center w-14 h-full gap-1 text-gray-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform duration-200" style="font-size: 24px;">home</span>
+<span class="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-2">Home</span>
+</button>
+<!-- Reminders -->
+<button class="flex flex-col items-center justify-center w-14 h-full gap-1 text-gray-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform duration-200" style="font-size: 24px;">notifications</span>
+<span class="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-2">Reminders</span>
+</button>
+<!-- Tracking (Active) -->
+<button class="flex flex-col items-center justify-center w-14 h-full gap-1 text-primary relative group">
+<div class="absolute -top-1 size-1 bg-primary rounded-full shadow-[0_0_8px_rgba(19,236,55,0.8)]"></div>
+<span class="material-symbols-outlined -translate-y-0.5" style="font-size: 24px; font-variation-settings: 'FILL' 1;">ecg_heart</span>
+<span class="text-[10px] font-medium">Tracking</span>
+</button>
+<!-- Pharmacy -->
+<button class="flex flex-col items-center justify-center w-14 h-full gap-1 text-gray-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform duration-200" style="font-size: 24px;">medication</span>
+<span class="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-2">Pharmacy</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center justify-center w-14 h-full gap-1 text-gray-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined group-hover:-translate-y-0.5 transition-transform duration-200" style="font-size: 24px;">person</span>
+<span class="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-2">Profile</span>
+</button>
+</div>
+</div>
+</body></html>

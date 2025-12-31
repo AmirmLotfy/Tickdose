@@ -1,0 +1,81 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": [
+    {
+      "bucket": "tickdoseapp.appspot.com",
+      "rules": "storage.rules"
+    }
+  ],
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    }
+  ],
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "storage": {
+      "port": 9199
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000
+    }
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "tickdoseapp",
+          "appId": "1:664338606340:android:db734d8a94a60fa8d4c851",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "tickdoseapp",
+          "appId": "1:664338606340:ios:272801d45e69a007d4c851",
+          "uploadDebugSymbols": true,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "tickdoseapp",
+          "appId": "1:664338606340:ios:272801d45e69a007d4c851",
+          "uploadDebugSymbols": true,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "tickdoseapp",
+          "configurations": {
+            "android": "1:664338606340:android:db734d8a94a60fa8d4c851",
+            "ios": "1:664338606340:ios:272801d45e69a007d4c851",
+            "macos": "1:664338606340:ios:272801d45e69a007d4c851",
+            "web": "1:664338606340:web:6df0fd8f7e65c4e2d4c851",
+            "windows": "1:664338606340:web:8fe0a4d055f6f99bd4c851"
+          }
+        }
+      }
+    }
+  },
+  "extensions": {
+    "storage-resize-images": "firebase/storage-resize-images@0.3.0"
+  }
+}

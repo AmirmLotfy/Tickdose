@@ -1,0 +1,28 @@
+{
+    "conditions": [],
+    "parameters": {
+        "GEMINI_API_KEY": {
+            "defaultValue": {
+                "value": ""
+            },
+            "description": "Gemini AI API key for symptom analysis",
+            "valueType": "STRING"
+        },
+        "ELEVENLABS_API_KEY": {
+            "defaultValue": {
+                "value": "sk_59f4ef8dea7bbcbca98e9e5519511c42eb0a35cdf1439cf9"
+            },
+            "description": "ElevenLabs API key for voice synthesis",
+            "valueType": "STRING"
+        }
+    },
+    "version": {
+        "versionNumber": "1",
+        "updateTime": "2025-11-24T12:20:00Z",
+        "updateUser": {
+            "email": "automated@tickdose.app"
+        },
+        "description": "Initial Remote Config with API keys for ElevenLabs integration",
+        "updateOrigin": "ADMIN_SDK_NODE"
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password - Tickdo App</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#19331e",
+                        "border-dark": "#32673b",
+                        "text-muted": "#92c99b"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', "Noto Sans", sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center font-display antialiased">
+<!-- Mobile Container -->
+<div class="relative flex h-full min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl">
+<!-- Status Bar Area (simulated) -->
+<div class="h-10 w-full bg-transparent"></div>
+<!-- Top App Bar -->
+<header class="flex items-center p-4 justify-between">
+<button aria-label="Go back" class="text-gray-900 dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<!-- Optional centered title or empty space -->
+<div class="w-12"></div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col px-6 pt-4 pb-8">
+<!-- Headline Text -->
+<div class="mb-2">
+<h1 class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">Forgot Password?</h1>
+</div>
+<!-- Body Text -->
+<div class="mb-8">
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-relaxed">
+                    Don't worry! It happens. Please enter the email address linked to your account.
+                </p>
+</div>
+<!-- Form -->
+<div class="flex flex-col gap-6">
+<!-- TextField -->
+<div class="flex flex-col w-full">
+<label class="text-gray-900 dark:text-white text-sm font-medium leading-normal mb-2 ml-1" for="email">Email Address</label>
+<div class="relative flex items-center w-full">
+<input class="peer w-full h-14 rounded-lg border border-gray-300 dark:border-border-dark bg-white dark:bg-surface-dark px-4 pl-12 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all text-base" id="email" name="email" placeholder="name@example.com" type="email" value=""/>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-text-muted peer-focus:text-primary transition-colors flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined" style="font-size: 24px;">mail</span>
+</div>
+<!-- Validation checkmark (hidden by default) -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-primary hidden peer-valid:block pointer-events-none">
+<span class="material-symbols-outlined" style="font-size: 20px;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- SingleButton -->
+<button class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-primary hover:bg-[#10d630] active:scale-[0.98] transition-all duration-200 mt-4 shadow-[0_0_20px_rgba(19,236,55,0.3)] hover:shadow-[0_0_25px_rgba(19,236,55,0.5)]">
+<span class="text-background-dark text-base font-bold leading-normal tracking-wide group-hover:tracking-wider transition-all">Send Reset Link</span>
+</button>
+</div>
+<!-- Footer / Spacer to push content up if needed -->
+<div class="mt-auto flex flex-col items-center pt-8 pb-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm">
+                    Remember your password? 
+                    <a class="text-primary font-semibold hover:underline ml-1" href="#">Log in</a>
+</p>
+</div>
+</main>
+<!-- Bottom safe area spacing -->
+<div class="h-6 w-full"></div>
+</div>
+</body></html>

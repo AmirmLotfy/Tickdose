@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tickdo Onboarding</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white h-screen w-full overflow-hidden flex justify-center">
+<!-- Mobile Container -->
+<div class="relative flex h-full w-full max-w-md flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl">
+<!-- TopAppBar: Skip Button -->
+<div class="flex items-center w-full p-6 pb-2 justify-end z-10 shrink-0">
+<button class="flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-semibold leading-normal tracking-wide">Skip</span>
+</button>
+</div>
+<!-- Carousel Section -->
+<div class="flex-1 flex flex-col justify-center overflow-hidden relative">
+<!-- Scroll Container -->
+<div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full items-center pb-8">
+<!-- Slide 1 -->
+<div class="snap-center shrink-0 w-full flex flex-col items-center justify-center px-8 gap-8">
+<div class="relative w-full aspect-square max-h-[360px] rounded-2xl overflow-hidden bg-gradient-to-b from-primary/20 to-transparent flex items-center justify-center border border-primary/10">
+<div class="w-full h-full bg-cover bg-center mix-blend-overlay opacity-60" data-alt="Abstract 3D pill bottle and calendar illustration" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkbJx1nbZ-nU0OR06v02laClTw0hqc9NB5aJYbYPkokkj1qKOK6zjA1sfFmwjeH6a7eJGaYL6wc6LKgoeCZTVng2xo0DQy7wQYtw6_osTI-b9cMty_ExYtC_Bn7sYv8fR14RMJpkdWTfKIa8JkCjcsL1FTw0lf6sOGuIhjjGEKSLhcM2mmqWqim3Dm49onEx_6ke_SDjZxCe9cTPaVj2YFZbX5_2UtgWvpVVKSdHIqOjrbUiiK0D6oabvf3TDy4G8urQJPyt0MXvg');"></div>
+<span class="material-symbols-outlined text-primary text-[80px] drop-shadow-[0_0_15px_rgba(19,236,55,0.5)] z-10">medication</span>
+</div>
+<div class="text-center space-y-3">
+<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-tight">Master Your Meds</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed max-w-[280px] mx-auto">Get timely reminders and track your inventory so you never run out again.</p>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="snap-center shrink-0 w-full flex flex-col items-center justify-center px-8 gap-8">
+<div class="relative w-full aspect-square max-h-[360px] rounded-2xl overflow-hidden bg-gradient-to-b from-primary/20 to-transparent flex items-center justify-center border border-primary/10">
+<div class="w-full h-full bg-cover bg-center mix-blend-overlay opacity-60" data-alt="Digital heartbeat line graph visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCX89IGbmb1t9nRFVeDMj39F8Hd0yZgaCvhL1_1rv67Df3yl6Wr5Xp3G5TFrxhfZ7N0t0qtDXVIzKiHTePvzuRX_Hlbmthw7rm1awsQLKZNfW8nrBIkRam56BEWE-pqa60dXF67zShFNwxDZ36Y5tDFc2leiOZ6MnDrAHI-JKjlN3TglHPT3yL4QPnGFjjLU2vLfxAwk6PdVcdUTeBLmEqV81X0A5to-G4-KKFS9CLsXGkHTXHqFvRnzQ5YnO1uQ5oQHRJOV1ecE-4');"></div>
+<span class="material-symbols-outlined text-primary text-[80px] drop-shadow-[0_0_15px_rgba(19,236,55,0.5)] z-10">ecg_heart</span>
+</div>
+<div class="text-center space-y-3">
+<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-tight">Track Whole Health</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed max-w-[280px] mx-auto">Log vitals, mood, and symptoms to see the full picture of your well-being.</p>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="snap-center shrink-0 w-full flex flex-col items-center justify-center px-8 gap-8">
+<div class="relative w-full aspect-square max-h-[360px] rounded-2xl overflow-hidden bg-gradient-to-b from-primary/20 to-transparent flex items-center justify-center border border-primary/10">
+<div class="w-full h-full bg-cover bg-center mix-blend-overlay opacity-60" data-alt="Futuristic AI brain and neural network connections" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBY7MNfrkwhEqDy6a4wDNgvkHU4ABtKEcw5zqOXx5tODPa67nbUd3n_PtsDpZ7zxXYJldlEHda3eIimiNKKbwIAEx3r791moEHui8WHNW4dQ3K1RV9IkHu8aZntdhi-tUBA0Zl4r1qC4496TClohhzgAwAgiclTlA9w8Y7EKYqIA4CfWs-KOrvDBlV1J03NBZFUtfLuU_nOassZw04G_Wqsmhg06B4FgO8Y-cQomb48aY518Ox8tm3l5PRWzKImOxjI4-LEhx1-V7s');"></div>
+<span class="material-symbols-outlined text-primary text-[80px] drop-shadow-[0_0_15px_rgba(19,236,55,0.5)] z-10">psychology</span>
+</div>
+<div class="text-center space-y-3">
+<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-tight">AI Symptom Checker</h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed max-w-[280px] mx-auto">Instant analysis of your symptoms powered by advanced AI technology.</p>
+</div>
+</div>
+</div>
+<!-- Fade overlay for edges to hint scroll -->
+<div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent pointer-events-none"></div>
+<div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent pointer-events-none"></div>
+</div>
+<!-- Footer Actions -->
+<div class="flex flex-col items-center gap-6 px-6 pb-10 pt-4 shrink-0 bg-background-light dark:bg-background-dark z-10">
+<!-- Page Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-3">
+<div class="h-2 w-8 rounded-full bg-primary shadow-[0_0_8px_rgba(19,236,55,0.6)]"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- SingleButton -->
+<div class="w-full flex items-center justify-center">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-primary hover:bg-green-400 active:scale-[0.98] transition-all duration-200 shadow-[0_0_20px_rgba(19,236,55,0.3)]">
+<span class="text-background-dark text-lg font-bold leading-normal tracking-wide mr-2">Next</span>
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

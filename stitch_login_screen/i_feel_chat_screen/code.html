@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>I Feel Chat Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "primary-dark": "#0eb52b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                        "surface-dark": "#1a301e",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.375rem", "md": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark h-screen flex flex-col font-display overflow-hidden text-slate-900 dark:text-white relative">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark border-b border-white/5 shrink-0 z-20">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full hover:bg-white/5 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<div class="flex flex-col items-center">
+<h2 class="text-base font-bold tracking-tight">I Feel Assistant</h2>
+<div class="flex items-center gap-1.5 mt-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(19,236,55,0.6)]"></div>
+<span class="text-[10px] text-primary font-medium tracking-wide uppercase">Online</span>
+</div>
+</div>
+<button class="flex items-center justify-center w-10 h-10 -mr-2 rounded-full hover:bg-white/5 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</header>
+<!-- Context Indicator (Sticky) -->
+<div class="bg-[#152818] border-b border-primary/10 p-3 flex items-center justify-between gap-3 shrink-0 shadow-lg relative z-10">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">medication_liquid</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[10px] uppercase tracking-wider text-primary/70 font-bold">Active Context</span>
+<p class="text-xs font-medium text-white truncate">Medication A, Medication B</p>
+</div>
+</div>
+<button class="text-[11px] font-semibold text-primary bg-primary/5 border border-primary/20 rounded-md px-3 py-1.5 hover:bg-primary/10 transition-colors shrink-0 whitespace-nowrap">
+            View Meds
+        </button>
+</div>
+<!-- Chat Stream -->
+<main class="flex-1 overflow-y-auto p-4 space-y-6 scroll-smooth w-full max-w-3xl mx-auto">
+<!-- Date Divider -->
+<div class="flex justify-center py-2">
+<span class="text-[10px] font-semibold text-white/30 tracking-wide uppercase">Today, 10:23 AM</span>
+</div>
+<!-- AI Message 1: Greeting -->
+<div class="flex items-end gap-3 group">
+<div class="w-8 h-8 rounded-full bg-[#1e3a24] border border-white/5 flex items-center justify-center shrink-0 shadow-md" data-alt="AI Medical Assistant Avatar Icon">
+<span class="material-symbols-outlined text-primary text-[18px]">monitor_heart</span>
+</div>
+<div class="flex flex-col gap-1 max-w-[85%] sm:max-w-[70%]">
+<span class="text-[10px] font-medium text-white/40 ml-1">I Feel AI</span>
+<div class="bg-[#1e3a24] text-gray-100 rounded-2xl rounded-bl-none px-4 py-3 text-[15px] leading-relaxed shadow-sm border border-white/5">
+<p>Hello! I see you are currently taking <strong class="text-primary font-semibold">Medication A</strong> and <strong class="text-primary font-semibold">Medication B</strong>.</p>
+<p class="mt-2">How are you feeling right now?</p>
+</div>
+</div>
+</div>
+<!-- User Message 1: Symptom Input -->
+<div class="flex items-end gap-3 justify-end group">
+<div class="flex flex-col gap-1 items-end max-w-[85%] sm:max-w-[70%]">
+<!-- User Bubble -->
+<div class="bg-primary text-background-dark font-medium rounded-2xl rounded-br-none px-4 py-3 text-[15px] leading-relaxed shadow-md">
+<p>I've been feeling really dizzy since this morning.</p>
+</div>
+<!-- Read receipt -->
+<div class="flex items-center gap-1 mr-1">
+<span class="text-[10px] text-white/30">Read 10:24 AM</span>
+<span class="material-symbols-outlined text-[12px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<!-- AI Message 2: Analysis & Markdown -->
+<div class="flex items-end gap-3 group">
+<div class="w-8 h-8 rounded-full bg-[#1e3a24] border border-white/5 flex items-center justify-center shrink-0 shadow-md" data-alt="AI Medical Assistant Avatar Icon">
+<span class="material-symbols-outlined text-primary text-[18px]">monitor_heart</span>
+</div>
+<div class="flex flex-col gap-1 max-w-[90%] sm:max-w-[75%]">
+<span class="text-[10px] font-medium text-white/40 ml-1">I Feel AI</span>
+<div class="bg-[#1e3a24] text-gray-100 rounded-2xl rounded-bl-none p-4 text-[15px] leading-relaxed shadow-sm border border-white/5">
+<p class="mb-3">I'm sorry to hear that. Dizziness can be a common side effect of <strong class="text-white font-bold bg-white/10 px-1 rounded">Medication A</strong>.</p>
+<p class="mb-2 text-white/70 text-sm">To help me understand better:</p>
+<ul class="space-y-2 mb-4">
+<li class="flex gap-3 items-start bg-black/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">sick</span>
+<span class="text-sm">Are you experiencing any nausea or vomiting?</span>
+</li>
+<li class="flex gap-3 items-start bg-black/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">restaurant</span>
+<span class="text-sm">Have you eaten recently? Low blood sugar might contribute.</span>
+</li>
+</ul>
+<!-- Urgent Warning Block -->
+<div class="mt-2 bg-red-500/10 border border-red-500/20 rounded-lg p-3 flex gap-3 items-start">
+<div class="bg-red-500/20 p-1 rounded-md shrink-0">
+<span class="material-symbols-outlined text-red-400 text-[18px] block">warning</span>
+</div>
+<div class="text-xs text-red-200/90 leading-snug">
+<strong class="text-red-400 block mb-1 text-xs uppercase tracking-wide">Safety Check</strong>
+                            If you feel faint, experience chest pain, or have shortness of breath, please seek immediate medical help.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer for scrolling visibility behind fixed footer -->
+<div class="h-48"></div>
+</main>
+<!-- Bottom Interface Area -->
+<div class="bg-[#102213]/95 backdrop-blur-xl border-t border-white/5 shrink-0 z-30 pb-safe absolute bottom-0 w-full shadow-[0_-5px_20px_rgba(0,0,0,0.5)]">
+<!-- Recommendation Chips -->
+<div class="px-4 py-3 flex gap-2 overflow-x-auto no-scrollbar mask-gradient-right items-center">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold whitespace-nowrap hover:bg-primary/20 active:scale-95 transition-all shadow-[0_0_10px_rgba(19,236,55,0.1)]">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+                Log "Dizziness"
+            </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium whitespace-nowrap hover:bg-white/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">medical_services</span>
+                Report Side Effect
+            </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-medium whitespace-nowrap hover:bg-white/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">call</span>
+                Call Doctor
+            </button>
+</div>
+<!-- Input Field Container -->
+<div class="px-4 pb-2">
+<div class="flex items-end gap-2 bg-[#0a160c] rounded-[1.25rem] p-1.5 border border-white/10 focus-within:border-primary/50 transition-colors shadow-inner">
+<button class="p-2.5 text-white/40 hover:text-white transition-colors rounded-full hover:bg-white/5">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<textarea class="bg-transparent border-0 text-white placeholder-white/30 focus:ring-0 flex-1 resize-none py-3 max-h-32 text-[15px] leading-relaxed" placeholder="Type a message..." rows="1" style="min-height: 44px;"></textarea>
+<button class="p-2.5 text-white/40 hover:text-white transition-colors rounded-full hover:bg-white/5">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="p-2.5 bg-primary text-background-dark rounded-full hover:bg-primary-dark transition-colors flex items-center justify-center shadow-[0_0_15px_rgba(19,236,55,0.4)] active:scale-90">
+<span class="material-symbols-outlined text-[20px] ml-0.5">send</span>
+</button>
+</div>
+<!-- Disclaimer Footer -->
+<div class="mt-3 mb-1 flex justify-center items-center gap-1.5 opacity-40 hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-[12px] text-white">info</span>
+<p class="text-[10px] text-white text-center font-medium">
+                    AI is not a doctor. Call emergency services for urgent needs.
+                </p>
+</div>
+</div>
+</div>
+</body></html>
