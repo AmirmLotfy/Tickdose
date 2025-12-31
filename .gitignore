@@ -55,6 +55,10 @@ google-services.json
 **/GoogleService-Info.plist
 lib/firebase_options.dart
 
+# Remote config files - DO NOT COMMIT (may contain API keys)
+remote-config.json
+remote-config-current.json
+
 # Android Keystore files - DO NOT COMMIT
 **/keystore.properties
 **/*.jks
